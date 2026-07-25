@@ -1,6 +1,7 @@
-// ============================================
-// 9 POOL LIGA - ACHIEVEMENTS SYSTEM FINAL
-// ============================================
+// =======================================
+// 9 POOL LIGA - HALL OF FAME ACHIEVEMENT
+// FINAL DISTRIBUTION SYSTEM
+// =======================================
 
 
 const klasemenURL =
@@ -9,6 +10,13 @@ const klasemenURL =
 
 const pertandinganURL =
 "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnS6WoVWincu7nBJyd9r01BsKoCQoa5MKvB8bkjvnuGygU0JZ8YrWT3L0s3Vuq38erG9Quxl2R3JVFNb-mxeshgDai_XAfZvaUl5k6j9mT45khcmhwgUh1DiUpPSv_lubHrEm0wqnYUlcYBuv8OU33AII-9EfnYdHR7YCZ1XfNKyAIdcSdagYVSmZNhA01HFFiXCFyv4M93ifUnykszCk5HWDtSk1prNwqFyd_uJ7xBR1lnizFiu0jvnsCmIk12jxrUpiQsu7-vsRHtvmqZx3GbCVGsXBQ&lib=MQ974VFXeXNHBp6rsCAsq0yJ67tG3SoUN";
+
+
+// maksimal 2 gelar per pemain
+
+let achievementCount={};
+
+
 
 
 
@@ -20,6 +28,7 @@ fetch(pertandinganURL).then(r=>r.json())
 
 ])
 
+
 .then(([kelas,match])=>{
 
 
@@ -28,42 +37,73 @@ let players=parsePlayers(kelas);
 let games=parseGames(match);
 
 
-let achievements=[
-
-king(players),
-
-mvp(players),
-
-perfect(players,games),
-
-finisher(players),
-
-giant(players,games),
-
-iron(players),
-
-middle(players),
-
-bottom(players),
-
-clutch(players,games),
-
-hall(players)
-
-];
+let achievements=[];
 
 
-render(achievements);
+// URUTAN GENGSI
 
 
-})
+achievements.push(
+king(players)
+);
 
-.catch(err=>{
 
-console.log(err);
+achievements.push(
+mvp(players)
+);
 
-document.getElementById("achievement-list").innerHTML=
-"<h3>Gagal memuat achievement</h3>";
+
+achievements.push(
+perfectDominator(players,games)
+);
+
+
+achievements.push(
+finisher(players)
+);
+
+
+achievements.push(
+giantKiller(players,games)
+);
+
+
+achievements.push(
+winStreak(players,games)
+);
+
+
+achievements.push(
+predator(players)
+);
+
+
+achievements.push(
+risingStar(players)
+);
+
+
+achievements.push(
+mostActive(players)
+);
+
+
+achievements.push(
+hallOfFame(players)
+);
+
+
+
+renderAchievements(achievements);
+
+
+
+document.getElementById("lastUpdated").innerHTML=
+
+"🕒 Terakhir diperbarui : "+
+new Date().toLocaleString("id-ID");
+
+
 
 });
 
@@ -71,12 +111,15 @@ document.getElementById("achievement-list").innerHTML=
 
 
 
-// =========================
+
+
+// =======================================
 // PARSER
-// =========================
+// =======================================
 
 
 function parsePlayers(data){
+
 
 return data.slice(1)
 
@@ -84,31 +127,33 @@ return data.slice(1)
 
 .map(x=>({
 
-rank:+x[0],
+
+rank:Number(x[0]),
 
 name:x[1],
 
-played:+x[2],
+played:Number(x[2]),
 
-win:+x[3],
+win:Number(x[3]),
 
-lose:+x[4],
+lose:Number(x[4]),
 
-plus:+x[5],
+plus:Number(x[5]),
 
-minus:+x[6],
+minus:Number(x[6]),
 
-diff:+x[7],
+diff:Number(x[7]),
 
-point:+x[8]
+point:Number(x[8])
+
 
 }));
 
 }
 
 
-
 function parseGames(data){
+
 
 return data.slice(1)
 
@@ -116,17 +161,19 @@ return data.slice(1)
 
 .map(x=>({
 
+
 a:x[2],
 
-sa:+x[3],
+sa:Number(x[3]),
 
-sb:+x[4],
+sb:Number(x[4]),
 
 b:x[5],
 
 winner:x[6],
 
 loser:x[7]
+
 
 }));
 
@@ -136,44 +183,112 @@ loser:x[7]
 
 
 
-// =========================
-// GENERATOR
-// =========================
 
 
-function make(title,badge,desc,calc,data){
+// =======================================
+// SISTEM DISTRIBUSI GELAR
+// =======================================
 
 
-data=data
-.filter(x=>x.name)
+function availablePlayers(players){
+
+
+return players.filter(p=>{
+
+
+return (achievementCount[p.name]||0)<2;
+
+
+});
+
+
+}
+
+
+
+function registerTitles(players){
+
+
+players.slice(0,3)
+
+.forEach(p=>{
+
+
+if(!achievementCount[p.name])
+
+achievementCount[p.name]=0;
+
+
+achievementCount[p.name]++;
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+function createAchievement(
+icon,
+title,
+badge,
+description,
+calculation,
+ranking
+){
+
+
+let winners=ranking
+
+.filter(p=>p.name)
+
 .slice(0,3);
 
 
-if(data.length===0){
 
-data=[
-{
+registerTitles(winners);
+
+
+
+if(winners.length===0){
+
+
+winners=[{
+
 name:"Belum ada pemain",
+
 score:0
-}
-];
+
+}];
+
 
 }
+
 
 
 return {
+
+
+icon,
 
 title,
 
 badge,
 
-desc,
+description,
 
-calc,
+calculation,
 
-players:data
+winners
+
 
 };
+
 
 }
 
@@ -181,17 +296,27 @@ players:data
 
 
 
-// =========================
-// 1 KING
-// =========================
 
 
-function king(p){
+// =======================================
+// 1 KING OF THE LEAGUE
+// =======================================
 
 
-return make(
+function king(players){
 
-"🏆 King of The League",
+
+let ranking=[...players]
+
+.sort((a,b)=>b.point-a.point);
+
+
+
+return createAchievement(
+
+"🏆",
+
+"King of The League",
 
 "LEGEND",
 
@@ -199,41 +324,36 @@ return make(
 
 "Poin(Frame) tertinggi.",
 
-
-[...p].sort((a,b)=>b.point-a.point)
+ranking
 
 );
 
 
 }
 
-
-
-
-
-
-
-// =========================
+// =======================================
 // 2 MVP
-// =========================
+// =======================================
 
 
-function mvp(p){
+function mvp(players){
 
 
-let data=p.map(x=>({
+let ranking=availablePlayers(players)
 
-...x,
+.map(p=>({
+
+...p,
 
 score:
 
-x.point*0.4+
+(p.point*0.4)+
 
-x.win*3+
+(p.win*3)+
 
-(x.win/x.played)*20+
+((p.win/p.played)*20)+
 
-x.diff*0.2
+(p.diff*0.2)
 
 
 }))
@@ -243,9 +363,11 @@ x.diff*0.2
 
 
 
-return make(
+return createAchievement(
 
-"⭐ MVP",
+"⭐",
+
+"MVP",
 
 "ELITE",
 
@@ -253,7 +375,7 @@ return make(
 
 "Point 40% + Menang 30% + Win Rate 20% + Selisih Frame 10%.",
 
-data
+ranking
 
 );
 
@@ -265,37 +387,106 @@ data
 
 
 
-// =========================
+// =======================================
 // 3 PERFECT DOMINATOR
-// =========================
+// =======================================
 
 
-function perfect(p,g){
+function perfectDominator(players,games){
 
 
-let obj={};
+let score={};
 
 
-g.forEach(x=>{
+
+games.forEach(g=>{
 
 
-let sel=Math.abs(x.sa-x.sb);
+let diff=Math.abs(g.sa-g.sb);
 
 
-if(sel>=5){
 
-obj[x.winner]=(obj[x.winner]||0)+sel;
+if(diff>=5){
+
+
+score[g.winner]=(score[g.winner]||0)+diff;
+
 
 }
+
+
 
 });
 
 
-let data=p.map(x=>({
 
-...x,
 
-score:obj[x.name]||0
+let ranking=availablePlayers(players)
+
+.map(p=>({
+
+...p,
+
+score:score[p.name]||0
+
+
+}))
+
+
+.filter(p=>p.score>0)
+
+.sort((a,b)=>b.score-a.score);
+
+
+
+return createAchievement(
+
+"💥",
+
+"Perfect Dominator",
+
+"PERFECT GAME",
+
+"Pemain yang mampu menghancurkan lawan dengan kemenangan telak dan dominasi mutlak.",
+
+"Menang dengan selisih besar seperti 9-0, 9-1, dan kemenangan dominan lainnya.",
+
+ranking
+
+);
+
+
+}
+
+
+
+
+
+
+
+// =======================================
+// 4 THE FINISHER
+// =======================================
+
+
+function finisher(players){
+
+
+let ranking=availablePlayers(players)
+
+.map(p=>({
+
+
+...p,
+
+
+score:
+
+(p.win*10)+
+
+Math.max(p.diff,0)
+
+
 
 }))
 
@@ -304,59 +495,22 @@ score:obj[x.name]||0
 
 
 
-return make(
+return createAchievement(
 
-"💥 Perfect Dominator",
+"🎯",
 
-"PERFECT GAME",
-
-"Pemain yang mampu menghasilkan kemenangan telak dan menghancurkan perlawanan lawan.",
-
-"Selisih kemenangan besar termasuk 9-0, 9-1, dan dominasi frame.",
-
-data
-
-);
-
-
-}
-
-
-
-
-
-
-
-
-// =========================
-// 4 FINISHER
-// =========================
-
-
-function finisher(p){
-
-
-return make(
-
-"🎯 The Finisher",
+"The Finisher",
 
 "SHARPSHOOTER",
 
 "Pemain yang paling efektif mengubah peluang menjadi kemenangan.",
 
-"Jumlah kemenangan + selisih frame.",
+"Jumlah kemenangan + dominasi selisih frame.",
 
-[...p].map(x=>({
-
-...x,
-
-score:x.win*10+x.diff
-
-}))
-
-.sort((a,b)=>b.score-a.score)
+ranking
 
 );
+
 
 }
 
@@ -366,60 +520,98 @@ score:x.win*10+x.diff
 
 
 
-// =========================
+// =======================================
 // 5 GIANT KILLER
-// =========================
+// =======================================
 
 
-function giant(p,g){
+function giantKiller(players,games){
 
 
-let rank={};
+let ranks={};
 
-p.forEach(x=>rank[x.name]=x.rank);
+
+players.forEach(p=>{
+
+ranks[p.name]=p.rank;
+
+});
 
 
 let score={};
 
 
-g.forEach(x=>{
+
+games.forEach(g=>{
 
 
-if(rank[x.winner] && rank[x.loser]){
+if(
+
+ranks[g.winner] &&
+
+ranks[g.loser]
+
+){
 
 
-let val=rank[x.loser]-rank[x.winner];
+let value=
+
+ranks[g.loser]-ranks[g.winner];
 
 
-if(val>0)
 
-score[x.winner]=(score[x.winner]||0)+val;
+if(value>0){
+
+
+score[g.winner]=
+
+(score[g.winner]||0)+value;
+
 
 }
+
+
+
+}
+
 
 });
 
 
 
-return make(
 
-"🎲 Giant Killer",
+let ranking=availablePlayers(players)
+
+.map(p=>({
+
+
+...p,
+
+score:score[p.name]||0
+
+
+}))
+
+
+.filter(p=>p.score>0)
+
+.sort((a,b)=>b.score-a.score);
+
+
+
+return createAchievement(
+
+"🎲",
+
+"Giant Killer",
 
 "GIANT SLAYER",
 
 "Pemain yang mampu menjatuhkan lawan dengan peringkat lebih tinggi.",
 
-"Total ranking lawan kuat yang berhasil dikalahkan.",
+"Akumulasi nilai ranking lawan kuat yang berhasil dikalahkan.",
 
-p.map(x=>({
-
-...x,
-
-score:score[x.name]||0
-
-}))
-
-.sort((a,b)=>b.score-a.score)
+ranking
 
 );
 
@@ -432,150 +624,98 @@ score:score[x.name]||0
 
 
 
-// =========================
-// 6 IRON
-// =========================
+// =======================================
+// 6 WIN STREAK MASTER
+// =======================================
 
 
-function iron(p){
+function winStreak(players,games){
 
 
-return make(
+let streak={};
 
-"🧱 Iron Defense",
-
-"UNBREAKABLE",
-
-"Pemain dengan pertahanan terbaik dan sulit ditembus.",
-
-"Main dibanding frame yang hilang.",
-
-p.map(x=>({
-
-...x,
-
-score:x.played*100/(x.minus||1)
-
-}))
-
-.sort((a,b)=>b.score-a.score)
-
-);
-
-}
+let best={};
 
 
 
+players.forEach(p=>{
+
+streak[p.name]=0;
+
+best[p.name]=0;
+
+});
 
 
 
-// =========================
-// 7 MID
-// =========================
+games.forEach(g=>{
 
 
-function middle(p){
+let winner=g.winner;
 
 
-return make(
+let loser=g.loser;
 
-"👑 Mid Table Emperor",
 
-"MIDDLE KING",
 
-"Penguasa papan tengah yang bertahan dalam persaingan ketat.",
+if(streak[winner]!=undefined){
 
-"Performa pemain posisi tengah.",
 
-p.filter(x=>x.rank>=5&&x.rank<=15)
+streak[winner]++;
 
-.sort((a,b)=>b.point-a.point)
+best[winner]=
 
-);
+Math.max(best[winner],streak[winner]);
 
 
 }
 
 
 
+if(streak[loser]!=undefined){
 
-
-
-
-// =========================
-// 8 BOTTOM
-// =========================
-
-
-function bottom(p){
-
-
-return make(
-
-"🌱 Bottom Fighter",
-
-"NEVER GIVE UP",
-
-"Pemain yang terus berjuang dan menciptakan kejutan.",
-
-"Kemenangan + aktivitas pertandingan.",
-
-p.filter(x=>x.rank>=16)
-
-.sort((a,b)=>b.win-a.win)
-
-);
-
+streak[loser]=0;
 
 }
 
-
-
-
-
-
-
-// =========================
-// 9 CLUTCH
-// =========================
-
-
-function clutch(p,g){
-
-
-let obj={};
-
-
-g.forEach(x=>{
-
-
-if(Math.abs(x.sa-x.sb)<=2)
-
-obj[x.winner]=(obj[x.winner]||0)+1;
 
 
 });
 
 
-return make(
 
-"💣 Clutch Player",
+let ranking=availablePlayers(players)
 
-"ICE COLD",
+.map(p=>({
 
-"Pemain yang mampu menang dalam kondisi pertandingan paling menegangkan.",
 
-"Kemenangan dengan selisih tipis.",
+...p,
 
-p.map(x=>({
+score:best[p.name]||0
 
-...x,
-
-score:obj[x.name]||0
 
 }))
 
-.sort((a,b)=>b.score-a.score)
+
+.filter(p=>p.score>0)
+
+.sort((a,b)=>b.score-a.score);
+
+
+
+return createAchievement(
+
+"🔥",
+
+"Win Streak Master",
+
+"UNSTOPPABLE",
+
+"Pemain dengan mental juara yang mampu mempertahankan kemenangan beruntun.",
+
+"Jumlah kemenangan beruntun terbaik.",
+
+ranking
 
 );
 
@@ -587,25 +727,223 @@ score:obj[x.name]||0
 
 
 
-// =========================
+
+// =======================================
+// 7 PREDATOR
+// =======================================
+
+
+function predator(players){
+
+
+
+let ranking=availablePlayers(players)
+
+.filter(p=>p.played>=3)
+
+.map(p=>({
+
+
+...p,
+
+
+score:p.diff
+
+
+}))
+
+
+.sort((a,b)=>b.score-a.score);
+
+
+
+return createAchievement(
+
+"🎱",
+
+"Predator",
+
+"DEADLY",
+
+"Pemain dengan kemampuan menyerang paling efektif melalui tekanan frame yang tinggi.",
+
+"Selisih frame positif terbesar.",
+
+ranking
+
+);
+
+
+}
+
+
+
+
+
+
+
+// =======================================
+// 8 RISING STAR
+// =======================================
+
+
+function risingStar(players){
+
+
+
+let ranking=availablePlayers(players)
+
+.filter(p=>
+
+p.rank>3 &&
+
+p.played>=3 &&
+
+p.played<=6
+
+)
+
+
+.map(p=>({
+
+
+...p,
+
+
+score:
+
+((p.win/p.played)*100)+
+
+p.point
+
+
+}))
+
+
+.sort((a,b)=>b.score-a.score);
+
+
+
+return createAchievement(
+
+"🚀",
+
+"Rising Star",
+
+"FUTURE STAR",
+
+"Pemain yang menunjukkan perkembangan luar biasa dan berpotensi menjadi bintang berikutnya.",
+
+"Performa kemenangan, aktivitas, dan kualitas permainan pemain berkembang.",
+
+ranking
+
+);
+
+
+}
+
+
+
+
+
+
+
+// =======================================
+// 9 MOST ACTIVE
+// =======================================
+
+
+function mostActive(players){
+
+
+
+let ranking=availablePlayers(players)
+
+.filter(p=>p.played>=3)
+
+.map(p=>({
+
+
+...p,
+
+score:p.played
+
+
+}))
+
+
+.sort((a,b)=>b.score-a.score);
+
+
+
+return createAchievement(
+
+"🎮",
+
+"Most Active",
+
+"WARRIOR",
+
+"Pemain yang paling aktif hadir dan bertarung dalam kompetisi.",
+
+"Jumlah pertandingan yang dimainkan.",
+
+ranking
+
+);
+
+
+}
+
+
+
+
+
+
+
+// =======================================
 // 10 HALL OF FAME
-// =========================
+// =======================================
 
 
-function hall(p){
+function hallOfFame(players){
 
 
-return make(
 
-"🏅 Hall of Fame",
+let ranking=players
+
+.map(p=>({
+
+
+...p,
+
+
+score:
+
+achievementCount[p.name]||0
+
+
+}))
+
+
+.sort((a,b)=>b.score-a.score);
+
+
+
+return createAchievement(
+
+"🏅",
+
+"Hall of Fame",
 
 "IMMORTAL",
 
-"Pemain yang meninggalkan sejarah dalam perjalanan liga.",
+"Pemain yang meninggalkan jejak prestasi dalam perjalanan 9 Pool Liga.",
 
-"Akumulasi prestasi keseluruhan.",
+"Jumlah penghargaan yang berhasil diraih.",
 
-[...p].sort((a,b)=>b.point-a.point)
+ranking
 
 );
 
@@ -619,56 +957,105 @@ return make(
 
 
 
-// =========================
-// DISPLAY
-// =========================
+
+// =======================================
+// RENDER HALL OF FAME
+// =======================================
 
 
-function render(data){
+function renderAchievements(data){
 
 
 let html="";
 
 
-data.forEach(a=>{
+html+=`
 
+<div class="hall-intro">
+
+
+<h2>
+🏅 HALL OF FAME 9 POOL LIGA
+</h2>
+
+
+<p>
+
+Di sinilah nama-nama besar tercatat dalam sejarah 9 Pool Liga.
+
+Setiap kemenangan lahir dari perjuangan, setiap frame memiliki cerita, dan setiap pertandingan menjadi bukti mental seorang juara.
+
+Hall of Fame bukan hanya milik mereka yang berada di puncak klasemen, tetapi juga untuk para petarung yang menunjukkan keberanian, konsistensi, kejutan luar biasa, serta semangat pantang menyerah.
+
+Dari penguasa liga hingga kuda hitam yang muncul memberikan kejutan, setiap pemain memiliki kesempatan mengukir legenda mereka sendiri.
+
+Seluruh penghargaan dihitung secara otomatis berdasarkan data pertandingan dan klasemen terbaru.
+
+Siapa berikutnya yang akan menulis namanya dalam sejarah?
+
+</p>
+
+
+</div>
+
+
+`;
+
+
+
+data.forEach(a=>{
 
 html+=`
 
 <div class="hall-card">
 
 
+<div class="hall-title">
+
 <h2>
-${a.title}
+${a.icon} ${a.title}
 </h2>
 
-
-<h4>
+<span>
 ${a.badge}
-</h4>
+</span>
+
+</div>
+
 
 
 <p>
-${a.desc}
+${a.description}
 </p>
+
 
 
 <div class="podium">
 
 
-${a.players.map((p,i)=>`
+${a.winners.map((p,i)=>`
 
-<div class="player-rank">
+<div class="player-rank rank-${i+1}">
 
 
 <div class="medal">
 
-${i==0?"🥇":i==1?"🥈":"🥉"}
+${
+
+i==0?"🥇":
+
+i==1?"🥈":
+
+"🥉"
+
+}
 
 </div>
 
 
-<h3>${p.name}</h3>
+<h3>
+${p.name}
+</h3>
 
 
 <div class="score">
@@ -684,20 +1071,27 @@ ${Math.round(p.score || p.point || 0)}
 `).join("")}
 
 
+
 </div>
 
 
 
 <div class="formula">
 
-<b>📊 Cara Perhitungan</b>
+<b>
+📊 Cara Perhitungan
+</b>
 
-<p>${a.calc}</p>
+<p>
+${a.calculation}
+</p>
+
 
 </div>
 
 
 </div>
+
 
 `;
 
