@@ -1,31 +1,1154 @@
-const url = "https://script.google.com/macros/s/AKfycbweEZmfiYZG9bOtKyQKar7bcW-Zv8sC75bvliYN7Eurq94veGujyNfWTxfCDvAfGn7Ndg/exec";
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-fetch(url)
-.then(res => res.json())
-.then(data => {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #e0e0e0;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
 
-let html = "";
+/* ===== JUDUL ===== */
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 20px rgba(211, 47, 47, 0.5);
+}
 
-for(let i=1;i<data.length;i++){
+/* ===== NAVIGASI ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px auto 35px auto;
+  flex-wrap: wrap;
+}
 
-html += `
-<tr>
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+}
 
-<td>${data[i][0]}</td>
-<td>${data[i][1]}</td>
-<td>${data[i][2]}</td>
-<td>${data[i][3]}</td>
-<td>${data[i][4]}</td>
-<td>${data[i][5]}</td>
-<td>${data[i][6]}</td>
-<td>${data[i][7]}</td>
-<td>${data[i][8]}</td>
+nav a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(211, 47, 47, 0.5);
+  background: linear-gradient(135deg, #f44336, #d32f2f);
+}
 
-</tr>
-`;
+nav a:active {
+  transform: translateY(0);
+}
+
+/* ===== TABEL ===== */
+table {
+  margin: 0 auto 30px auto;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+thead {
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+}
+
+th {
+  padding: 14px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  border: none;
+}
+
+td {
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #cccccc;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+tr:hover {
+  background: rgba(211, 47, 47, 0.12);
+  transition: background 0.3s ease;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== RESPONSIF (HP) ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 8px 6px;
+    font-size: 0.75rem;
+  }
+
+  nav a {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* ===== ANIMASI MASUK ===== */
+table, h1, nav {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== DAFTAR PEMAIN ===== */
+
+#cari{
+
+    width:300px;
+    padding:10px;
+    margin:20px auto;
+    display:block;
+    font-size:16px;
 
 }
 
-document.getElementById("isi").innerHTML = html;
+.kartu-pemain{
+    width:400px;
+    margin:20px auto;
+    padding:20px;
+    background:#ffffff;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
 
-});
+    color:#222;   /* Warna teks menjadi gelap */
+}
+.kartu-pemain:hover{
+
+    background:#f0f0f0;
+
+}
+/* ===========================
+   HALAMAN PEMAIN
+=========================== */
+
+#cari{
+
+    width:300px;
+    padding:10px;
+    margin:20px auto;
+    display:block;
+    font-size:16px;
+
+}
+
+.kartu-pemain{
+
+    width:400px;
+
+    margin:15px auto;
+
+    padding:20px;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 2px 5px rgba(0,0,0,.15);
+
+    background:white;
+
+}
+
+.kartu-pemain h3{
+
+    margin-top:0;
+
+}
+
+.kartu-pemain button{
+
+    margin-top:10px;
+
+    padding:8px 15px;
+
+}
+.skor{
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    margin:18px 0;
+    color:#111;
+}
+
+.hasil-skor{
+    color:#d32f2f;
+    font-size:34px;
+    font-weight:900;
+    padding:0 10px;
+}
+/* ==========================================
+   ACHIEVEMENTS
+========================================== */
+
+.achievement-header{
+
+    width:95%;
+    max-width:1100px;
+    margin:0 auto 35px auto;
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+
+}
+
+.achievement-header h2{
+
+    color:#ffd54f;
+
+    margin-bottom:15px;
+
+    font-size:30px;
+
+}
+
+.achievement-header p{
+
+    color:#d7d7d7;
+
+    line-height:1.7;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+#lastUpdated{
+
+    margin-top:18px;
+
+    color:#9e9e9e;
+
+    font-size:14px;
+
+}
+
+/* =============================== */
+
+#achievement-list{
+
+    width:95%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/* =============================== */
+
+.achievement-card{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:18px;
+
+    margin-bottom:28px;
+
+    overflow:hidden;
+
+    border-left:8px solid gold;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.30);
+
+    transition:.25s;
+
+}
+
+.achievement-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.45);
+
+}
+
+/* =============================== */
+
+.achievement-title{
+
+    padding:18px 25px;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:white;
+
+}
+
+/* =============================== */
+
+.badge{
+
+    display:inline-block;
+
+    margin-left:25px;
+
+    margin-bottom:18px;
+
+    padding:6px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    color:white;
+
+}
+
+/* =============================== */
+
+.description{
+
+    padding:0 25px;
+
+    text-align:left;
+
+    color:#e3e3e3;
+
+    line-height:1.8;
+
+}
+
+/* =============================== */
+
+.top3{
+
+    margin:25px;
+
+}
+
+/* =============================== */
+
+.player{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:12px;
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+}
+
+/* =============================== */
+
+.player-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:white;
+
+}
+
+/* =============================== */
+
+.player-value{
+
+    color:#ffd54f;
+
+}
+
+/* =============================== */
+
+.progress{
+
+    width:100%;
+
+    height:10px;
+
+    border-radius:20px;
+
+    background:#333;
+
+    overflow:hidden;
+
+    margin-top:12px;
+
+}
+
+/* =============================== */
+
+.progress-bar{
+
+    height:100%;
+
+    width:0%;
+
+    border-radius:20px;
+
+}
+
+/* =============================== */
+
+.calculation{
+
+    margin:25px;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.04);
+
+    text-align:left;
+
+}
+
+.calculation h3{
+
+    margin-bottom:10px;
+
+    color:#ffd54f;
+
+}
+
+/* ======================================
+   WARNA TIAP ACHIEVEMENT
+====================================== */
+
+.gold{
+
+    border-left-color:#FFD700;
+
+}
+
+.gold .badge{
+
+    background:#FFD700;
+
+    color:#111;
+
+}
+
+.gold .progress-bar{
+
+    background:#FFD700;
+
+}
+
+/* =============================== */
+
+.blue{
+
+    border-left-color:#42A5F5;
+
+}
+
+.blue .badge{
+
+    background:#42A5F5;
+
+}
+
+.blue .progress-bar{
+
+    background:#42A5F5;
+
+}
+
+/* =============================== */
+
+.orange{
+
+    border-left-color:#FF9800;
+
+}
+
+.orange .badge{
+
+    background:#FF9800;
+
+}
+
+.orange .progress-bar{
+
+    background:#FF9800;
+
+}
+
+/* =============================== */
+
+.gray{
+
+    border-left-color:#9E9E9E;
+
+}
+
+.gray .badge{
+
+    background:#757575;
+
+}
+
+.gray .progress-bar{
+
+    background:#9E9E9E;
+
+}
+
+/* =============================== */
+
+.purple{
+
+    border-left-color:#AB47BC;
+
+}
+
+.purple .badge{
+
+    background:#AB47BC;
+
+}
+
+.purple .progress-bar{
+
+    background:#AB47BC;
+
+}
+
+/* =============================== */
+
+.green{
+
+    border-left-color:#43A047;
+
+}
+
+.green .badge{
+
+    background:#43A047;
+
+}
+
+.green .progress-bar{
+
+    background:#43A047;
+
+}
+
+/* =============================== */
+
+.red{
+
+    border-left-color:#E53935;
+
+}
+
+.red .badge{
+
+    background:#E53935;
+
+}
+
+.red .progress-bar{
+
+    background:#E53935;
+
+}
+
+/* =============================== */
+
+.cyan{
+
+    border-left-color:#00BCD4;
+
+}
+
+.cyan .badge{
+
+    background:#00BCD4;
+
+}
+
+.cyan .progress-bar{
+
+    background:#00BCD4;
+
+}
+
+/* =============================== */
+
+.legend{
+
+    border-left-color:#FFD700;
+
+    background:linear-gradient(135deg,#2b2b2b,#121212);
+
+}
+
+.legend .badge{
+
+    background:linear-gradient(90deg,#FFD700,#ff9800);
+
+    color:#111;
+
+}
+
+.legend .progress-bar{
+
+    background:linear-gradient(90deg,#FFD700,#ff9800);
+
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media(max-width:768px){
+
+.player-header{
+
+    font-size:15px;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.achievement-title{
+
+    font-size:22px;
+
+}
+
+}
+
+/* =====================================
+   ACHIEVEMENT HALL OF FAME
+===================================== */
+
+
+#achievement-list{
+
+width:95%;
+max-width:1100px;
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(350px,1fr));
+
+gap:25px;
+
+}
+
+
+
+
+.hall-card{
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.08),
+rgba(0,0,0,.5)
+);
+
+
+border-radius:22px;
+
+padding:25px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.5);
+
+
+border:1px solid rgba(255,255,255,.15);
+
+animation:
+hallShow .6s ease;
+
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+
+
+.hall-card:hover{
+
+transform:
+translateY(-8px);
+
+transition:.3s;
+
+box-shadow:
+0 20px 50px rgba(255,215,0,.3);
+
+}
+
+
+
+
+
+@keyframes hallShow{
+
+
+from{
+
+opacity:0;
+
+transform:
+translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+.hall-header{
+
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+.icon{
+
+font-size:45px;
+
+}
+
+
+
+
+.hall-header h2{
+
+font-size:24px;
+
+color:white;
+
+margin:0;
+
+}
+
+
+
+
+.rank-badge{
+
+
+display:inline-block;
+
+margin-top:8px;
+
+padding:6px 18px;
+
+border-radius:20px;
+
+background:
+linear-gradient(
+45deg,
+#ffd700,
+#ff9800
+);
+
+
+color:#222;
+
+font-weight:900;
+
+font-size:12px;
+
+letter-spacing:1px;
+
+
+}
+
+
+
+
+.description{
+
+
+color:#ddd;
+
+line-height:1.6;
+
+min-height:70px;
+
+}
+
+
+
+
+
+/* PODIUM */
+
+
+.podium{
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:end;
+
+gap:12px;
+
+margin-top:25px;
+
+}
+
+
+
+
+.podium-player{
+
+
+background:
+rgba(255,255,255,.08);
+
+
+border-radius:18px;
+
+padding:15px 10px;
+
+width:30%;
+
+
+text-align:center;
+
+
+border:1px solid rgba(255,255,255,.2);
+
+
+}
+
+
+
+
+.rank-1{
+
+
+order:2;
+
+transform:
+translateY(-15px);
+
+
+background:
+linear-gradient(
+145deg,
+rgba(255,215,0,.3),
+rgba(255,255,255,.08)
+);
+
+
+}
+
+
+
+.rank-2{
+
+order:1;
+
+}
+
+
+
+.rank-3{
+
+order:3;
+
+}
+
+
+
+
+.medal{
+
+font-size:35px;
+
+}
+
+
+
+
+
+.player-name{
+
+
+font-weight:900;
+
+color:white;
+
+margin-top:10px;
+
+font-size:14px;
+
+
+}
+
+
+
+.player-score{
+
+
+font-size:28px;
+
+font-weight:900;
+
+color:#ffd700;
+
+margin:10px;
+
+
+}
+
+
+
+
+.title-mini{
+
+
+font-size:10px;
+
+color:#bbb;
+
+letter-spacing:1px;
+
+}
+
+
+
+
+
+.calculation-box{
+
+
+margin-top:25px;
+
+padding:15px;
+
+
+background:
+rgba(0,0,0,.3);
+
+
+border-radius:15px;
+
+
+}
+
+
+
+.calculation-box h3{
+
+
+color:#ffd700;
+
+font-size:15px;
+
+
+}
+
+
+
+.calculation-box p{
+
+
+font-size:13px;
+
+color:#ddd;
+
+line-height:1.5;
+
+
+}
+
+
+
+
+
+/* WARNA KHUSUS */
+
+
+.hall-card.gold{
+
+
+border-top:
+5px solid gold;
+
+}
+
+
+
+.hall-card.blue{
+
+
+border-top:
+5px solid #2196f3;
+
+}
+
+
+
+.hall-card.orange{
+
+
+border-top:
+5px solid orange;
+
+}
+
+
+
+.hall-card.purple{
+
+
+border-top:
+5px solid purple;
+
+}
+
+
+
+.hall-card.legend{
+
+
+border-top:
+5px solid #ff00ff;
+
+box-shadow:
+0 0 35px rgba(255,0,255,.3);
+
+}
+
+
+
+
+
+
+@media(max-width:600px){
+
+
+.podium{
+
+
+gap:5px;
+
+
+}
+
+
+.podium-player{
+
+
+padding:10px 5px;
+
+
+}
+
+
+.player-score{
+
+font-size:20px;
+
+}
+
+
+}
