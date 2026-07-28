@@ -1152,3 +1152,100 @@ font-size:20px;
 
 
 }
+
+/* ==========================================
+   TAMBAHAN UNTUK NAVIGASI & PERATURAN BARU
+   ========================================== */
+
+/* Navigasi Aktif agar tahu sedang di halaman mana */
+nav a.active {
+    background: linear-gradient(135deg, #ffffff, #e0e0e0) !important;
+    color: #d32f2f !important;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Penyesuaian Tabel untuk kolom baru (Avg Margin & Penalti) */
+table th {
+    font-size: 0.75rem; /* Mengecilkan sedikit agar muat banyak kolom */
+    white-space: nowrap;
+}
+
+/* Style Khusus Halaman Peraturan Resmi */
+.konten-peraturan {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.bab {
+    margin-bottom: 40px;
+}
+
+.bab h2 {
+    color: #ffd700;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #d32f2f;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.pasal h3 {
+    color: #4db6ac;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.moto {
+    background: rgba(211, 47, 47, 0.1);
+    border: 1px dashed #d32f2f;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 25px 0;
+    font-size: 1.3rem;
+    text-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+}
+
+.tabel-peraturan {
+    width: 100%;
+    margin: 20px 0;
+    background: rgba(0,0,0,0.2);
+}
+
+.tabel-peraturan th {
+    background: #d32f2f;
+    color: white;
+}
+
+.tabel-peraturan td {
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 10px;
+    color: #e0e0e0;
+}
+
+.penalti-box {
+    background: rgba(231, 76, 60, 0.1);
+    border-left: 5px solid #e74c3c;
+    padding: 15px;
+    margin: 20px 0;
+    color: #ffcdd2;
+}
+
+/* List Style untuk Peraturan */
+.konten-peraturan ul, .konten-peraturan ol {
+    padding-left: 20px;
+    color: #cccccc;
+}
+
+.konten-peraturan li {
+    margin-bottom: 10px;
+}
