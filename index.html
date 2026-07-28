@@ -2,7 +2,8 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>9 Pool Liga</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Pool Liga - Klasemen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,51 +12,32 @@
 <h1>🏆 9 POOL LIGA</h1>
 
 <nav>
-<nav>
-
-<a href="index.html">
-🏆 Klasemen
-</a>
-
-
-<a href="pertandingan.html">
-🎱 Pertandingan
-</a>
-
-
-<a href="pemain.html">
-👥 Pemain
-</a>
-
-
-<a href="achievement.html">
-🏅 Achievements
-</a>
-
-
+    <a href="index.html" class="active">🏆 Klasemen</a>
+    <a href="pertandingan.html">🎱 Pertandingan</a>
+    <a href="pemain.html">👥 Pemain</a>
+    <a href="achievement.html">🏅 Achievements</a>
 </nav>
+
 <table>
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Nama</th>
+            <th>Main</th>
+            <th>Menang</th>
+            <th>Kalah</th>
+            <th>Frame+</th>
+            <th>Frame-</th>
+            <th>Selisih</th>
+            <th>Point</th>
+            <th>Avg Margin</th>
+            <th>Penalti</th>
+        </tr>
+    </thead>
 
-<thead>
-
-<tr>
-    <th>Rank</th>
-    <th>Nama</th>
-    <th>Main</th>
-    <th>Menang</th>
-    <th>Kalah</th>
-    <th>Frame+</th>
-    <th>Frame-</th>
-    <th>Selisih</th>
-    <th>Point</th>
-</tr>
-
-</thead>
-
-<tbody id="isi">
-
-</tbody>
-
+    <tbody id="isi">
+        <!-- Data akan diisi secara otomatis oleh script.js -->
+    </tbody>
 </table>
 
 <script src="script.js"></script>
