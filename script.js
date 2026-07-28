@@ -5,8 +5,12 @@ fetch(url )
   .then(data => {
     let html = "";
 
-    // Memulai loop dari i=1 untuk melewati baris judul (header) di Google Sheets
     for (let i = 1; i < data.length; i++) {
+      // Mengubah nilai Avg Margin menjadi angka dan membatasi 3 desimal
+      // Jika data kosong atau bukan angka, akan tetap menampilkan data asli atau 0.000
+      let avgMargin = data[i][9];
+      let formattedAvg = !isNaN(avgMargin) ? Number(avgMargin).toFixed(3) : avgMargin;
+
       html += `
         <tr>
           <td>${data[i][0]}</td>   <!-- Rank -->
@@ -18,7 +22,7 @@ fetch(url )
           <td>${data[i][6]}</td>   <!-- Frame- -->
           <td>${data[i][7]}</td>   <!-- Selisih -->
           <td>${data[i][8]}</td>   <!-- Point -->
-          <td>${data[i][9]}</td>   <!-- Avg Margin -->
+          <td>${formattedAvg}</td> <!-- Avg Margin (Dibatasi 3 Desimal) -->
           <td>${data[i][10]}</td>  <!-- Penalti -->
         </tr>
       `;
