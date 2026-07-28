@@ -1,149 +1,276 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>9 Pool Liga - Peraturan Resmi</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Style khusus agar teks di dalam kotak putih terbaca jelas */
-    .box-peraturan {
-      max-width: 900px; 
-      margin: 20px auto; 
-      text-align: left; 
-      background: #ffffff; 
-      padding: 40px; 
-      border-radius: 16px; 
-      color: #222222; /* Warna teks hitam agar kontras dengan background putih */
-      line-height: 1.8; 
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    }
-    .box-peraturan h2 { color: #d32f2f; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; text-transform: uppercase; }
-    .box-peraturan h3 { color: #1a1a2e; margin-top: 20px; }
-    .box-peraturan p, .box-peraturan li { font-size: 1rem; margin-bottom: 10px; }
-    .moto-box { background: #fff8f0; border: 1px dashed #e67e22; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; margin: 20px 0; color: #e67e22; }
-    table.peraturan-tabel { width: 100%; border-collapse: collapse; margin: 20px 0; }
-    table.peraturan-tabel th, table.peraturan-tabel td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-    table.peraturan-tabel th { background: #f4f4f4; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Pool Liga - Peraturan Resmi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box-peraturan {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            text-align: left;
+            color: #000000; /* Teks Hitam Pekat */
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        .box-peraturan h1 { color: #000000; margin-bottom: 20px; border-bottom: 4px double #000; padding-bottom: 10px; }
+        .box-peraturan h2 { color: #d32f2f; margin-top: 40px; border-bottom: 2px solid #eee; padding-bottom: 5px; text-transform: uppercase; }
+        .box-peraturan h3 { color: #2c3e50; margin-top: 25px; font-weight: bold; }
+        .moto-box { background: #fff8f0; border: 2px dashed #e67e22; padding: 20px; border-radius: 12px; text-align: center; font-weight: bold; color: #e67e22; margin: 30px 0; font-size: 1.2rem; }
+        .tabel-peraturan { width: 100%; border-collapse: collapse; margin: 20px 0; color: #000; }
+        .tabel-peraturan th, .tabel-peraturan td { border: 1px solid #000; padding: 12px; text-align: left; }
+        .tabel-peraturan th { background: #f2f2f2; font-weight: bold; }
+        .penalti-info { background: #fdf2f2; border-left: 6px solid #d32f2f; padding: 20px; margin: 20px 0; font-weight: 500; }
+        hr { border: 0; border-top: 1px solid #ddd; margin: 30px 0; }
+        ul, ol { margin-bottom: 20px; }
+        li { margin-bottom: 10px; }
+    </style>
 </head>
 <body>
 
-  <h1>🏆 9 POOL LIGA</h1>
+    <h1>🏆 9 POOL LIGA</h1>
 
-  <nav>
-    <a href="peraturan.html" style="background: #ffffff; color: #d32f2f; box-shadow: 0 0 15px rgba(255,255,255,0.5);">📜 Peraturan Resmi</a>
-    <a href="index.html">🏆 Klasemen</a>
-    <a href="pertandingan.html">🎱 Pertandingan</a>
-    <a href="pemain.html">👥 Pemain</a>
-    <a href="achievement.html">🏅 Achievements</a>
-  </nav>
+    <nav>
+        <a href="peraturan.html" style="background: #ffffff; color: #d32f2f; box-shadow: 0 0 15px rgba(255,255,255,0.5);">📜 Peraturan Resmi</a>
+        <a href="index.html">🏆 Klasemen</a>
+        <a href="pertandingan.html">🎱 Pertandingan</a>
+        <a href="pemain.html">👥 Pemain</a>
+        <a href="achievement.html">🏅 Achievements</a>
+    </nav>
 
-  <div class="box-peraturan">
-    <div style="text-align:center; border-bottom: 3px double #333; margin-bottom: 20px; padding-bottom: 10px;">
-        <h1 style="color:#222; margin:0;">PERATURAN RESMI LIGA 9 POOL</h1>
+    <div class="box-peraturan">
+        <div style="text-align: center;">
+            <h1>PERATURAN RESMI LIGA 9 POOL</h1>
+        </div>
+
+        <h2>BAB I: TUJUAN LIGA</h2>
+        <p>Liga diselenggarakan untuk:</p>
+        <ol>
+            <li>meningkatkan kemampuan bermain peserta;</li>
+            <li>menjunjung tinggi sportivitas;</li>
+            <li>menciptakan kompetisi yang adil;</li>
+            <li>menjaga integritas setiap pertandingan.</li>
+        </ol>
+        <div class="moto-box">
+            Moto Liga:  
+
+            "EVERY FRAME MATTERS"  
+
+            <small style="font-weight: normal; color: #555;">Setiap frame memiliki nilai dan wajib diperoleh melalui permainan yang sebenarnya.</small>
+        </div>
+        <h3>EMPAT PRINSIP UTAMA PERATURAN RESMI LIGA 9 POOL</h3>
+        <ol>
+            <li><strong>Sportif</strong> (hasil harus sesuai permainan).</li>
+            <li><strong>Sederhana</strong> (mudah dipahami pemain).</li>
+            <li><strong>Mudah diterapkan</strong> panitia.</li>
+            <li><strong>Meminimalisir manipulasi</strong>.</li>
+        </ol>
+
+        <hr>
+
+        <h2>BAB II: FORMAT PERTANDINGAN</h2>
+        <h3>Pasal 1</h3>
+        <ol>
+            <li>Liga menggunakan sistem Single Round Robin.</li>
+            <li>Setiap peserta hanya bertemu 1 (satu) kali melawan setiap peserta lainnya.</li>
+            <li>Setiap pertandingan menggunakan format Race to 9.</li>
+            <li>Pemain yang pertama mencapai 9 frame dinyatakan sebagai pemenang pertandingan.</li>
+            <li>Seluruh frame yang diperoleh selama pertandingan dihitung sebagai Frame+.</li>
+        </ol>
+
+        <hr>
+
+        <h2>BAB III: SISTEM HANDICAP</h2>
+        <p>Handicap diberikan berdasarkan Tier pemain.</p>
+        <table class="tabel-peraturan">
+            <thead>
+                <tr>
+                    <th>Selisih Tier</th>
+                    <th>Handicap</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1 Tier</td><td>+1 Frame</td></tr>
+                <tr><td>2 Tier</td><td>+2 Frame</td></tr>
+                <tr><td>3 Tier</td><td>+3 Frame</td></tr>
+            </tbody>
+        </table>
+        <p><strong>Contoh:</strong> Tier 1 vs Tier 3. Tier 3 memulai pertandingan dengan skor 2–0. Frame handicap merupakan bagian dari skor resmi pertandingan.</p>
+
+        <hr>
+
+        <h2>BAB IV: DATA KLASEMEN</h2>
+        <p>Website <u>https://amagavrila-netizen.github.io/9pool-liga/</u> menampilkan:</p>
+        <ul>
+            <li>Main</li>
+            <li>Menang</li>
+            <li>Kalah</li>
+            <li>Frame+</li>
+            <li>Frame−</li>
+            <li>Selisih Frame</li>
+            <li>Penalti Administratif</li>
+            <li>Average Margin Kalah</li>
+            <li>Total Frame Resmi (Point )</li>
+        </ul>
+        <h3>Penjelasan</h3>
+        <p><strong>Main:</strong> Jumlah pertandingan yang telah dimainkan.  
+
+        <strong>Menang:</strong> Jumlah pertandingan yang dimenangkan.  
+
+        <strong>Kalah:</strong> Jumlah pertandingan yang kalah.  
+
+        <strong>Frame+:</strong> Jumlah seluruh frame yang diperoleh.  
+
+        <strong>Frame−:</strong> Jumlah seluruh frame yang diterima dari lawan.  
+
+        <strong>Selisih Frame:</strong> Frame+ dikurangi Frame−.  
+
+        <strong>Penalti Administratif:</strong> Pengurangan Frame akibat sanksi panitia. Nilai awal = 0.  
+
+        <strong>Average Margin Kalah:</strong> Jumlah selisih kekalahan dibagi jumlah kekalahan. Semakin kecil nilainya semakin baik.  
+
+        <strong>Total Frame Resmi (Point):</strong> Digunakan sebagai dasar klasemen. Rumus: <code>Total Frame Resmi = (Frame+) − Penalti Administratif</code></p>
+
+        <hr>
+
+        <h2>BAB V: PENENTUAN PERINGKAT</h2>
+        <p>Urutan klasemen ditentukan berdasarkan:</p>
+        <ol>
+            <li>Total Frame Resmi terbesar</li>
+            <li>Jumlah kemenangan pertandingan terbanyak</li>
+            <li>Selisih Frame terbesar</li>
+            <li>Head to Head (hanya apabila dua pemain memiliki seluruh nilai yang sama)</li>
+            <li>Average Margin Kalah terkecil</li>
+            <li>Play-off Race to 3 (apabila masih tetap sama)</li>
+        </ol>
+
+        <hr>
+
+        <h2>BAB VI: PELAPORAN HASIL PERTANDINGAN</h2>
+        <ol>
+            <li>Setelah pertandingan selesai, kedua pemain wajib melapor kepada panitia.</li>
+            <li>Panitia membacakan kembali skor pertandingan.</li>
+            <li>Kedua pemain wajib menyatakan bahwa skor tersebut benar.</li>
+            <li>Setelah dicatat oleh panitia, dan diupload di Whatsapp group hasil pertandingan dinyatakan FINAL.</li>
+        </ol>
+        <p>Keberatan terhadap skor hanya dapat diajukan sebelum salah satu pemain memainkan pertandingan berikutnya.</p>
+
+        <hr>
+
+        <h2>BAB VII: PAKTA INTEGRITAS PESERTA</h2>
+        <p>Setiap peserta Liga 9 Pool wajib menjunjung tinggi sportivitas, kejujuran, dan integritas dalam setiap pertandingan. Dengan mendaftarkan diri serta mengikuti Liga 9 POOL ini, setiap peserta secara otomatis dianggap telah membaca, memahami, menerima, dan menyetujui Pakta Integritas Peserta, serta bersedia mematuhi seluruh ketentuan yang berlaku tanpa pengecualian.</p>
+        <p><strong>Setiap peserta wajib:</strong></p>
+        <ul>
+            <li>bermain secara sportif dan menjunjung tinggi nilai fair play;</li>
+            <li>bertanding dengan kemampuan terbaik tanpa sengaja mengalah atau mengurangi usaha bermain;</li>
+            <li>tidak melakukan manipulasi skor dalam bentuk apa pun;</li>
+            <li>tidak meminta penambahan frame yang tidak diperoleh melalui permainan;</li>
+            <li>tidak memberikan penambahan frame kepada lawan yang tidak diperoleh melalui permainan;</li>
+            <li>tidak mengurangi frame kemenangan sendiri untuk menguntungkan pihak lain;</li>
+            <li>tidak melakukan pengaturan hasil pertandingan (match fixing) atau bekerja sama untuk memengaruhi klasemen liga;</li>
+            <li>melaporkan hasil pertandingan sesuai dengan skor yang sebenarnya;</li>
+            <li>menjaga sikap saling menghormati terhadap lawan, panitia, dan seluruh peserta liga;</li>
+            <li>mematuhi seluruh Peraturan Liga serta keputusan panitia yang diambil berdasarkan peraturan yang berlaku.</li>
+        </ul>
+        <p>Setiap pelanggaran terhadap Pakta Integritas akan diproses sesuai Peraturan Liga dan dapat dikenakan sanksi administratif maupun sanksi lainnya.</p>
+
+        <hr>
+
+        <h2>BAB VIII: LARANGAN</h2>
+        <p>Peserta dilarang:</p>
+        <ul>
+            <li>mengubah hasil pertandingan;</li>
+            <li>meminta tambahan frame;</li>
+            <li>memberikan tambahan frame;</li>
+            <li>mengurangi frame kemenangan;</li>
+            <li>bernegosiasi mengenai skor;</li>
+            <li>sengaja memberikan kemenangan;</li>
+            <li>sengaja memberikan frame;</li>
+            <li>melakukan pengaturan hasil pertandingan (match fixing);</li>
+            <li>bekerja sama untuk mempengaruhi klasemen.</li>
+        </ul>
+
+        <hr>
+
+        <h2>BAB IX: DEFINISI MANIPULASI SKOR</h2>
+        <p>Manipulasi skor adalah setiap tindakan yang menyebabkan skor resmi pertandingan tidak sesuai dengan hasil permainan yang sebenarnya. Manipulasi dapat dilakukan oleh pemain yang menang, pemain yang kalah, maupun kedua pemain secara bersama-sama. Kedua pemain dapat dikenai sanksi apabila terbukti menyepakati manipulasi tersebut.</p>
+
+        <hr>
+
+        <h2>BAB X: KEWENANGAN PANITIA</h2>
+        <p>Panitia berhak meminta klarifikasi, saksi, bukti video, melakukan investigasi, menunda pengesahan hasil, menjatuhkan sanksi administratif, dan memperbaiki kesalahan pencatatan. Keputusan panitia bersifat final.</p>
+
+        <hr>
+
+        <h2>BAB XI: SISTEM SANKSI</h2>
+        <p><strong>Pelanggaran Pertama:</strong> Teguran tertulis dan dicatat dalam administrasi liga.</p>
+        <p><strong>Pelanggaran Kedua:</strong> Penalti Administratif sebesar 5–15 Frame (besarnya ditentukan berdasarkan tingkat pelanggaran).</p>
+        <p><strong>Pelanggaran Ketiga:</strong> Diskualifikasi dari liga.</p>
+
+        <hr>
+
+        <h2>BAB XII: PENALTI ADMINISTRATIF</h2>
+        <p>Penalti Administratif tidak mengubah: hasil pertandingan, jumlah menang, jumlah kalah, Frame+, Frame−, dan riwayat pertandingan. Penalti hanya mengurangi <strong>Total Frame Resmi</strong>.</p>
+        <div class="penalti-info">
+            <strong>Contoh:</strong>  
+
+            Frame+: 114  
+
+            Penalti: 10  
+
+            Total Frame Resmi: 104  
+
+            <small>Dengan demikian riwayat pertandingan tetap valid namun pelanggaran tetap berdampak terhadap klasemen.</small>
+        </div>
+
+        <hr>
+
+        <h2>BAB XIII: KESALAHAN PENCATATAN</h2>
+        <p>Apabila terjadi kesalahan input oleh panitia, panitia berhak melakukan koreksi administrasi. Koreksi ini bukan merupakan sanksi.</p>
+
+        <hr>
+
+        <h2>BAB XIV: TRANSPARANSI</h2>
+        <p>Website liga wajib menampilkan klasemen terbaru, riwayat pertandingan, riwayat Penalti Administratif, dan peraturan liga yang berlaku. Riwayat Penalti Administratif memuat: Nama pemain, Tanggal, Jenis pelanggaran, Besaran penalti, dan Keputusan panitia.</p>
+
+        <hr>
+
+        <h2>BAB XV: ETIKA SPORTIVITAS</h2>
+        <p>Setiap peserta wajib menjaga kejujuran, rasa hormat kepada lawan, rasa hormat kepada panitia, dan ketertiban selama pertandingan. Tindakan yang bertentangan dengan semangat sportivitas dapat dikenakan sanksi administratif.</p>
+
+        <hr>
+
+        <h2>BAB XVI: PENUTUP</h2>
+        <p>Dengan mengikuti Liga 9 POOL ini, setiap peserta dianggap telah membaca seluruh Peraturan Liga, memahami seluruh ketentuan, menyetujui seluruh aturan, dan bersedia mematuhi keputusan panitia. Keputusan panitia bersifat final dan mengikat.</p>
+
+        <hr>
+
+        <h2>Lampiran A — Pedoman Penjatuhan Penalti Administratif</h2>
+        <table class="tabel-peraturan">
+            <thead>
+                <tr>
+                    <th>Tingkat Pelanggaran</th>
+                    <th>Contoh</th>
+                    <th>Penalti yang Diterapkan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ringan</td><td>Kesalahan administrasi tidak disengaja</td><td>Teguran atau tanpa penalti</td></tr>
+                <tr><td>Sedang</td><td>Upaya manipulasi skor pertama yang terbukti</td><td>-5 Frame</td></tr>
+                <tr><td>Berat</td><td>Manipulasi skor yang memengaruhi klasemen</td><td>-10 Frame</td></tr>
+                <tr><td>Sangat Berat</td><td>Pengulangan, kolusi, atau match fixing</td><td>-15 Frame atau diskualifikasi</td></tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 40px; font-style: italic; font-size: 0.95rem; border-top: 1px solid #000; padding-top: 20px;">
+            Peraturan ini dibuat agar memenuhi kebutuhan penting Liga 9 Pool: Adil (Every Frame Matters), Praktis bagi panitia, dan Memiliki efek jera bagi pelanggar.
+        </div>
     </div>
-
-    <h2>BAB I: TUJUAN LIGA</h2>
-    <p>Liga diselenggarakan untuk:</p>
-    <ol>
-        <li>meningkatkan kemampuan bermain peserta;</li>
-        <li>menjunjung tinggi sportivitas;</li>
-        <li>menciptakan kompetisi yang adil;</li>
-        <li>menjaga integritas setiap pertandingan.</li>
-    </ol>
-    <div class="moto-box">
-        "EVERY FRAME MATTERS"  
-
-        <small>Setiap frame memiliki nilai dan wajib diperoleh melalui permainan yang sebenarnya.</small>
-    </div>
-    <p><strong>EMPAT PRINSIP UTAMA:</strong> Sportif, Sederhana, Mudah diterapkan panitia, Meminimalisir manipulasi.</p>
-
-    <h2>BAB II: FORMAT PERTANDINGAN</h2>
-    <p>1. Liga menggunakan sistem Single Round Robin.  
-
-       2. Setiap peserta hanya bertemu 1 (satu) kali melawan setiap peserta lainnya.  
-
-       3. Setiap pertandingan menggunakan format Race to 9.  
-
-       4. Pemain yang pertama mencapai 9 frame dinyatakan sebagai pemenang.  
-
-       5. Seluruh frame yang diperoleh dihitung sebagai Frame+.</p>
-
-    <h2>BAB III: SISTEM HANDICAP</h2>
-    <table class="peraturan-tabel">
-        <tr><th>Selisih Tier</th><th>Handicap</th></tr>
-        <tr><td>1 Tier</td><td>+1 Frame</td></tr>
-        <tr><td>2 Tier</td><td>+2 Frame</td></tr>
-        <tr><td>3 Tier</td><td>+3 Frame</td></tr>
-    </table>
-    <p>Contoh: Tier 1 vs Tier 3, maka Tier 3 memulai pertandingan dengan skor 2–0.</p>
-
-    <h2>BAB IV: DATA KLASEMEN</h2>
-    <p>Website menampilkan: Main, Menang, Kalah, Frame+, Frame−, Selisih Frame, Penalti Administratif, Average Margin Kalah, Total Frame Resmi (Point).</p>
-
-    <h2>BAB V: PENENTUAN PERINGKAT</h2>
-    <p>Urutan klasemen ditentukan berdasarkan:</p>
-    <ol>
-        <li>Total Frame Resmi terbesar</li>
-        <li>Jumlah kemenangan pertandingan terbanyak</li>
-        <li>Selisih Frame terbesar</li>
-        <li>Head to Head</li>
-        <li>Average Margin Kalah terkecil</li>
-        <li>Play-off Race to 3</li>
-    </ol>
-
-    <h2>BAB VI: PELAPORAN HASIL</h2>
-    <p>1. Setelah selesai, kedua pemain wajib melapor kepada panitia.  
-
-       2. Panitia membacakan kembali skor.  
-
-       3. Pemain menyatakan skor benar.  
-
-       4. Setelah diupload di Whatsapp, hasil dinyatakan FINAL.</p>
-
-    <h2>BAB VII: PAKTA INTEGRITAS</h2>
-    <p>Setiap peserta wajib menjunjung tinggi sportivitas, kejujuran, dan integritas. Dilarang melakukan manipulasi skor, match fixing, atau sengaja mengalah.</p>
-
-    <h2>BAB VIII: LARANGAN</h2>
-    <ul>
-        <li>Mengubah hasil pertandingan</li>
-        <li>Meminta/memberikan tambahan frame</li>
-        <li>Bernegosiasi mengenai skor</li>
-        <li>Sengaja memberikan kemenangan/frame</li>
-    </ul>
-
-    <h2>BAB IX: MANIPULASI SKOR</h2>
-    <p>Manipulasi skor adalah tindakan yang menyebabkan skor resmi tidak sesuai hasil asli. Pelaku dapat dikenai sanksi berat.</p>
-
-    <h2>BAB X: KEWENANGAN PANITIA</h2>
-    <p>Panitia berhak melakukan investigasi, meminta bukti video, dan menjatuhkan sanksi administratif. Keputusan panitia bersifat final.</p>
-
-    <h2>BAB XI & XII: SANKSI & PENALTI</h2>
-    <p><strong>Pelanggaran 1:</strong> Teguran tertulis.  
-
-       <strong>Pelanggaran 2:</strong> Penalti 5–15 Frame.  
-
-       <strong>Pelanggaran 3:</strong> Diskualifikasi.</p>
-    <div style="background:#fdf2f2; border-left:5px solid #d32f2f; padding:10px; margin:10px 0;">
-        Penalti hanya mengurangi <strong>Total Frame Resmi</strong>, tidak mengubah riwayat menang/kalah.
-    </div>
-
-    <h2>BAB XIV: TRANSPARANSI</h2>
-    <p>Website wajib menampilkan klasemen, riwayat pertandingan, riwayat penalti, dan peraturan liga.</p>
-
-    <h2>BAB XV & XVI: ETIKA & PENUTUP</h2>
-    <p>Setiap peserta dianggap telah membaca, memahami, dan menyetujui seluruh aturan liga serta keputusan panitia.</p>
-
-    <h2 style="background:#f4f4f4; padding:5px;">LAMPIRAN A: PEDOMAN PENALTI</h2>
-    <table class="peraturan-tabel">
-        <tr><th>Tingkat</th><th>Contoh</th><th>Penalti</th></tr>
-        <tr><td>Ringan</td><td>Salah administrasi</td><td>Teguran</td></tr>
-        <tr><td>Sedang</td><td>Upaya manipulasi pertama</td><td>-5 Frame</td></tr>
-        <tr><td>Berat</td><td>Manipulasi disengaja</td><td>-10 Frame</td></tr>
-        <tr><td>Sangat Berat</td><td>Match fixing/Kolusi</td><td>-15 Frame/Diskualifikasi</td></tr>
-    </table>
-  </div>
 
 </body>
 </html>
