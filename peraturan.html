@@ -5,7 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9 Pool Liga - Peraturan Resmi</title>
     <link rel="stylesheet" href="style.css">
-    
+    <style>
+
+/* ==========================
+   KHUSUS HALAMAN PERATURAN
+========================== */
+
+.box-peraturan{
+    max-width:1000px;
+    margin:40px auto;
+    background:#ffffff;
+    color:#222;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,.45);
+    text-align:justify;
+    line-height:1.9;
+}
+
+/* Judul di dalam box */
+.box-peraturan h1{
+    color:#111;
+    text-align:center;
+    font-size:42px;
+    margin-bottom:30px;
+    text-shadow:none;
+}
+
+.box-peraturan h2{
+    color:#c62828;
+    border-bottom:3px solid #ddd;
+    padding-bottom:8px;
+    margin-top:45px;
+    margin-bottom:18px;
+    text-align:left;
+}
+
+.box-peraturan h3{
+    color:#1f3b63;
+    margin-top:30px;
+    margin-bottom:10px;
+    text-align:left;
+}
+
+.box-peraturan p{
+    color:#333;
+    text-align:justify;
+    margin:15px 0;
+}
+
+.box-peraturan ol,
+.box-peraturan ul{
+    color:#333;
+    margin-left:28px;
+    margin-bottom:18px;
+    text-align:left;
+}
+
+.box-peraturan li{
+    margin:10px 0;
+    line-height:1.8;
+}
+
+/* Garis */
+.box-peraturan hr{
+    border:none;
+    border-top:1px solid #ccc;
+    margin:40px 0;
+}
+
+/* Moto */
+.moto-box{
+    background:#fff8f1;
+    border:2px dashed #ef6c00;
+    border-radius:12px;
+    padding:22px;
+    text-align:center;
+    margin:30px 0;
+    color:#ef6c00;
+    font-weight:bold;
+    font-size:24px;
+}
+
+.moto-box small{
+    display:block;
+    margin-top:10px;
+    color:#555;
+    font-size:15px;
+    font-weight:normal;
+}
+
+/* Tabel khusus */
+.tabel-peraturan,
+.tabel-peraturan-resmi{
+
+    width:100%;
+    margin:25px 0;
+    border-collapse:collapse;
+    background:#fff;
+
+}
+
+.tabel-peraturan th,
+.tabel-peraturan-resmi th{
+
+    background:#d32f2f;
+    color:#fff;
+    padding:14px;
+    border:1px solid #999;
+
+}
+
+.tabel-peraturan td,
+.tabel-peraturan-resmi td{
+
+    background:#fff;
+    color:#222;
+    padding:12px;
+    border:1px solid #bbb;
+
+}
+
+/* Kotak Penalti */
+
+.penalti-info{
+
+    background:#fff4f4;
+    border-left:6px solid #d32f2f;
+    padding:20px;
+    color:#222;
+    margin:25px 0;
+
+}
+
+.penalti-info small{
+
+    display:block;
+    margin-top:10px;
+    color:#666;
+
+}
+
+code{
+
+    background:#eee;
+    padding:2px 6px;
+    border-radius:4px;
+
+}
+
+</style>
 </head>
 <body>
 
@@ -20,13 +169,13 @@
     </nav>
 
     <div class="box-peraturan">
-        <div style="text-align: center;">
+        <div>
             <h1>PERATURAN RESMI LIGA 9 POOL</h1>
         </div>
 
         <h2>BAB I: TUJUAN LIGA</h2>
-        <p>Liga diselenggarakan untuk:</p>
-        <ol>
+        <p><strong>Liga diselenggarakan untuk:</strong></p>
+        <ol style="text-align:left;">
             <li>meningkatkan kemampuan bermain peserta;</li>
             <li>menjunjung tinggi sportivitas;</li>
             <li>menciptakan kompetisi yang adil;</li>
@@ -63,7 +212,7 @@
 
         <h2>BAB III: SISTEM HANDICAP</h2>
         <p>Handicap diberikan berdasarkan Tier pemain.</p>
-        <table class="tabel-peraturan-resmi">
+        <table class="tabel-peraturan">
             <thead>
                 <tr>
                     <th>Selisih Tier</th>
