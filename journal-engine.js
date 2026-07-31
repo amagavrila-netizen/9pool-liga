@@ -22,11 +22,12 @@ Promise.all([
 
     buatTrend(pertandingan);
 
+    buatMatchOfTheDay(pertandingan);
+
 })
 .catch(err=>{
     console.log(err);
 });
-
 
 //==========================================
 // HEADLINE
@@ -221,6 +222,79 @@ function buatTrend(pertandingan){
     <b>${terbanyak}</b> pertandingan.
 
     </p>
+
+    </div>
+
+    `;
+
+}
+//==========================================
+// MATCH OF THE DAY
+//==========================================
+
+function buatMatchOfTheDay(data){
+
+    const last=data[data.length-1];
+
+    const ronde=last[1];
+    const playerA=last[2];
+    const scoreA=Number(last[3]);
+    const scoreB=Number(last[4]);
+    const playerB=last[5];
+    const winner=last[6];
+
+    let narasi="";
+
+    const margin=Math.abs(scoreA-scoreB);
+
+    if(margin==1){
+
+        narasi=
+        `Pertandingan berlangsung sangat dramatis. <b>${winner}</b> berhasil menang dengan selisih hanya satu frame.`;
+
+    }
+
+    else if(margin<=3){
+
+        narasi=
+        `<b>${winner}</b> harus bekerja keras sebelum akhirnya mengamankan kemenangan penting.`;
+
+    }
+
+    else{
+
+        narasi=
+        `<b>${winner}</b> tampil sangat dominan dan mengendalikan pertandingan sejak awal.`;
+
+    }
+
+    document.getElementById("matchDay").innerHTML=`
+
+    <div class="card">
+
+        <h2>🎱 Match of the Day</h2>
+
+        <p>
+
+        <b>Ronde ${ronde}</b>
+
+        <br><br>
+
+        ${playerA}
+
+        <b>${scoreA}</b>
+
+        -
+
+        <b>${scoreB}</b>
+
+        ${playerB}
+
+        <br><br>
+
+        ${narasi}
+
+        </p>
 
     </div>
 
