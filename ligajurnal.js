@@ -1,26 +1,32 @@
 fetch("jurnal.json")
+.then(res => res.json())
+.then(data => {
 
-.then(res=>res.json())
-
-.then(data=>{
-
-document.getElementById("isiJurnal").innerHTML=`
+document.getElementById("isiJurnal").innerHTML = `
 
 <h2>📰 Liga Jurnal</h2>
 
-<p><b>${data.tanggal}</b></p>
+<p>${data.tanggal}</p>
 
 <hr>
 
-<h3>🔥 Highlight Hari Ini</h3>
+<h2>${data.headline}</h2>
 
 <p>${data.highlight}</p>
 
 <hr>
 
-<h3>📈 Naik Daun</h3>
+<h3>⭐ Player of the Day</h3>
 
-<p>${data.naik}</p>
+<p><b>${data.playerOfDay}</b></p>
+
+<p>${data.playerStory}</p>
+
+<hr>
+
+<h3>⚠️ Warning</h3>
+
+<p>${data.warning}</p>
 
 <hr>
 
@@ -33,6 +39,12 @@ document.getElementById("isiJurnal").innerHTML=`
 <h3>🧠 Mental Coaching</h3>
 
 <p>${data.mental}</p>
+
+<hr>
+
+<h3>📊 Fakta Hari Ini</h3>
+
+<p>${data.fact}</p>
 
 `;
 
