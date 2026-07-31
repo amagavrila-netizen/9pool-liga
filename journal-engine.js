@@ -1,128 +1,39 @@
-function buatNarasi(data){
+const klasemenURL =
+"https://script.google.com/macros/s/AKfycbweEZmfiYZG9bOtKyQKar7bcW-Zv8sC75bvliYN7Eurq94veGujyNfWTxfCDvAfGn7Ndg/exec";
 
-    let html="";
+const pertandinganURL =
+"https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnS6WoVWincu7nBJyd9r01BsKoCQoa5MKvB8bkjvnuGygU0JZ8YrWT3L0s3Vuq38erG9Quxl2R3JVFNb-mxeshgDai_XAfZvaUl5k6j9mT45khcmhwgUh1DiUpPSv_lubHrEm0wqnYUlcYBuv8OU33AII-9EfnYdHR7YCZ1XfNKyAIdcSdagYVSmZNhA01HFFiXCFyv4M93ifUnykszCk5HWDtSk1prNwqFyd_uJ7xBR1lnizFiu0jvnsCmIk12jxrUpiQsu7-vsRHtvmqZx3GbCVGsXBQ&lib=MQ974VFXeXNHBp6rsCAsq0yJ67tG3SoUN";
 
-    //---------------------------------
-    // KLASMEN
-    //---------------------------------
+Promise.all([
+    fetch(klasemenURL).then(r => r.json()),
+    fetch(pertandinganURL).then(r => r.json())
+])
+.then(([klasemen, pertandingan]) => {
 
-    let klasemen=data.klasemen;
+    buatHeadline(klasemen);
 
-    klasemen.sort((a,b)=>b.point-a.point);
+});
+function buatHeadline(data){
 
-    let nomor1=klasemen[0];
+    const juara = data[1];
 
-    html+=`
-    <h2>🔥 Sorotan Hari Ini</h2>
+    document.getElementById("headline").innerHTML = `
+        <div class="card">
+            <h2>🔥 Headline Hari Ini</h2>
 
-    <p>
-    <b>${nomor1.nama}</b> masih memimpin klasemen dengan
-    <b>${nomor1.point}</b> poin.
-    Konsistensi menjadi kekuatan utamanya.
-    </p>
+            <p>
+
+            <b>${juara[1]}</b>
+
+            masih memimpin klasemen dengan
+
+            <b>${juara[8]}</b> poin.
+
+            Liga mulai memasuki fase yang semakin ketat.
+
+            </p>
+
+        </div>
     `;
-
-    //---------------------------------
-    // PENGEJAR
-    //---------------------------------
-
-    if(klasemen.length>=2){
-
-        let kedua=klasemen[1];
-
-        let selisih=nomor1.point-kedua.point;
-
-        html+=`
-
-        <p>
-
-        Jarak dengan posisi kedua tinggal
-
-        <b>${selisih}</b>
-
-        frame.
-
-        Persaingan perebutan puncak klasemen masih sangat terbuka.
-
-        </p>
-
-        `;
-    }
-
-    //---------------------------------
-    // PALING PRODUKTIF
-    //---------------------------------
-
-    let produktif=[...klasemen];
-
-    produktif.sort((a,b)=>b.framePlus-a.framePlus);
-
-    html+=`
-
-    <h2>🎯 Mesin Frame</h2>
-
-    <p>
-
-    ${produktif[0].nama}
-
-    menjadi pemain paling produktif
-
-    dengan
-
-    <b>${produktif[0].framePlus}</b>
-
-    frame.
-
-    </p>
-
-    `;
-
-    //---------------------------------
-    // PERTANDINGAN TERAKHIR
-    //---------------------------------
-
-    let last=data.match[data.match.length-1];
-
-    html+=`
-
-    <h2>📰 Hasil Terbaru</h2>
-
-    <p>
-
-    ${last.winner}
-
-    mengalahkan
-
-    ${last.loser}
-
-    dengan skor
-
-    <b>${last.scoreA}-${last.scoreB}</b>
-
-    </p>
-
-    `;
-
-    //---------------------------------
-    // MOTIVASI
-    //---------------------------------
-
-    html+=`
-
-    <h2>💡 Insight Hari Ini</h2>
-
-    <p>
-
-    Liga belum selesai.
-
-    Satu kemenangan besar dapat mengubah posisi klasemen secara signifikan.
-
-    Bermainlah satu rack demi satu rack.
-
-    </p>
-
-    `;
-
-    return html;
 
 }
