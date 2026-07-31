@@ -1,11 +1,31 @@
 {
-"tanggal":"31 Juli 2026",
+  "tanggal": "24 Juli 2026",
 
-"highlight":"Bang Larosa semakin kokoh di puncak klasemen.",
+  "headline": "Bang Larosa semakin kokoh di puncak klasemen setelah kembali meraih kemenangan atas Solis.",
 
-"naik":"Habib mulai menunjukkan performa stabil.",
+  "berita": [
+    "Bang Jul masih menjadi pesaing utama dengan margin frame terbaik.",
+    "Chad kembali menunjukkan konsistensi sebagai Tier 1 paling stabil.",
+    "Empat pemain baru mulai bergabung dan siap mengganggu papan tengah."
+  ],
 
-"strategy":"Jangan memaksakan cut shot tipis jika tersedia safety.",
+  "pemainHariIni": {
+    "nama": "Bang Larosa",
+    "alasan": "2 kemenangan beruntun dengan total 18 frame."
+  },
 
-"mental":"Mainkan satu bola dalam satu waktu."
+  "warning": {
+    "nama": "Bang Jul",
+    "isi": "Selisih frame +54 membuatnya tetap ancaman utama."
+  },
+
+  "coaching": {
+    "judul": "Mental Hari Ini",
+    "isi": "Jangan mengejar kemenangan besar. Fokus memenangkan satu rack pada satu waktu."
+  },
+
+  "tips": {
+    "judul": "Tips Teknik",
+    "isi": "Selalu berhenti 1 detik di cue ball sebelum menarik cue."
+  }
 }
