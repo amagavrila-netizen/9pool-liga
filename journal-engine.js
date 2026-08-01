@@ -682,3 +682,203 @@ function buatCoaching(data){
     `;
 
 }
+//==========================================
+// COACHING PLAYER
+//==========================================
+
+function buatCoaching(data){
+
+    let teks="";
+
+    teks += `
+    <div class="card">
+
+    <h2>🎯 Coaching Hari Ini</h2>
+
+    `;
+
+
+    teks += `
+    <p>
+    <b>Player Rank 1-10</b><br>
+    Fokus utama adalah menjaga standar permainan.
+    Jangan mengejar kemenangan dengan risiko tinggi.
+    Pertahankan rutinitas pre-shot, kontrol tempo,
+    dan minimalkan kesalahan pada bola mudah.
+    Konsistensi adalah pembeda pemain papan atas.
+    </p>
+    `;
+
+
+    teks += `
+    <p>
+    <b>Player Rank 11-20</b><br>
+    Prioritas peningkatan adalah mengubah peluang menjadi poin.
+    Perbaiki keputusan safety, kontrol cue ball,
+    serta kemampuan menutup pertandingan ketika sudah unggul.
+    Setiap frame memiliki nilai penting untuk mengejar klasemen.
+    </p>
+    `;
+
+
+    teks += `
+    <p>
+    <b>Player Rank 21-30</b><br>
+    Fokus pembangunan fondasi permainan.
+    Utamakan akurasi potting, pukulan aman,
+    dan mengurangi kesalahan sendiri.
+    Kemenangan kecil yang konsisten akan memperbaiki posisi.
+    </p>
+    `;
+
+
+    teks += `
+    </div>
+    `;
+
+
+    document.getElementById("coach").innerHTML=teks;
+
+}
+
+
+
+//==========================================
+// MENTAL GAME
+//==========================================
+
+function buatMental(data){
+
+document.getElementById("mental").innerHTML=`
+
+<div class="card">
+
+<h2>🧠 Mental Game</h2>
+
+<p>
+Tekanan terbesar dalam liga bukan hanya berasal dari lawan,
+tetapi dari keputusan sendiri ketika pertandingan memasuki
+frame-frame akhir.
+
+Tetap gunakan tempo yang sama saat latihan maupun pertandingan.
+Jangan mempercepat stroke ketika menghadapi bola penting.
+Pemain yang mampu menjaga ketenangan biasanya memenangkan
+lebih banyak frame krusial.
+</p>
+
+</div>
+
+`;
+
+}
+
+
+
+//==========================================
+// STRATEGI
+//==========================================
+
+function buatStrategi(data){
+
+const leader=data[1];
+const posisi2=data[2];
+
+const selisih=
+Number(leader[8])-Number(posisi2[8]);
+
+
+let teks="";
+
+
+if(selisih<=5){
+
+teks=
+`
+Persaingan papan atas sangat ketat.
+Strategi terbaik adalah bermain lebih agresif,
+karena setiap kemenangan dapat langsung mengubah posisi klasemen.
+`;
+
+}
+
+else if(selisih<=15){
+
+teks=
+`
+Jarak klasemen masih dapat dikejar.
+Prioritaskan kemenangan konsisten daripada mencoba
+permainan spektakuler dengan risiko tinggi.
+`;
+
+}
+
+else{
+
+teks=
+`
+Pemimpin klasemen memiliki jarak yang cukup besar.
+Fokus utama pemain lain adalah membangun momentum,
+mengurangi kekalahan besar, dan mengambil keuntungan
+dari pertandingan berikutnya.
+`;
+
+}
+
+
+document.getElementById("strategy").innerHTML=
+
+`
+
+<div class="card">
+
+<h2>♟ Strategi Liga</h2>
+
+<p>${teks}</p>
+
+</div>
+
+`;
+
+}
+
+
+
+//==========================================
+// PREDIKSI
+//==========================================
+
+function buatPrediksi(data){
+
+const leader=data[1];
+
+const runner=data[2];
+
+
+document.getElementById("prediction").innerHTML=
+
+`
+
+<div class="card">
+
+<h2>🔮 Prediksi Fase Berikutnya</h2>
+
+
+<p>
+
+Dengan kondisi klasemen saat ini,
+<b>${leader[1]}</b> berada pada posisi terbaik.
+
+Namun perkembangan liga masih dapat berubah.
+<b>${runner[1]}</b> dan pesaing lainnya masih memiliki peluang
+apabila mampu menjaga konsistensi kemenangan.
+
+Pertandingan berikutnya akan sangat menentukan perubahan
+peta persaingan.
+
+</p>
+
+</div>
+
+`;
+
+}
