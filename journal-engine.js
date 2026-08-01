@@ -22,15 +22,15 @@ Promise.all([
 
     buatTrend(pertandingan);
 
-    buatMatchOfTheDay(pertandingan);
+    buatCoaching();
 
-    buatCoaching(klasemen, pertandingan);
-
-    buatMental(klasemen);
+    buatMental();
 
     buatStrategy(klasemen);
 
     buatPrediction(klasemen);
+
+    buatMatchOfTheDay(pertandingan);
 
 })
 .catch(err=>{
@@ -880,5 +880,164 @@ peta persaingan.
 </div>
 
 `;
+
+}
+//==========================================
+// STRATEGI MINGGU INI
+//==========================================
+
+function buatStrategy(data){
+
+    const leader = data[1];
+    const runner = data[2];
+
+    const selisih =
+    Number(leader[8]) - Number(runner[8]);
+
+    let judul="";
+    let isi="";
+
+    if(selisih<=5){
+
+        judul="🔥 Liga Masih Terbuka";
+
+        isi=`
+        Perebutan posisi teratas masih sangat ketat.
+
+        Prioritas pemain papan atas bukan lagi mencari kemenangan besar,
+        melainkan menghindari kehilangan frame yang tidak perlu.
+
+        Dalam kondisi seperti ini, satu kemenangan tipis sering kali
+        lebih bernilai daripada permainan yang terlalu agresif.
+        `;
+
+    }
+
+    else if(selisih<=15){
+
+        judul="⚔ Mengejar Sang Pemimpin";
+
+        isi=`
+        Selisih klasemen masih cukup realistis untuk dikejar.
+
+        Fokus utama adalah menjaga konsistensi kemenangan sambil
+        memperbaiki efisiensi frame.
+
+        Jangan hanya mengejar menang.
+        Menang dengan kehilangan frame seminimal mungkin
+        akan memberikan dampak besar terhadap klasemen.
+        `;
+
+    }
+
+    else{
+
+        judul="👑 Pemimpin Mulai Menjauh";
+
+        isi=`
+        Saat pemuncak klasemen mulai menciptakan jarak,
+        strategi terbaik bukan bermain terburu-buru.
+
+        Bangun kemenangan secara konsisten,
+        karena liga panjang biasanya dimenangkan
+        oleh pemain yang stabil,
+        bukan pemain yang sesekali tampil luar biasa.
+        `;
+
+    }
+
+    document.getElementById("strategy").innerHTML=`
+
+    <div class="card">
+
+        <h2>🎯 Strategi Minggu Ini</h2>
+
+        <h3>${judul}</h3>
+
+        <p>${isi}</p>
+
+    </div>
+
+    `;
+
+}
+//==========================================
+// AI PREDICTION
+//==========================================
+
+function buatPrediction(data){
+
+    const p1 = data[1];
+    const p2 = data[2];
+    const p3 = data[3];
+    const p10 = data.length > 10 ? data[10] : null;
+
+    const gap12 = Number(p1[8]) - Number(p2[8]);
+    const gap23 = Number(p2[8]) - Number(p3[8]);
+
+    let judul = "";
+    let isi = "";
+
+    if(gap12 <= 5){
+
+        judul = "🏆 Perebutan Gelar";
+
+        isi = `
+        Persaingan menuju gelar juara masih sepenuhnya terbuka.
+        Selisih poin antar pemain papan atas sangat tipis sehingga
+        satu pertandingan saja dapat mengubah pemuncak klasemen.
+        Konsistensi akan menjadi faktor penentu hingga pekan terakhir.
+        `;
+
+    }
+
+    else if(gap12 <= 15){
+
+        judul = "👑 Pemimpin Masih Bisa Dikejar";
+
+        isi = `
+        Pemuncak klasemen masih memiliki keuntungan,
+        namun belum berada di zona aman.
+        Para pesaing masih memiliki peluang mengejar apabila
+        mampu menjaga kemenangan secara beruntun.
+        `;
+
+    }
+
+    else{
+
+        judul = "🚀 Peluang Juara";
+
+        isi = `
+        Pemuncak klasemen mulai menciptakan jarak yang cukup besar.
+        Apabila mampu mempertahankan performa saat ini,
+        peluang mempertahankan posisi pertama sangat tinggi.
+        `;
+
+    }
+
+    if(p10){
+
+        isi += `
+        <br><br>
+        Persaingan menuju posisi Top 10 juga diperkirakan akan
+        berlangsung sengit karena selisih poin antarpemain
+        masih relatif tipis.
+        `;
+    }
+
+    document.getElementById("prediction").innerHTML = `
+
+    <div class="card">
+
+        <h2>🔮 Prediksi AI</h2>
+
+        <h3>${judul}</h3>
+
+        <p>${isi}</p>
+
+    </div>
+
+    `;
 
 }
