@@ -618,3 +618,67 @@ document.getElementById("prediction").innerHTML=
 `;
 
 }
+//==========================================
+// COACHING RANK
+//==========================================
+
+function buatCoaching(data){
+
+    let rank1_10 = `
+    Pemain papan atas sudah memiliki fondasi permainan yang kuat.
+    Fokus berikutnya bukan hanya mencari kemenangan,
+    tetapi meningkatkan kualitas keputusan.
+
+    Prioritas latihan:
+    - Menjaga tempo stroke tetap stabil saat tekanan tinggi.
+    - Memilih safety ketika peluang pot terlalu kecil.
+    - Memperbaiki kontrol cue ball agar kemenangan semakin meyakinkan.
+    `;
+
+
+    let rank10_20 = `
+    Pemain kelompok menengah memiliki potensi besar untuk naik peringkat.
+    Perbedaan utama dengan papan atas biasanya berada pada konsistensi.
+
+    Prioritas latihan:
+    - Kurangi kesalahan mudah setelah mendapatkan peluang.
+    - Bangun rutinitas sebelum setiap pukulan.
+    - Latih penyelesaian bola 7, 8, dan 9 agar kemenangan tidak terlepas.
+    `;
+
+
+    let rank20_30 = `
+    Pemain kelompok ini harus membangun fondasi permainan terlebih dahulu.
+
+    Fokus utama:
+    - Membuat stroke lebih lurus dan sederhana.
+    - Mengutamakan pukulan center ball.
+    - Melatih kontrol tenaga daripada memaksakan pukulan sulit.
+
+    Kemajuan kecil setiap hari akan menghasilkan peningkatan besar dalam klasemen.
+    `;
+
+
+    document.getElementById("coach").innerHTML=`
+
+    <div class="card">
+
+    <h2>🎯 Coaching Liga</h2>
+
+    <h3>🏆 Player Rank 1 - 10</h3>
+    <p>${rank1_10}</p>
+
+
+    <h3>📈 Player Rank 10 - 20</h3>
+    <p>${rank10_20}</p>
+
+
+    <h3>🌱 Player Rank 20 - 30</h3>
+    <p>${rank20_30}</p>
+
+
+    </div>
+
+    `;
+
+}
