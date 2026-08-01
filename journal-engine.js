@@ -1,6 +1,150 @@
-// ===============================
+//==================================================
+// LIGA JURNAL ENGINE
+// Versi 2.0
+//==================================================
+
+
+//==================================================
+// DATABASE COACHING
+//==================================================
+
+const coachingDatabase=[
+
+{
+judul:"Pre-shot Routine",
+isi:"Rutinitas sebelum melakukan stroke adalah fondasi permainan yang konsisten. Selalu tentukan garis tembak terlebih dahulu, lakukan practice stroke dengan tempo yang sama, berhenti sejenak, kemudian lakukan stroke tanpa ragu. Rutinitas yang konsisten membantu menjaga performa saat tekanan meningkat."
+},
+
+{
+judul:"Pocket Speed",
+isi:"Usahakan object ball masuk dengan kecepatan secukupnya. Pocket speed memberikan toleransi yang lebih besar dibanding memukul terlalu keras sekaligus mempermudah kontrol cue ball menuju posisi berikutnya."
+},
+
+{
+judul:"Bridge Stabil",
+isi:"Panjang bridge yang konsisten membuat timing dan arah cue menjadi lebih mudah diulang. Hindari mengubah panjang bridge tanpa alasan teknis yang jelas."
+},
+
+{
+judul:"Follow Through",
+isi:"Biarkan cue tetap bergerak lurus setelah mengenai cue ball. Follow-through yang penuh membantu menjaga arah pukulan sekaligus menghasilkan transfer tenaga yang lebih konsisten."
+},
+
+{
+judul:"Cue Ball Control",
+isi:"Potting hanyalah langkah pertama. Permainan yang baik dibangun dari kemampuan menempatkan cue ball pada posisi yang memudahkan shot berikutnya."
+},
+
+{
+judul:"Pattern Play",
+isi:"Biasakan merencanakan dua hingga tiga bola berikutnya sebelum melakukan stroke. Semakin baik perencanaan, semakin sedikit recovery shot yang harus dilakukan."
+},
+
+{
+judul:"Safety",
+isi:"Tidak semua posisi layak dipaksakan untuk dipot. Safety yang baik sering kali memberikan peluang menang lebih besar dibanding mencoba shot dengan probabilitas rendah."
+},
+
+{
+judul:"Straight Stroke",
+isi:"Jagalah cue tetap bergerak lurus sepanjang garis tembak. Stroke sederhana, stabil, dan mudah diulang selalu lebih bernilai daripada gerakan yang rumit."
+},
+
+{
+judul:"Decision Making",
+isi:"Jika terdapat dua pilihan dengan peluang hampir sama, pilih keputusan dengan risiko yang lebih kecil. Liga panjang lebih sering dimenangkan oleh pemain yang konsisten mengambil keputusan yang benar."
+},
+
+{
+judul:"Tempo",
+isi:"Gunakan tempo yang sama pada setiap bola, termasuk bola penentu. Jangan mengubah kecepatan practice stroke hanya karena tekanan pertandingan meningkat."
+},
+
+{
+judul:"Center Ball",
+isi:"Mayoritas posisi sebenarnya dapat diselesaikan menggunakan center ball. Semakin sedikit spin yang digunakan, semakin sederhana kontrol cue ball yang diperoleh."
+},
+
+{
+judul:"Shot Commitment",
+isi:"Setelah mengambil keputusan, jalankan stroke dengan penuh keyakinan. Keraguan yang muncul tepat sebelum memukul sering menjadi penyebab utama miss."
+}
+
+];
+
+
+//==================================================
+// DATABASE MENTAL
+//==================================================
+
+const mentalDatabase=[
+
+{
+judul:"Satu Bola pada Satu Waktu",
+isi:"Jangan memikirkan hasil akhir pertandingan. Fokuskan perhatian sepenuhnya pada satu shot yang sedang dimainkan. Banyak keputusan kecil yang benar akan menghasilkan pertandingan yang baik."
+},
+
+{
+judul:"Tetap Tenang",
+isi:"Rasa gugup merupakan bagian alami dari kompetisi. Tujuannya bukan menghilangkan rasa gugup, melainkan tetap menjalankan rutinitas yang sama di bawah tekanan."
+},
+
+{
+judul:"Percaya Rutinitas",
+isi:"Saat mulai ragu, jangan mengubah teknik yang telah dilatih. Percayalah pada rutinitas karena konsistensi lebih penting daripada improvisasi."
+},
+
+{
+judul:"Tempo Sendiri",
+isi:"Jangan mengikuti tempo lawan. Bermain terlalu cepat atau terlalu lambat hanya karena lawan akan mengganggu ritme permainan sendiri."
+},
+
+{
+judul:"Move On",
+isi:"Shot yang gagal sudah menjadi masa lalu. Segera alihkan perhatian menuju posisi berikutnya tanpa membawa emosi dari kesalahan sebelumnya."
+},
+
+{
+judul:"Bahasa Tubuh",
+isi:"Postur tubuh yang tenang membantu menjaga fokus sendiri sekaligus mengurangi rasa percaya diri lawan."
+},
+
+{
+judul:"Nikmati Proses",
+isi:"Target utama bukan memenangkan setiap pertandingan, melainkan meningkatkan kualitas setiap keputusan yang diambil di meja."
+},
+
+{
+judul:"Frame demi Frame",
+isi:"Liga panjang dimenangkan melalui akumulasi frame. Jangan terburu-buru mengejar kemenangan besar apabila permainan aman masih dapat menghasilkan poin."
+},
+
+{
+judul:"Berani Mengambil Jeda",
+isi:"Sebelum shot penting, beri diri sendiri satu jeda singkat untuk memastikan keputusan sudah benar. Jeda kecil sering menghasilkan keputusan yang jauh lebih baik."
+},
+
+{
+judul:"Tetap Objektif",
+isi:"Satu miss tidak menentukan kualitas permainan Anda. Nilailah performa berdasarkan keseluruhan pertandingan, bukan hanya satu kesalahan."
+},
+
+{
+judul:"Percaya Stroke",
+isi:"Begitu stance selesai dibangun, biarkan stroke bekerja. Jangan mencoba mengoreksi arah cue pada saat terakhir."
+},
+
+{
+judul:"Momentum",
+isi:"Momentum bukan muncul karena keberuntungan, melainkan karena rangkaian keputusan yang baik dilakukan secara berulang."
+}
+
+];
+
+
+//==================================================
 // DATA SOURCE
-// ===============================
+//==================================================
 
 const klasemenURL =
 "https://script.google.com/macros/s/AKfycbweEZmfiYZG9bOtKyQKar7bcW-Zv8sC75bvliYN7Eurq94veGujyNfWTxfCDvAfGn7Ndg/exec";
@@ -8,68 +152,90 @@ const klasemenURL =
 const pertandinganURL =
 "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnS6WoVWincu7nBJyd9r01BsKoCQoa5MKvB8bkjvnuGygU0JZ8YrWT3L0s3Vuq38erG9Quxl2R3JVFNb-mxeshgDai_XAfZvaUl5k6j9mT45khcmhwgUh1DiUpPSv_lubHrEm0wqnYUlcYBuv8OU33AII-9EfnYdHR7YCZ1XfNKyAIdcSdagYVSmZNhA01HFFiXCFyv4M93ifUnykszCk5HWDtSk1prNwqFyd_uJ7xBR1lnizFiu0jvnsCmIk12jxrUpiQsu7-vsRHtvmqZx3GbCVGsXBQ&lib=MQ974VFXeXNHBp6rsCAsq0yJ67tG3SoUN";
 
+
+//==================================================
+// LOAD DATA
+//==================================================
+
 Promise.all([
-    fetch(klasemenURL).then(r => r.json()),
-    fetch(pertandinganURL).then(r => r.json())
+
+fetch(klasemenURL).then(r=>r.json()),
+
+fetch(pertandinganURL).then(r=>r.json())
+
 ])
-.then(([klasemen, pertandingan]) => {
 
-    buatHeadline(klasemen);
+.then(([klasemen,pertandingan])=>{
 
-    buatHotPlayer(klasemen);
+buatHeadline(klasemen);
 
-    buatWarning(klasemen);
+buatHotPlayer(klasemen);
 
-    buatTrend(pertandingan);
+buatWarning(klasemen);
 
-    buatCoaching();
+buatTrend(pertandingan);
 
-    buatMental();
+buatCoaching();
 
-    buatStrategy(klasemen);
+buatMental();
 
-    buatPrediction(klasemen);
+buatStrategy(klasemen);
 
-    buatMatchOfTheDay(pertandingan);
+buatPrediction(klasemen);
+
+buatMatchOfTheDay(pertandingan);
 
 })
-.catch(err=>{
-    console.log(err);
-});
 
-//==========================================
+.catch(err=>console.log(err));
+//==================================================
 // HEADLINE
-//==========================================
+//==================================================
 
 function buatHeadline(data){
 
-    const juara=data[1];
-    const runner=data[2];
-    const ketiga=data[3];
+    if(data.length<3) return;
 
-    const selisih=
-    Number(juara[8])-Number(runner[8]);
+    const p1=data[1];
+    const p2=data[2];
+    const p3=data.length>3 ? data[3] : p2;
+
+    const gap=
+    Number(p1[8])-Number(p2[8]);
 
     let narasi="";
 
-    if(selisih<=5){
+    if(gap<=5){
 
-        narasi=
-        `<b>${runner[1]}</b> terus menekan <b>${juara[1]}</b> di puncak klasemen. Selisih hanya <b>${selisih}</b> frame sehingga perebutan gelar diperkirakan berlangsung hingga akhir liga.`;
+        narasi=`
+        <b>${p2[1]}</b> terus memberikan tekanan kepada
+        <b>${p1[1]}</b>.
+        Selisih hanya <b>${gap}</b> frame sehingga
+        perebutan puncak klasemen diperkirakan berlangsung
+        hingga akhir musim.
+        `;
 
     }
 
-    else if(selisih<=15){
+    else if(gap<=15){
 
-        narasi=
-        `<b>${juara[1]}</b> masih memimpin klasemen dengan nyaman, namun <b>${runner[1]}</b> dan <b>${ketiga[1]}</b> masih memiliki peluang mengejar apabila mampu menjaga konsistensi.`;
+        narasi=`
+        <b>${p1[1]}</b> masih memimpin klasemen,
+        namun <b>${p2[1]}</b> dan
+        <b>${p3[1]}</b>
+        masih berada dalam jarak yang dapat dikejar.
+        `;
 
     }
 
     else{
 
-        narasi=
-        `<b>${juara[1]}</b> mulai menciptakan jarak dari para pesaingnya. Konsistensi akan menjadi kunci untuk mempertahankan posisi puncak hingga akhir musim.`;
+        narasi=`
+        <b>${p1[1]}</b> mulai menciptakan jarak yang cukup
+        nyaman dari para pesaingnya.
+        Konsistensi beberapa pertandingan berikutnya akan
+        menjadi penentu peluang juara.
+        `;
 
     }
 
@@ -89,19 +255,24 @@ function buatHeadline(data){
 
 
 
-//==========================================
+//==================================================
 // HOT PLAYER
-//==========================================
+//==================================================
 
 function buatHotPlayer(data){
 
-    let terbaik=data[1];
+    if(data.length<2)return;
+
+    let pemain=data[1];
 
     for(let i=2;i<data.length;i++){
 
-        if(Number(data[i][7])>Number(terbaik[7])){
+        if(
+            Number(data[i][7])>
+            Number(pemain[7])
+        ){
 
-            terbaik=data[i];
+            pemain=data[i];
 
         }
 
@@ -115,13 +286,16 @@ function buatHotPlayer(data){
 
         <p>
 
-        <b>${terbaik[1]}</b>
+        <b>${pemain[1]}</b>
 
-        memiliki selisih frame terbaik di liga yaitu
+        sedang menjadi pemain dengan
+        selisih frame terbaik yaitu
 
-        <b>+${terbaik[7]}</b>.
+        <b>+${pemain[7]}</b>.
 
-        Hal ini menunjukkan kemampuan mengubah kemenangan menjadi poin dengan sangat efisien.
+        Efisiensi kemenangan seperti ini biasanya
+        menjadi salah satu indikator pemain yang
+        sedang berada dalam performa terbaik.
 
         </p>
 
@@ -133,19 +307,24 @@ function buatHotPlayer(data){
 
 
 
-//==========================================
+//==================================================
 // WARNING ZONE
-//==========================================
+//==================================================
 
 function buatWarning(data){
 
-    let terburuk=data[1];
+    if(data.length<2)return;
+
+    let pemain=data[1];
 
     for(let i=2;i<data.length;i++){
 
-        if(Number(data[i][7])<Number(terburuk[7])){
+        if(
+            Number(data[i][7])<
+            Number(pemain[7])
+        ){
 
-            terburuk=data[i];
+            pemain=data[i];
 
         }
 
@@ -159,13 +338,15 @@ function buatWarning(data){
 
         <p>
 
-        <b>${terburuk[1]}</b>
+        <b>${pemain[1]}</b>
 
-        saat ini memiliki selisih frame
+        memiliki selisih frame
 
-        <b>${terburuk[7]}</b>.
+        <b>${pemain[7]}</b>.
 
-        Fokus utama berikutnya adalah mengurangi kekalahan dengan margin besar. Bahkan ketika kalah, setiap frame tetap sangat berharga bagi klasemen akhir.
+        Mengurangi kekalahan dengan margin besar
+        akan memberikan dampak signifikan terhadap
+        posisi klasemen akhir.
 
         </p>
 
@@ -174,176 +355,193 @@ function buatWarning(data){
     `;
 
 }
-//==========================================
-// FORM TERAKHIR
-//==========================================
 
-function buatTrend(pertandingan){
 
-    let form={};
 
-    for(let i=1;i<pertandingan.length;i++){
+//==================================================
+// TREN 5 PERTANDINGAN TERAKHIR
+//==================================================
 
-        let winner=pertandingan[i][6];
-        let loser=pertandingan[i][7];
+function buatTrend(data){
 
-        if(!form[winner]) form[winner]=[];
-        if(!form[loser]) form[loser]=[];
+    const form={};
+
+    for(let i=1;i<data.length;i++){
+
+        const winner=data[i][6];
+        const loser=data[i][7];
+
+        if(!winner||!loser)continue;
+
+        if(!form[winner])form[winner]=[];
+        if(!form[loser])form[loser]=[];
 
         form[winner].push("W");
         form[loser].push("L");
 
     }
 
-    let terbaik="";
-    let terbanyak=0;
+    let nama="";
+    let menang=-1;
 
-    for(let pemain in form){
+    Object.keys(form).forEach(player=>{
 
-        let lima=form[pemain].slice(-5);
+        const lima=form[player].slice(-5);
 
-        let menang=lima.filter(x=>x=="W").length;
+        const total=
+        lima.filter(x=>x==="W").length;
 
-        if(menang>terbanyak){
+        if(total>menang){
 
-            terbanyak=menang;
-            terbaik=pemain;
+            menang=total;
+            nama=player;
 
         }
 
-    }
+    });
 
     document.getElementById("trend").innerHTML=`
 
     <div class="card">
 
-    <h2>📈 Tren Liga</h2>
+        <h2>📈 Tren Liga</h2>
 
-    <p>
+        <p>
 
-    <b>${terbaik}</b>
+        <b>${nama}</b>
 
-    sedang berada dalam performa terbaik.
+        sedang berada dalam performa terbaik.
 
-    Dalam 5 pertandingan terakhir ia memenangkan
+        Dari lima pertandingan terakhir,
 
-    <b>${terbanyak}</b> pertandingan.
+        ia memenangkan
 
-    </p>
+        <b>${menang}</b>
+
+        pertandingan.
+
+        </p>
 
     </div>
 
     `;
 
 }
-//==========================================
+//==================================================
 // MATCH OF THE DAY
-// Mengambil pertandingan terbaru dari 10 pertandingan terakhir
-//==========================================
+//==================================================
 
 function buatMatchOfTheDay(data){
 
-    let pertandinganValid=[];
+    const daftar=[];
 
-
-    // ambil pertandingan yang memiliki nomor ronde
     for(let i=1;i<data.length;i++){
 
+        const row=data[i];
+
         if(
-            data[i][0] &&
-            !isNaN(data[i][0]) &&
-            data[i][2] &&
-            data[i][5]
+            row &&
+            row[0]!=="" &&
+            !isNaN(row[0]) &&
+            row[2] &&
+            row[5]
         ){
 
-            pertandinganValid.push(data[i]);
+            daftar.push(row);
 
         }
 
     }
 
+    if(daftar.length===0){
 
-    if(pertandinganValid.length===0){
-
-        document.getElementById("prediction").innerHTML="";
+        document.getElementById("matchOfTheDay").innerHTML="";
 
         return;
 
     }
 
+    // Ambil 10 pertandingan terbaru
+    const terakhir=daftar.slice(-10);
 
+    // Cari pertandingan dengan margin paling kecil
+    let terbaik=terakhir[0];
 
-    // hanya lihat 10 pertandingan terakhir
-    let terakhir = pertandinganValid.slice(-10);
+    let marginTerbaik=Math.abs(
 
+        Number(terbaik[3])-
 
+        Number(terbaik[4])
 
-    // cari pertandingan paling dramatis
-    let terbaik = terakhir[0];
-    let marginTerbaik = Math.abs(
-        Number(terbaik[3])-Number(terbaik[4])
     );
-
 
     for(let i=1;i<terakhir.length;i++){
 
-        let margin =
-        Math.abs(
+        const margin=Math.abs(
+
             Number(terakhir[i][3])-
+
             Number(terakhir[i][4])
+
         );
 
+        if(margin<marginTerbaik){
 
-        if(margin < marginTerbaik){
-
-            terbaik=terakhir[i];
             marginTerbaik=margin;
+            terbaik=terakhir[i];
 
         }
 
     }
 
+    const ronde=terbaik[1];
 
+    const playerA=terbaik[2];
+    const scoreA=Number(terbaik[3]);
 
-    const ronde   = terbaik[1];
-    const playerA = terbaik[2];
-    const scoreA  = terbaik[3];
-    const scoreB  = terbaik[4];
-    const playerB = terbaik[5];
-    const winner  = terbaik[6];
+    const scoreB=Number(terbaik[4]);
+    const playerB=terbaik[5];
 
+    const winner=terbaik[6];
 
     let narasi="";
 
+    if(marginTerbaik===1){
 
-    if(marginTerbaik==1){
+        narasi=`
+        Pertandingan paling dramatis pada pekan ini.
 
-        narasi=
-        `Pertandingan paling dramatis. 
-        <b>${winner}</b> berhasil memenangkan duel ketat 
-        dengan selisih hanya satu frame.`;
+        <b>${winner}</b>
+
+        berhasil memenangkan duel ketat dengan selisih
+        hanya satu frame.
+        `;
 
     }
 
     else if(marginTerbaik<=3){
 
-        narasi=
-        `<b>${winner}</b> harus berjuang keras 
-        sebelum akhirnya mengamankan kemenangan penting.`;
+        narasi=`
+        <b>${winner}</b>
+
+        harus bekerja keras sebelum akhirnya
+        mengamankan kemenangan penting.
+        `;
 
     }
 
     else{
 
-        narasi=
-        `<b>${winner}</b> tampil dominan dan berhasil 
-        mengontrol pertandingan sejak awal.`;
+        narasi=`
+        <b>${winner}</b>
+
+        tampil dominan sejak awal pertandingan
+        dan berhasil menjaga keunggulan hingga selesai.
+        `;
 
     }
 
-
-
-    document.getElementById("prediction").innerHTML=`
+    document.getElementById("matchOfTheDay").innerHTML=`
 
     <div class="card">
 
@@ -355,19 +553,15 @@ function buatMatchOfTheDay(data){
 
         <br><br>
 
-
         ${playerA}
 
         <b>${scoreA} - ${scoreB}</b>
 
         ${playerB}
 
-
         <br><br>
 
-
         ${narasi}
-
 
         </p>
 
@@ -375,557 +569,219 @@ function buatMatchOfTheDay(data){
 
     `;
 
-
 }
-//==========================================
-// COACHING
-//==========================================
-
-function buatCoaching(data){
-
-    let html="";
-
-    for(let i=1;i<data.length;i++){
-
-        let rank=i;
-        let nama=data[i][1];
-        let menang=Number(data[i][3]);
-        let kalah=Number(data[i][4]);
-        let selisih=Number(data[i][7]);
-
-
-        if(rank<=10){
-
-            html += `
-            <p>
-            🥇 <b>${nama}</b>:
-            Pertahankan standar permainan.
-            Fokus berikutnya adalah menjaga konsistensi kemenangan
-            dan menghindari kekalahan dengan margin besar.
-            </p>
-            `;
-
-        }
-
-        else if(rank<=20){
-
-            html += `
-            <p>
-            📈 <b>${nama}</b>:
-            Peluang naik klasemen masih terbuka.
-            Prioritas utama adalah mengubah pertandingan ketat menjadi kemenangan
-            dan mengambil poin dari pemain papan atas.
-            </p>
-            `;
-
-        }
-
-        else{
-
-            html += `
-            <p>
-            🚀 <b>${nama}</b>:
-            Jangan mengejar kemenangan besar terlebih dahulu.
-            Bangun momentum dengan mengurangi kesalahan,
-            karena setiap frame dapat memperbaiki posisi klasemen.
-            </p>
-            `;
-
-        }
-
-    }
-
-
-    document.getElementById("coach").innerHTML=
-
-    `
-    <div class="card">
-
-    <h2>🎯 Coaching Liga</h2>
-
-    ${html}
-
-    </div>
-    `;
-
-}
-
-
-
-//==========================================
-// MENTAL
-//==========================================
-
-function buatMental(data){
-
-    const pertama=data[1];
-    const kedua=data[2];
-
-
-    let jarak=
-    Number(pertama[8])-Number(kedua[8]);
-
-
-    let narasi;
-
-
-    if(jarak<=5){
-
-        narasi=
-        `
-        Perebutan puncak sangat panas.
-        <b>${kedua[1]}</b> hanya terpaut sedikit dari
-        <b>${pertama[1]}</b>.
-        Setiap pertandingan memiliki nilai penting.
-        Jangan bermain terburu-buru.
-        `;
-
-    }
-
-    else{
-
-        narasi=
-        `
-        <b>${pertama[1]}</b> memiliki ruang aman sementara.
-        Namun tekanan terbesar adalah menjaga fokus,
-        karena liga masih panjang dan momentum dapat berubah.
-        `;
-
-    }
-
-
-    document.getElementById("mental").innerHTML=
-
-    `
-    <div class="card">
-
-    <h2>🧠 Mental Liga</h2>
-
-    <p>${narasi}</p>
-
-    </div>
-    `;
-
-}
-
-
-
-//==========================================
-// STRATEGI
-//==========================================
-
-function buatStrategi(data){
-
-
-let top=data[1];
-
-let narasi="";
-
-
-if(Number(top[7])>30){
-
-narasi=
-`
-Pemimpin klasemen memiliki keunggulan besar.
-Strategi terbaik adalah bermain aman,
-mengurangi risiko kesalahan,
-dan menjaga kemenangan rutin.
-`;
-
-}
-
-else{
-
-narasi=
-`
-Persaingan sangat ketat.
-Strategi terbaik adalah mencari kemenangan beruntun
-karena perubahan kecil dapat mengubah posisi klasemen.
-`;
-
-}
-
-
-
-document.getElementById("strategy").innerHTML=
-
-`
-<div class="card">
-
-<h2>♟ Strategi Liga</h2>
-
-<p>${narasi}</p>
-
-</div>
-`;
-
-}
-
-
-
-//==========================================
-// PREDIKSI
-//==========================================
-
-function buatPrediksi(data){
-
-let pertama=data[1];
-let kedua=data[2];
-
-
-let prediksi="";
-
-
-let jarak=
-Number(pertama[8])-Number(kedua[8]);
-
-
-if(jarak<=5){
-
-prediksi=
-`
-Liga sangat terbuka.
-Perebutan juara kemungkinan akan berubah
-apabila pemimpin klasemen kehilangan momentum.
-`;
-
-}
-
-else{
-
-prediksi=
-`
-Pemimpin klasemen memiliki peluang besar,
-namun konsistensi tetap menjadi faktor utama
-hingga pertandingan terakhir.
-`;
-
-}
-
-
-
-document.getElementById("prediction").innerHTML=
-
-`
-<div class="card">
-
-<h2>🔮 Prediksi Liga</h2>
-
-<p>${prediksi}</p>
-
-</div>
-
-`;
-
-}
-//==========================================
-// COACHING RANK
-//==========================================
-
-function buatCoaching(data){
-
-    let rank1_10 = `
-    Pemain papan atas sudah memiliki fondasi permainan yang kuat.
-    Fokus berikutnya bukan hanya mencari kemenangan,
-    tetapi meningkatkan kualitas keputusan.
-
-    Prioritas latihan:
-    - Menjaga tempo stroke tetap stabil saat tekanan tinggi.
-    - Memilih safety ketika peluang pot terlalu kecil.
-    - Memperbaiki kontrol cue ball agar kemenangan semakin meyakinkan.
-    `;
-
-
-    let rank10_20 = `
-    Pemain kelompok menengah memiliki potensi besar untuk naik peringkat.
-    Perbedaan utama dengan papan atas biasanya berada pada konsistensi.
-
-    Prioritas latihan:
-    - Kurangi kesalahan mudah setelah mendapatkan peluang.
-    - Bangun rutinitas sebelum setiap pukulan.
-    - Latih penyelesaian bola 7, 8, dan 9 agar kemenangan tidak terlepas.
-    `;
-
-
-    let rank20_30 = `
-    Pemain kelompok ini harus membangun fondasi permainan terlebih dahulu.
-
-    Fokus utama:
-    - Membuat stroke lebih lurus dan sederhana.
-    - Mengutamakan pukulan center ball.
-    - Melatih kontrol tenaga daripada memaksakan pukulan sulit.
-
-    Kemajuan kecil setiap hari akan menghasilkan peningkatan besar dalam klasemen.
-    `;
-
-
-    document.getElementById("coach").innerHTML=`
+//==================================================
+// COACHING HARI INI
+//==================================================
+
+function buatCoaching(){
+
+    const materi =
+    coachingDatabase[
+        Math.floor(
+            Math.random()*coachingDatabase.length
+        )
+    ];
+
+    let html = `
 
     <div class="card">
 
-    <h2>🎯 Coaching Liga</h2>
+        <h2>🎯 Coaching Hari Ini</h2>
 
-    <h3>🏆 Player Rank 1 - 10</h3>
-    <p>${rank1_10}</p>
+        <h3>${materi.judul}</h3>
 
+        <p>${materi.isi}</p>
 
-    <h3>📈 Player Rank 10 - 20</h3>
-    <p>${rank10_20}</p>
+        <hr>
 
+    `;
 
-    <h3>🌱 Player Rank 20 - 30</h3>
-    <p>${rank20_30}</p>
+    html += `
 
+        <h3>🏆 Player Rank 1–10</h3>
+
+        <p>
+
+        Fokus utama adalah mempertahankan standar permainan.
+
+        Kurangi risiko yang tidak perlu,
+
+        jaga tempo tetap sama,
+
+        manfaatkan safety ketika peluang pot kecil,
+
+        dan usahakan setiap kemenangan menghasilkan
+
+        selisih frame yang baik.
+
+        </p>
+
+    `;
+
+    html += `
+
+        <h3>📈 Player Rank 11–20</h3>
+
+        <p>
+
+        Kelompok ini masih memiliki peluang besar
+
+        untuk naik klasemen.
+
+        Prioritas latihan adalah
+
+        meningkatkan konsistensi,
+
+        memperbaiki cue ball control,
+
+        serta mengubah peluang menjadi kemenangan.
+
+        </p>
+
+    `;
+
+    html += `
+
+        <h3>🌱 Player Rank 21+</h3>
+
+        <p>
+
+        Bangun fondasi permainan.
+
+        Fokus pada stroke lurus,
+
+        center ball,
+
+        pocket speed,
+
+        dan mengurangi kesalahan sendiri.
+
+        Kemajuan kecil yang dilakukan secara konsisten
+
+        akan menghasilkan kenaikan peringkat.
+
+        </p>
+
+    `;
+
+    html += `
 
     </div>
 
     `;
 
-}
-//==========================================
-// COACHING PLAYER
-//==========================================
-
-function buatCoaching(data){
-
-    let teks="";
-
-    teks += `
-    <div class="card">
-
-    <h2>🎯 Coaching Hari Ini</h2>
-
-    `;
-
-
-    teks += `
-    <p>
-    <b>Player Rank 1-10</b><br>
-    Fokus utama adalah menjaga standar permainan.
-    Jangan mengejar kemenangan dengan risiko tinggi.
-    Pertahankan rutinitas pre-shot, kontrol tempo,
-    dan minimalkan kesalahan pada bola mudah.
-    Konsistensi adalah pembeda pemain papan atas.
-    </p>
-    `;
-
-
-    teks += `
-    <p>
-    <b>Player Rank 11-20</b><br>
-    Prioritas peningkatan adalah mengubah peluang menjadi poin.
-    Perbaiki keputusan safety, kontrol cue ball,
-    serta kemampuan menutup pertandingan ketika sudah unggul.
-    Setiap frame memiliki nilai penting untuk mengejar klasemen.
-    </p>
-    `;
-
-
-    teks += `
-    <p>
-    <b>Player Rank 21-30</b><br>
-    Fokus pembangunan fondasi permainan.
-    Utamakan akurasi potting, pukulan aman,
-    dan mengurangi kesalahan sendiri.
-    Kemenangan kecil yang konsisten akan memperbaiki posisi.
-    </p>
-    `;
-
-
-    teks += `
-    </div>
-    `;
-
-
-    document.getElementById("coach").innerHTML=teks;
+    document.getElementById("coach").innerHTML = html;
 
 }
-
-
-
-//==========================================
+//==================================================
 // MENTAL GAME
-//==========================================
+//==================================================
 
-function buatMental(data){
+function buatMental(){
 
-document.getElementById("mental").innerHTML=`
+    const materi =
+    mentalDatabase[
+        Math.floor(
+            Math.random()*mentalDatabase.length
+        )
+    ];
 
-<div class="card">
+    document.getElementById("mental").innerHTML=`
 
-<h2>🧠 Mental Game</h2>
+    <div class="card">
 
-<p>
-Tekanan terbesar dalam liga bukan hanya berasal dari lawan,
-tetapi dari keputusan sendiri ketika pertandingan memasuki
-frame-frame akhir.
+        <h2>🧠 Mental Game</h2>
 
-Tetap gunakan tempo yang sama saat latihan maupun pertandingan.
-Jangan mempercepat stroke ketika menghadapi bola penting.
-Pemain yang mampu menjaga ketenangan biasanya memenangkan
-lebih banyak frame krusial.
-</p>
+        <h3>${materi.judul}</h3>
 
-</div>
+        <p>
 
-`;
+        ${materi.isi}
 
-}
+        </p>
 
+        <hr>
 
+        <p>
 
-//==========================================
-// STRATEGI
-//==========================================
+        <b>Pengingat Hari Ini</b>
 
-function buatStrategi(data){
+        <br><br>
 
-const leader=data[1];
-const posisi2=data[2];
+        ✔ Bermain dengan tempo yang sama dari awal sampai akhir.
 
-const selisih=
-Number(leader[8])-Number(posisi2[8]);
+        <br>
 
+        ✔ Jangan mempercepat stroke pada bola penting.
 
-let teks="";
+        <br>
 
+        ✔ Percaya pada rutinitas yang sudah dilatih.
 
-if(selisih<=5){
+        <br>
 
-teks=
-`
-Persaingan papan atas sangat ketat.
-Strategi terbaik adalah bermain lebih agresif,
-karena setiap kemenangan dapat langsung mengubah posisi klasemen.
-`;
+        ✔ Fokus hanya pada satu shot yang sedang dimainkan.
 
-}
+        <br>
 
-else if(selisih<=15){
+        ✔ Setelah stroke selesai, segera move on ke posisi berikutnya.
 
-teks=
-`
-Jarak klasemen masih dapat dikejar.
-Prioritaskan kemenangan konsisten daripada mencoba
-permainan spektakuler dengan risiko tinggi.
-`;
+        </p>
+
+    </div>
+
+    `;
 
 }
-
-else{
-
-teks=
-`
-Pemimpin klasemen memiliki jarak yang cukup besar.
-Fokus utama pemain lain adalah membangun momentum,
-mengurangi kekalahan besar, dan mengambil keuntungan
-dari pertandingan berikutnya.
-`;
-
-}
-
-
-document.getElementById("strategy").innerHTML=
-
-`
-
-<div class="card">
-
-<h2>♟ Strategi Liga</h2>
-
-<p>${teks}</p>
-
-</div>
-
-`;
-
-}
-
-
-
-//==========================================
-// PREDIKSI
-//==========================================
-
-function buatPrediksi(data){
-
-const leader=data[1];
-
-const runner=data[2];
-
-
-document.getElementById("prediction").innerHTML=
-
-`
-
-<div class="card">
-
-<h2>🔮 Prediksi Fase Berikutnya</h2>
-
-
-<p>
-
-Dengan kondisi klasemen saat ini,
-<b>${leader[1]}</b> berada pada posisi terbaik.
-
-Namun perkembangan liga masih dapat berubah.
-<b>${runner[1]}</b> dan pesaing lainnya masih memiliki peluang
-apabila mampu menjaga konsistensi kemenangan.
-
-Pertandingan berikutnya akan sangat menentukan perubahan
-peta persaingan.
-
-</p>
-
-</div>
-
-`;
-
-}
-//==========================================
+//==================================================
 // STRATEGI MINGGU INI
-//==========================================
+//==================================================
 
 function buatStrategy(data){
 
-    const leader = data[1];
-    const runner = data[2];
+    if(data.length<3)return;
 
-    const selisih =
-    Number(leader[8]) - Number(runner[8]);
+    const leader=data[1];
+    const runner=data[2];
+
+    const gap=
+    Number(leader[8])-
+    Number(runner[8]);
 
     let judul="";
     let isi="";
 
-    if(selisih<=5){
+    if(gap<=5){
 
-        judul="🔥 Liga Masih Terbuka";
+        judul="🔥 Liga Masih Sangat Terbuka";
 
         isi=`
-        Perebutan posisi teratas masih sangat ketat.
+        Perebutan posisi puncak masih sangat ketat.
 
-        Prioritas pemain papan atas bukan lagi mencari kemenangan besar,
-        melainkan menghindari kehilangan frame yang tidak perlu.
+        Setiap frame mempunyai nilai yang besar.
 
-        Dalam kondisi seperti ini, satu kemenangan tipis sering kali
-        lebih bernilai daripada permainan yang terlalu agresif.
+        Bermain terlalu agresif justru dapat
+        merugikan klasemen.
+
+        Prioritaskan keputusan yang memiliki
+        probabilitas paling tinggi.
         `;
 
     }
 
-    else if(selisih<=15){
+    else if(gap<=15){
 
-        judul="⚔ Mengejar Sang Pemimpin";
+        judul="⚔ Saatnya Mengejar";
 
         isi=`
-        Selisih klasemen masih cukup realistis untuk dikejar.
+        Pemimpin klasemen masih dapat dikejar.
 
-        Fokus utama adalah menjaga konsistensi kemenangan sambil
-        memperbaiki efisiensi frame.
+        Fokus utama bukan mencari kemenangan besar,
+        tetapi menjaga kemenangan secara konsisten.
 
-        Jangan hanya mengejar menang.
-        Menang dengan kehilangan frame seminimal mungkin
-        akan memberikan dampak besar terhadap klasemen.
+        Menang dengan kehilangan frame sesedikit mungkin
+        akan memberi dampak besar terhadap klasemen.
         `;
 
     }
@@ -935,13 +791,14 @@ function buatStrategy(data){
         judul="👑 Pemimpin Mulai Menjauh";
 
         isi=`
-        Saat pemuncak klasemen mulai menciptakan jarak,
-        strategi terbaik bukan bermain terburu-buru.
+        Pemuncak klasemen mulai menciptakan jarak.
 
-        Bangun kemenangan secara konsisten,
-        karena liga panjang biasanya dimenangkan
-        oleh pemain yang stabil,
-        bukan pemain yang sesekali tampil luar biasa.
+        Pemain lain sebaiknya tidak terburu-buru.
+
+        Bangun momentum sedikit demi sedikit,
+        kurangi kekalahan besar,
+        dan manfaatkan setiap peluang
+        untuk memperbaiki selisih frame.
         `;
 
     }
@@ -950,7 +807,7 @@ function buatStrategy(data){
 
     <div class="card">
 
-        <h2>🎯 Strategi Minggu Ini</h2>
+        <h2>♟ Strategi Minggu Ini</h2>
 
         <h3>${judul}</h3>
 
@@ -961,72 +818,75 @@ function buatStrategy(data){
     `;
 
 }
-//==========================================
+//==================================================
 // AI PREDICTION
-//==========================================
+//==================================================
 
 function buatPrediction(data){
 
-    const p1 = data[1];
-    const p2 = data[2];
-    const p3 = data[3];
-    const p10 = data.length > 10 ? data[10] : null;
+    if(data.length<3)return;
 
-    const gap12 = Number(p1[8]) - Number(p2[8]);
-    const gap23 = Number(p2[8]) - Number(p3[8]);
+    const leader=data[1];
+    const runner=data[2];
 
-    let judul = "";
-    let isi = "";
+    const gap=
+    Number(leader[8])-
+    Number(runner[8]);
 
-    if(gap12 <= 5){
+    let judul="";
+    let isi="";
 
-        judul = "🏆 Perebutan Gelar";
+    if(gap<=5){
 
-        isi = `
-        Persaingan menuju gelar juara masih sepenuhnya terbuka.
-        Selisih poin antar pemain papan atas sangat tipis sehingga
-        satu pertandingan saja dapat mengubah pemuncak klasemen.
-        Konsistensi akan menjadi faktor penentu hingga pekan terakhir.
+        judul="🏆 Perebutan Gelar Masih Terbuka";
+
+        isi=`
+        Selisih antarpemimpin klasemen masih sangat tipis.
+
+        Satu kemenangan atau satu kekalahan saja
+        dapat mengubah posisi puncak.
+
+        Liga diperkirakan akan berlangsung ketat
+        hingga pekan-pekan terakhir.
         `;
 
     }
 
-    else if(gap12 <= 15){
+    else if(gap<=15){
 
-        judul = "👑 Pemimpin Masih Bisa Dikejar";
+        judul="👑 Pemimpin Memiliki Keunggulan";
 
-        isi = `
-        Pemuncak klasemen masih memiliki keuntungan,
-        namun belum berada di zona aman.
-        Para pesaing masih memiliki peluang mengejar apabila
-        mampu menjaga kemenangan secara beruntun.
+        isi=`
+        Pemuncak klasemen mulai memperoleh keuntungan.
+
+        Namun jarak tersebut masih realistis
+        untuk dikejar apabila pesaing mampu
+        menjaga kemenangan secara konsisten.
+
+        Efisiensi frame akan menjadi faktor penting.
         `;
 
     }
 
     else{
 
-        judul = "🚀 Peluang Juara";
+        judul="🚀 Peluang Juara Sangat Besar";
 
-        isi = `
-        Pemuncak klasemen mulai menciptakan jarak yang cukup besar.
-        Apabila mampu mempertahankan performa saat ini,
-        peluang mempertahankan posisi pertama sangat tinggi.
+        isi=`
+        Pemimpin klasemen telah menciptakan
+        jarak yang cukup nyaman.
+
+        Apabila performanya tetap stabil,
+        peluang mempertahankan posisi pertama
+        sangat tinggi.
+
+        Tantangan terbesar kini adalah menjaga
+        konsistensi hingga akhir musim.
         `;
 
     }
 
-    if(p10){
-
-        isi += `
-        <br><br>
-        Persaingan menuju posisi Top 10 juga diperkirakan akan
-        berlangsung sengit karena selisih poin antarpemain
-        masih relatif tipis.
-        `;
-    }
-
-    document.getElementById("prediction").innerHTML = `
+    document.getElementById("prediction").innerHTML=`
 
     <div class="card">
 
