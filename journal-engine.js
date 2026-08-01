@@ -24,6 +24,14 @@ Promise.all([
 
     buatMatchOfTheDay(pertandingan);
 
+    buatCoaching(klasemen, pertandingan);
+
+    buatMental(klasemen);
+
+    buatStrategy(klasemen);
+
+    buatPrediction(klasemen);
+
 })
 .catch(err=>{
     console.log(err);
@@ -367,5 +375,195 @@ function buatMatchOfTheDay(data){
 
     `;
 
+
+}
+//==========================================
+// COACHING
+//==========================================
+
+function buatCoaching(data, pertandingan){
+
+    const nomor1=data[1];
+    const nomor2=data[2];
+
+
+    let narasi="";
+
+
+    if(Number(nomor1[7])>40){
+
+        narasi=
+        `${nomor1[1]} sedang menunjukkan performa sangat stabil. Fokus berikutnya adalah menjaga konsistensi dan menghindari kehilangan frame besar.`;
+
+    }
+
+    else{
+
+        narasi=
+        `Persaingan liga masih terbuka. Pemain papan atas harus fokus memenangkan pertandingan tipis karena setiap frame sangat menentukan klasemen.`;
+
+    }
+
+
+    document.getElementById("coach").innerHTML=`
+
+    <div class="card">
+
+    <h2>🎯 Coaching</h2>
+
+    <p>${narasi}</p>
+
+    </div>
+
+    `;
+
+}
+
+
+
+
+
+//==========================================
+// MENTAL
+//==========================================
+
+function buatMental(data){
+
+    const leader=data[1];
+    const rival=data[2];
+
+
+    let narasi="";
+
+
+    let jarak=
+    Number(leader[8])-Number(rival[8]);
+
+
+    if(jarak<=10){
+
+        narasi=
+        `Tekanan mental sedang tinggi. ${rival[1]} masih sangat dekat dengan ${leader[1]}. Setiap pertandingan memiliki nilai besar.`;
+
+    }
+
+    else{
+
+        narasi=
+        `${leader[1]} memiliki keuntungan psikologis karena berada di posisi puncak. Tantangan berikutnya adalah menjaga fokus.`;
+
+    }
+
+
+
+    document.getElementById("mental").innerHTML=`
+
+    <div class="card">
+
+    <h2>🧠 Mental Liga</h2>
+
+    <p>${narasi}</p>
+
+    </div>
+
+    `;
+
+}
+
+
+
+
+
+//==========================================
+// STRATEGY
+//==========================================
+
+function buatStrategy(data){
+
+    const leader=data[1];
+
+
+    let narasi=
+    "";
+
+
+    if(Number(leader[4])>5){
+
+        narasi=
+        `Strategi utama adalah mengurangi kekalahan. Margin kecil saat kalah dapat menjaga posisi klasemen.`;
+
+    }
+
+    else{
+
+        narasi=
+        `Pertahankan tekanan. Kemenangan beruntun akan menjadi faktor terbesar dalam perebutan gelar.`;
+
+    }
+
+
+
+    document.getElementById("strategy").innerHTML=`
+
+    <div class="card">
+
+    <h2>♟ Strategi</h2>
+
+    <p>${narasi}</p>
+
+    </div>
+
+    `;
+
+}
+
+
+
+
+
+//==========================================
+// PREDICTION
+//==========================================
+
+function buatPrediction(data){
+
+    const satu=data[1];
+    const dua=data[2];
+
+
+    let narasi="";
+
+
+    let selisih=
+    Number(satu[8])-Number(dua[8]);
+
+
+    if(selisih<10){
+
+        narasi=
+        `Liga masih sangat terbuka. Perebutan posisi pertama kemungkinan akan berubah apabila pemimpin klasemen kehilangan momentum.`;
+
+    }
+
+    else{
+
+        narasi=
+        `${satu[1]} menjadi kandidat kuat mempertahankan posisi puncak selama mampu menjaga performa saat ini.`;
+
+    }
+
+
+
+    document.getElementById("prediction").innerHTML=`
+
+    <div class="card">
+
+    <h2>🔮 Prediksi Liga</h2>
+
+    <p>${narasi}</p>
+
+    </div>
+
+    `;
 
 }
