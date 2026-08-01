@@ -381,45 +381,74 @@ function buatMatchOfTheDay(data){
 // COACHING
 //==========================================
 
-function buatCoaching(data, pertandingan){
+function buatCoaching(data){
 
-    const nomor1=data[1];
-    const nomor2=data[2];
+    let html="";
+
+    for(let i=1;i<data.length;i++){
+
+        let rank=i;
+        let nama=data[i][1];
+        let menang=Number(data[i][3]);
+        let kalah=Number(data[i][4]);
+        let selisih=Number(data[i][7]);
 
 
-    let narasi="";
+        if(rank<=10){
 
+            html += `
+            <p>
+            🥇 <b>${nama}</b>:
+            Pertahankan standar permainan.
+            Fokus berikutnya adalah menjaga konsistensi kemenangan
+            dan menghindari kekalahan dengan margin besar.
+            </p>
+            `;
 
-    if(Number(nomor1[7])>40){
+        }
 
-        narasi=
-        `${nomor1[1]} sedang menunjukkan performa sangat stabil. Fokus berikutnya adalah menjaga konsistensi dan menghindari kehilangan frame besar.`;
+        else if(rank<=20){
+
+            html += `
+            <p>
+            📈 <b>${nama}</b>:
+            Peluang naik klasemen masih terbuka.
+            Prioritas utama adalah mengubah pertandingan ketat menjadi kemenangan
+            dan mengambil poin dari pemain papan atas.
+            </p>
+            `;
+
+        }
+
+        else{
+
+            html += `
+            <p>
+            🚀 <b>${nama}</b>:
+            Jangan mengejar kemenangan besar terlebih dahulu.
+            Bangun momentum dengan mengurangi kesalahan,
+            karena setiap frame dapat memperbaiki posisi klasemen.
+            </p>
+            `;
+
+        }
 
     }
 
-    else{
 
-        narasi=
-        `Persaingan liga masih terbuka. Pemain papan atas harus fokus memenangkan pertandingan tipis karena setiap frame sangat menentukan klasemen.`;
+    document.getElementById("coach").innerHTML=
 
-    }
-
-
-    document.getElementById("coach").innerHTML=`
-
+    `
     <div class="card">
 
-    <h2>🎯 Coaching</h2>
+    <h2>🎯 Coaching Liga</h2>
 
-    <p>${narasi}</p>
+    ${html}
 
     </div>
-
     `;
 
 }
-
-
 
 
 
@@ -429,35 +458,45 @@ function buatCoaching(data, pertandingan){
 
 function buatMental(data){
 
-    const leader=data[1];
-    const rival=data[2];
-
-
-    let narasi="";
+    const pertama=data[1];
+    const kedua=data[2];
 
 
     let jarak=
-    Number(leader[8])-Number(rival[8]);
+    Number(pertama[8])-Number(kedua[8]);
 
 
-    if(jarak<=10){
+    let narasi;
+
+
+    if(jarak<=5){
 
         narasi=
-        `Tekanan mental sedang tinggi. ${rival[1]} masih sangat dekat dengan ${leader[1]}. Setiap pertandingan memiliki nilai besar.`;
+        `
+        Perebutan puncak sangat panas.
+        <b>${kedua[1]}</b> hanya terpaut sedikit dari
+        <b>${pertama[1]}</b>.
+        Setiap pertandingan memiliki nilai penting.
+        Jangan bermain terburu-buru.
+        `;
 
     }
 
     else{
 
         narasi=
-        `${leader[1]} memiliki keuntungan psikologis karena berada di posisi puncak. Tantangan berikutnya adalah menjaga fokus.`;
+        `
+        <b>${pertama[1]}</b> memiliki ruang aman sementara.
+        Namun tekanan terbesar adalah menjaga fokus,
+        karena liga masih panjang dan momentum dapat berubah.
+        `;
 
     }
 
 
+    document.getElementById("mental").innerHTML=
 
-    document.getElementById("mental").innerHTML=`
-
+    `
     <div class="card">
 
     <h2>🧠 Mental Liga</h2>
@@ -465,105 +504,117 @@ function buatMental(data){
     <p>${narasi}</p>
 
     </div>
-
     `;
 
 }
 
 
 
-
-
 //==========================================
-// STRATEGY
+// STRATEGI
 //==========================================
 
-function buatStrategy(data){
-
-    const leader=data[1];
+function buatStrategi(data){
 
 
-    let narasi=
-    "";
+let top=data[1];
+
+let narasi="";
 
 
-    if(Number(leader[4])>5){
+if(Number(top[7])>30){
 
-        narasi=
-        `Strategi utama adalah mengurangi kekalahan. Margin kecil saat kalah dapat menjaga posisi klasemen.`;
+narasi=
+`
+Pemimpin klasemen memiliki keunggulan besar.
+Strategi terbaik adalah bermain aman,
+mengurangi risiko kesalahan,
+dan menjaga kemenangan rutin.
+`;
 
-    }
+}
 
-    else{
+else{
 
-        narasi=
-        `Pertahankan tekanan. Kemenangan beruntun akan menjadi faktor terbesar dalam perebutan gelar.`;
-
-    }
-
-
-
-    document.getElementById("strategy").innerHTML=`
-
-    <div class="card">
-
-    <h2>♟ Strategi</h2>
-
-    <p>${narasi}</p>
-
-    </div>
-
-    `;
+narasi=
+`
+Persaingan sangat ketat.
+Strategi terbaik adalah mencari kemenangan beruntun
+karena perubahan kecil dapat mengubah posisi klasemen.
+`;
 
 }
 
 
 
+document.getElementById("strategy").innerHTML=
+
+`
+<div class="card">
+
+<h2>♟ Strategi Liga</h2>
+
+<p>${narasi}</p>
+
+</div>
+`;
+
+}
+
 
 
 //==========================================
-// PREDICTION
+// PREDIKSI
 //==========================================
 
-function buatPrediction(data){
+function buatPrediksi(data){
 
-    const satu=data[1];
-    const dua=data[2];
-
-
-    let narasi="";
+let pertama=data[1];
+let kedua=data[2];
 
 
-    let selisih=
-    Number(satu[8])-Number(dua[8]);
+let prediksi="";
 
 
-    if(selisih<10){
-
-        narasi=
-        `Liga masih sangat terbuka. Perebutan posisi pertama kemungkinan akan berubah apabila pemimpin klasemen kehilangan momentum.`;
-
-    }
-
-    else{
-
-        narasi=
-        `${satu[1]} menjadi kandidat kuat mempertahankan posisi puncak selama mampu menjaga performa saat ini.`;
-
-    }
+let jarak=
+Number(pertama[8])-Number(kedua[8]);
 
 
+if(jarak<=5){
 
-    document.getElementById("prediction").innerHTML=`
+prediksi=
+`
+Liga sangat terbuka.
+Perebutan juara kemungkinan akan berubah
+apabila pemimpin klasemen kehilangan momentum.
+`;
 
-    <div class="card">
+}
 
-    <h2>🔮 Prediksi Liga</h2>
+else{
 
-    <p>${narasi}</p>
+prediksi=
+`
+Pemimpin klasemen memiliki peluang besar,
+namun konsistensi tetap menjadi faktor utama
+hingga pertandingan terakhir.
+`;
 
-    </div>
+}
 
-    `;
+
+
+document.getElementById("prediction").innerHTML=
+
+`
+<div class="card">
+
+<h2>🔮 Prediksi Liga</h2>
+
+<p>${prediksi}</p>
+
+</div>
+
+`;
 
 }
