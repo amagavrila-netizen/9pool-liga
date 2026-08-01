@@ -230,101 +230,110 @@ function buatTrend(pertandingan){
 }
 //==========================================
 // MATCH OF THE DAY
+// Mengambil pertandingan terbaru dari 10 pertandingan terakhir
 //==========================================
 
 function buatMatchOfTheDay(data){
 
-    let terbaik = null;
-    let skorTerbaik = -9999;
+    let pertandinganValid=[];
 
+
+    // ambil pertandingan yang memiliki nomor ronde
     for(let i=1;i<data.length;i++){
 
-        let row = data[i];
-
-        if(row[0]=="" || row[0]==null) continue;
-
-        let scoreA = Number(row[3]);
-        let scoreB = Number(row[4]);
-
-        if(isNaN(scoreA) || isNaN(scoreB)) continue;
-
-        let margin = Math.abs(scoreA-scoreB);
-
-        let skor = 0;
-
-        // Semakin tipis semakin menarik
-        if(margin==1) skor+=100;
-        else if(margin==2) skor+=80;
-        else if(margin==3) skor+=60;
-        else if(margin==4) skor+=40;
-        else skor+=20;
-
-        // Total frame tinggi = duel panjang
-        skor += scoreA + scoreB;
-
-        // Kedua pemain Tier 1-3 lebih menarik
-        const namaA=row[2];
-        const namaB=row[5];
-
         if(
-            namaA.includes("1") ||
-            namaA.includes("2") ||
-            namaA.includes("3")
-        ) skor+=10;
+            data[i][0] &&
+            !isNaN(data[i][0]) &&
+            data[i][2] &&
+            data[i][5]
+        ){
 
-        if(
-            namaB.includes("1") ||
-            namaB.includes("2") ||
-            namaB.includes("3")
-        ) skor+=10;
-
-        if(skor>skorTerbaik){
-
-            skorTerbaik=skor;
-            terbaik=row;
+            pertandinganValid.push(data[i]);
 
         }
 
     }
 
-    if(terbaik==null){
+
+    if(pertandinganValid.length===0){
 
         document.getElementById("prediction").innerHTML="";
+
         return;
 
     }
 
-    const ronde=terbaik[1];
-    const playerA=terbaik[2];
-    const scoreA=Number(terbaik[3]);
-    const scoreB=Number(terbaik[4]);
-    const playerB=terbaik[5];
-    const winner=terbaik[6];
 
-    const margin=Math.abs(scoreA-scoreB);
 
-    let narasi="";
+    // hanya lihat 10 pertandingan terakhir
+    let terakhir = pertandinganValid.slice(-10);
 
-    if(margin==1){
 
-        narasi=
-        `Pertandingan paling dramatis sejauh ini. <b>${winner}</b> berhasil mencuri kemenangan hanya dengan selisih satu frame. Duel berlangsung hingga bola terakhir dan menjadi salah satu pertandingan terbaik musim ini.`;
+
+    // cari pertandingan paling dramatis
+    let terbaik = terakhir[0];
+    let marginTerbaik = Math.abs(
+        Number(terbaik[3])-Number(terbaik[4])
+    );
+
+
+    for(let i=1;i<terakhir.length;i++){
+
+        let margin =
+        Math.abs(
+            Number(terakhir[i][3])-
+            Number(terakhir[i][4])
+        );
+
+
+        if(margin < marginTerbaik){
+
+            terbaik=terakhir[i];
+            marginTerbaik=margin;
+
+        }
 
     }
 
-    else if(margin<=3){
+
+
+    const ronde   = terbaik[1];
+    const playerA = terbaik[2];
+    const scoreA  = terbaik[3];
+    const scoreB  = terbaik[4];
+    const playerB = terbaik[5];
+    const winner  = terbaik[6];
+
+
+    let narasi="";
+
+
+    if(marginTerbaik==1){
 
         narasi=
-        `<b>${winner}</b> menunjukkan mental yang kuat dalam pertandingan yang berlangsung ketat. Kedua pemain saling mengejar hingga frame-frame akhir sebelum kemenangan berhasil diamankan.`;
+        `Pertandingan paling dramatis. 
+        <b>${winner}</b> berhasil memenangkan duel ketat 
+        dengan selisih hanya satu frame.`;
+
+    }
+
+    else if(marginTerbaik<=3){
+
+        narasi=
+        `<b>${winner}</b> harus berjuang keras 
+        sebelum akhirnya mengamankan kemenangan penting.`;
 
     }
 
     else{
 
         narasi=
-        `<b>${winner}</b> tampil lebih konsisten sepanjang pertandingan dan mampu mengendalikan tempo permainan hingga memastikan kemenangan dengan cukup meyakinkan.`;
+        `<b>${winner}</b> tampil dominan dan berhasil 
+        mengontrol pertandingan sejak awal.`;
 
     }
+
+
 
     document.getElementById("prediction").innerHTML=`
 
@@ -338,24 +347,25 @@ function buatMatchOfTheDay(data){
 
         <br><br>
 
-        <b>${playerA}</b>
 
-        ${scoreA}
+        ${playerA}
 
-        -
+        <b>${scoreA} - ${scoreB}</b>
 
-        ${scoreB}
+        ${playerB}
 
-        <b>${playerB}</b>
 
         <br><br>
 
+
         ${narasi}
+
 
         </p>
 
     </div>
 
     `;
+
 
 }
