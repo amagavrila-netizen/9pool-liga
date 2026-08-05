@@ -2,7 +2,216 @@
 // LIGA JURNAL ENGINE
 // Versi 2.0
 //==================================================
+//==================================================
+// AI ANALYZER ENGINE
+//==================================================
 
+let ligaData = {
+    players: {},
+    klasemen: [],
+    pertandingan: []
+};
+
+//==================================================
+// BUILD PLAYER DATABASE
+//==================================================
+
+function buildDatabase(klasemen, pertandingan){
+
+    ligaData.players = {};
+    ligaData.klasemen = klasemen;
+    ligaData.pertandingan = pertandingan;
+
+    //------------------------------------------
+    // klasemen
+    //------------------------------------------
+
+    for(let i=1;i<klasemen.length;i++){
+
+        const r = klasemen[i];
+
+        if(!r || !r[1]) continue;
+
+        ligaData.players[r[1]] = {
+
+            nama : r[1],
+            tier : Number(r[2]),
+            main : Number(r[3]),
+            menang : Number(r[4]),
+            kalah : Number(r[5]),
+            frameMenang : Number(r[6]),
+            frameDiff : Number(r[7]),
+            poin : Number(r[8]),
+
+            frameKalah :
+            Number(r[6])-
+            Number(r[7]),
+
+            rank : i,
+
+            winRate : 0,
+
+            last5 : [],
+
+            streak : 0,
+
+            current:"",
+
+            menangTipis:0,
+            kalahTipis:0,
+
+            menangBesar:0,
+            kalahBesar:0,
+
+            upset:0,
+
+            giantKiller:0,
+
+            menangTierAtas:0,
+
+            kalahTierBawah:0,
+
+            form:0
+
+        };
+
+    }
+
+    //------------------------------------------
+    // pertandingan
+    //------------------------------------------
+
+    for(let i=1;i<pertandingan.length;i++){
+
+        const row = pertandingan[i];
+
+        if(!row) continue;
+
+        const A=row[2];
+        const B=row[5];
+
+        if(!ligaData.players[A]) continue;
+        if(!ligaData.players[B]) continue;
+
+        const scoreA=Number(row[3]);
+        const scoreB=Number(row[4]);
+
+        const winner=row[6];
+        const loser=row[7];
+
+        const margin=
+        Math.abs(scoreA-scoreB);
+
+        //----------------------------------
+
+        ligaData.players[winner].last5.push("W");
+
+        ligaData.players[loser].last5.push("L");
+
+        //----------------------------------
+
+        if(margin==1){
+
+            ligaData.players[winner].menangTipis++;
+
+            ligaData.players[loser].kalahTipis++;
+
+        }
+
+        if(margin>=5){
+
+            ligaData.players[winner].menangBesar++;
+
+            ligaData.players[loser].kalahBesar++;
+
+        }
+
+        //----------------------------------
+
+        const tierWinner=
+        ligaData.players[winner].tier;
+
+        const tierLoser=
+        ligaData.players[loser].tier;
+
+        if(tierWinner>tierLoser){
+
+            ligaData.players[winner].giantKiller++;
+
+            ligaData.players[loser].kalahTierBawah++;
+
+        }
+
+        if(tierWinner<tierLoser){
+
+            ligaData.players[winner].menangTierAtas++;
+
+        }
+
+    }
+
+    //------------------------------------------
+    // hitung win rate
+    //------------------------------------------
+
+    Object.values(ligaData.players).forEach(p=>{
+
+        if(p.main>0){
+
+            p.winRate=
+            p.menang/p.main;
+
+        }
+
+        p.last5=
+        p.last5.slice(-5);
+
+    });
+
+    //------------------------------------------
+    // streak
+    //------------------------------------------
+
+    Object.values(ligaData.players).forEach(p=>{
+
+        let s=0;
+
+        let current="";
+
+        for(let i=p.last5.length-1;i>=0;i--){
+
+            if(current===""){
+
+                current=p.last5[i];
+
+                s++;
+
+            }
+
+            else if(current==p.last5[i]){
+
+                s++;
+
+            }
+
+            else{
+
+                break;
+
+            }
+
+        }
+
+        p.current=current;
+
+        p.streak=s;
+
+        p.form=
+        p.last5.filter(x=>x=="W").length;
+
+    });
+
+}
 
 //==================================================
 // DATABASE COACHING
@@ -167,11 +376,13 @@ fetch(pertandinganURL).then(r=>r.json())
 
 .then(([klasemen,pertandingan])=>{
 
+buildDatabase(klasemen, pertandingan);
+
 buatHeadline(klasemen);
 
-buatHotPlayer(klasemen);
+buatHotPlayer();
 
-buatWarning(klasemen);
+buatWarning();
 
 buatTrend(pertandingan);
 
@@ -186,7 +397,6 @@ buatPrediction(klasemen);
 buatMatchOfTheDay(pertandingan);
 
 })
-
 .catch(err=>console.log(err));
 //==================================================
 // HEADLINE
@@ -194,50 +404,219 @@ buatMatchOfTheDay(pertandingan);
 
 function buatHeadline(data){
 
-    if(data.length<3) return;
+    const p = Object.values(ligaData.players);
 
-    const p1=data[1];
-    const p2=data[2];
-    const p3=data.length>3 ? data[3] : p2;
+    if(p.length<5) return;
 
-    const gap=
-    Number(p1[8])-Number(p2[8]);
+    const rank =
+    [...p].sort((a,b)=>a.rank-b.rank);
 
-    let narasi="";
+    const leader = rank[0];
+    const second = rank[1];
+    const third = rank[2];
 
-    if(gap<=5){
+    const headline=[];
 
-        narasi=`
-        <b>${p2[1]}</b> terus memberikan tekanan kepada
-        <b>${p1[1]}</b>.
-        Selisih hanya <b>${gap}</b> frame sehingga
-        perebutan puncak klasemen diperkirakan berlangsung
-        hingga akhir musim.
-        `;
+    //---------------------------------------
+    // Persaingan Juara
+    //---------------------------------------
 
-    }
+    if(leader.poin-second.poin<=5){
 
-    else if(gap<=15){
-
-        narasi=`
-        <b>${p1[1]}</b> masih memimpin klasemen,
-        namun <b>${p2[1]}</b> dan
-        <b>${p3[1]}</b>
-        masih berada dalam jarak yang dapat dikejar.
-        `;
+        headline.push(`
+        <b>${second.nama}</b> terus membayangi
+        <b>${leader.nama}</b>.
+        Selisih hanya
+        <b>${leader.poin-second.poin}</b>
+        frame membuat perebutan posisi pertama
+        semakin panas.
+        `);
 
     }
 
-    else{
+    //---------------------------------------
+    // Dominasi Pemuncak
+    //---------------------------------------
 
-        narasi=`
-        <b>${p1[1]}</b> mulai menciptakan jarak yang cukup
-        nyaman dari para pesaingnya.
-        Konsistensi beberapa pertandingan berikutnya akan
-        menjadi penentu peluang juara.
-        `;
+    if(leader.winRate>=0.80){
+
+        headline.push(`
+        <b>${leader.nama}</b>
+        tampil sangat konsisten dengan win rate
+
+        <b>${Math.round(leader.winRate*100)}%</b>.
+
+        Konsistensi seperti ini mulai
+        menciptakan tekanan bagi seluruh pesaing.
+        `);
 
     }
+
+    //---------------------------------------
+    // Persaingan Top 5
+    //---------------------------------------
+
+    if(rank.length>=6){
+
+        const gap=
+        rank[4].poin-
+        rank[5].poin;
+
+        if(Math.abs(gap)<=5){
+
+            headline.push(`
+            Persaingan memasuki
+            <b>zona Top 5</b>
+            mulai memanas.
+
+            Selisih frame yang tipis membuat
+            satu kemenangan besar dapat langsung
+            mengubah posisi klasemen.
+            `);
+
+        }
+
+    }
+
+    //---------------------------------------
+    // Pemain Paling Panas
+    //---------------------------------------
+
+    const hot=
+    [...p].sort((a,b)=>b.form-a.form)[0];
+
+    if(hot.form>=4){
+
+        headline.push(`
+        <b>${hot.nama}</b>
+
+        sedang berada dalam performa terbaik.
+
+        Ia memenangkan
+
+        <b>${hot.form}</b>
+
+        dari lima pertandingan terakhir.
+        `);
+
+    }
+
+    //---------------------------------------
+    // Giant Killer
+    //---------------------------------------
+
+    const giant=
+    [...p].sort((a,b)=>
+
+    b.giantKiller-
+    a.giantKiller
+
+    )[0];
+
+    if(giant.giantKiller>=2){
+
+        headline.push(`
+        <b>${giant.nama}</b>
+
+        mulai dikenal sebagai
+
+        <b>Giant Killer</b>.
+
+        Ia telah beberapa kali
+        mengalahkan pemain yang berada
+        di tier lebih tinggi.
+        `);
+
+    }
+
+    //---------------------------------------
+    // Win Rate Tinggi
+    //---------------------------------------
+
+    const efisien=
+    [...p]
+
+    .filter(x=>x.main>=8)
+
+    .sort((a,b)=>
+
+    b.winRate-a.winRate
+
+    )[0];
+
+    if(efisien){
+
+        headline.push(`
+        Efisiensi permainan
+
+        <b>${efisien.nama}</b>
+
+        layak mendapat perhatian.
+
+        Dengan win rate
+
+        <b>${Math.round(efisien.winRate*100)}%</b>,
+
+        ia menjadi salah satu pemain
+        paling konsisten musim ini.
+        `);
+
+    }
+
+    //---------------------------------------
+    // Comeback
+    //---------------------------------------
+
+    const naik=
+    [...p]
+
+    .filter(x=>x.form>=4 && x.rank>5)
+
+    .sort((a,b)=>b.form-a.form)[0];
+
+    if(naik){
+
+        headline.push(`
+        Jangan abaikan
+
+        <b>${naik.nama}</b>.
+
+        Performa beberapa pertandingan terakhir
+        menunjukkan bahwa ia mulai
+        mengancam kelompok papan atas.
+        `);
+
+    }
+
+    //---------------------------------------
+    // Warning Leader
+    //---------------------------------------
+
+    if(leader.current=="L"){
+
+        headline.push(`
+        Kekalahan terakhir
+
+        <b>${leader.nama}</b>
+
+        membuka kembali peluang
+        bagi para pesaing untuk
+        mengejar posisi puncak klasemen.
+        `);
+
+    }
+
+    //---------------------------------------
+    // Random
+    //---------------------------------------
+
+    const berita=
+
+    headline[
+        Math.floor(
+            Math.random()*headline.length
+        )
+    ];
 
     document.getElementById("headline").innerHTML=`
 
@@ -245,108 +624,501 @@ function buatHeadline(data){
 
         <h2>🔥 Headline Hari Ini</h2>
 
-        <p>${narasi}</p>
+        <p>
+
+        ${berita}
+
+        </p>
 
     </div>
 
     `;
 
 }
-
 
 
 //==================================================
 // HOT PLAYER
 //==================================================
 
-function buatHotPlayer(data){
+function buatHotPlayer(){
 
-    if(data.length<2)return;
+    const p = Object.values(ligaData.players);
 
-    let pemain=data[1];
+    const kandidat=[];
 
-    for(let i=2;i<data.length;i++){
+    //--------------------------------------------------
+    // Win Rate Tertinggi
+    //--------------------------------------------------
 
-        if(
-            Number(data[i][7])>
-            Number(pemain[7])
-        ){
+    const winRate=
+    [...p]
+    .filter(x=>x.main>=8)
+    .sort((a,b)=>b.winRate-a.winRate)[0];
 
-            pemain=data[i];
+    kandidat.push({
 
-        }
+        judul:"🔥 Win Rate Tertinggi",
+
+        isi:`
+        <b>${winRate.nama}</b>
+
+        mencatat win rate
+
+        <b>${Math.round(winRate.winRate*100)}%</b>.
+
+        Konsistensi seperti ini menjadi modal besar
+        untuk bertahan di papan atas.
+        `
+
+    });
+
+    //--------------------------------------------------
+    // Form Terbaik
+    //--------------------------------------------------
+
+    const form=
+    [...p]
+    .sort((a,b)=>b.form-a.form)[0];
+
+    kandidat.push({
+
+        judul:"📈 Sedang Panas",
+
+        isi:`
+
+        <b>${form.nama}</b>
+
+        memenangkan
+
+        <b>${form.form}</b>
+
+        dari lima pertandingan terakhir.
+
+        Tren positif ini membuatnya menjadi salah satu
+        pemain paling berbahaya saat ini.
+
+        `
+
+    });
+
+    //--------------------------------------------------
+    // Giant Killer
+    //--------------------------------------------------
+
+    const giant=
+    [...p]
+    .sort((a,b)=>b.giantKiller-a.giantKiller)[0];
+
+    if(giant.giantKiller>0){
+
+        kandidat.push({
+
+            judul:"💣 Giant Killer",
+
+            isi:`
+
+            <b>${giant.nama}</b>
+
+            beberapa kali berhasil
+            mengalahkan pemain
+            tier yang lebih tinggi.
+
+            Ia mulai menjadi ancaman
+            bagi unggulan liga.
+
+            `
+
+        });
 
     }
+
+    //--------------------------------------------------
+    // Raja 9-8
+    //--------------------------------------------------
+
+    const clutch=
+    [...p]
+    .sort((a,b)=>b.menangTipis-a.menangTipis)[0];
+
+    kandidat.push({
+
+        judul:"🎯 Raja Duel Ketat",
+
+        isi:`
+
+        <b>${clutch.nama}</b>
+
+        paling sering memenangkan
+        pertandingan ketat.
+
+        Mental seperti ini
+        sering menjadi pembeda
+        pada akhir musim.
+
+        `
+
+    });
+
+    //--------------------------------------------------
+    // Dominasi Besar
+    //--------------------------------------------------
+
+    const dominan=
+    [...p]
+    .sort((a,b)=>b.menangBesar-a.menangBesar)[0];
+
+    kandidat.push({
+
+        judul:"🚀 Dominan",
+
+        isi:`
+
+        <b>${dominan.nama}</b>
+
+        paling sering menang
+        dengan margin besar.
+
+        Hal ini menunjukkan
+        kemampuannya mengendalikan pertandingan
+        sejak awal.
+
+        `
+
+    });
+
+    //--------------------------------------------------
+    // Efisien
+    //--------------------------------------------------
+
+    const frame=
+    [...p]
+    .sort((a,b)=>b.frameDiff-a.frameDiff)[0];
+
+    kandidat.push({
+
+        judul:"⭐ Efisiensi Frame",
+
+        isi:`
+
+        Dengan selisih frame
+
+        <b>+${frame.frameDiff}</b>,
+
+        <b>${frame.nama}</b>
+
+        menjadi salah satu pemain
+        paling efisien musim ini.
+
+        `
+
+    });
+
+    //--------------------------------------------------
+    // Comeback
+    //--------------------------------------------------
+
+    const comeback=
+    [...p]
+    .filter(x=>x.rank>8)
+    .sort((a,b)=>b.form-a.form)[0];
+
+    if(comeback){
+
+        kandidat.push({
+
+            judul:"📢 Mulai Bangkit",
+
+            isi:`
+
+            Jangan remehkan
+
+            <b>${comeback.nama}</b>.
+
+            Performanya beberapa pertandingan terakhir
+            menunjukkan tanda-tanda kebangkitan.
+
+            `
+
+        });
+
+    }
+
+    //--------------------------------------------------
+    // Tier Rendah Berbahaya
+    //--------------------------------------------------
+
+    const underdog=
+    [...p]
+    .filter(x=>x.tier>=3)
+    .sort((a,b)=>b.winRate-a.winRate)[0];
+
+    kandidat.push({
+
+        judul:"⚡ Underdog",
+
+        isi:`
+
+        Di antara pemain Tier 3 dan 4,
+
+        <b>${underdog.nama}</b>
+
+        tampil paling konsisten.
+
+        Ia berpotensi menjadi
+        pengganggu serius
+        bagi papan atas.
+
+        `
+
+    });
+
+    //--------------------------------------------------
+
+    const pilih=
+
+    kandidat[
+        Math.floor(
+            Math.random()*kandidat.length
+        )
+    ];
 
     document.getElementById("hotPlayer").innerHTML=`
 
     <div class="card">
 
-        <h2>⭐ Player on Fire</h2>
+    <h2>${pilih.judul}</h2>
 
-        <p>
+    <p>
 
-        <b>${pemain[1]}</b>
+    ${pilih.isi}
 
-        sedang menjadi pemain dengan
-        selisih frame terbaik yaitu
-
-        <b>+${pemain[7]}</b>.
-
-        Efisiensi kemenangan seperti ini biasanya
-        menjadi salah satu indikator pemain yang
-        sedang berada dalam performa terbaik.
-
-        </p>
+    </p>
 
     </div>
 
     `;
 
 }
-
 
 
 //==================================================
 // WARNING ZONE
 //==================================================
 
-function buatWarning(data){
+function buatWarning(){
 
-    if(data.length<2)return;
+    const p = Object.values(ligaData.players);
 
-    let pemain=data[1];
+    const warning=[];
 
-    for(let i=2;i<data.length;i++){
+    //--------------------------------------------------
+    // Frame Difference Terburuk
+    //--------------------------------------------------
 
-        if(
-            Number(data[i][7])<
-            Number(pemain[7])
-        ){
+    const frame=
+    [...p]
+    .sort((a,b)=>a.frameDiff-b.frameDiff)[0];
 
-            pemain=data[i];
+    warning.push({
 
-        }
+        judul:"⚠ Tekanan Selisih Frame",
+
+        isi:`
+
+        <b>${frame.nama}</b>
+
+        masih memiliki selisih frame
+
+        <b>${frame.frameDiff}</b>.
+
+        Mengurangi kekalahan dengan margin besar
+        akan jauh lebih berpengaruh dibanding
+        mengejar kemenangan spektakuler.
+
+        `
+
+    });
+
+    //--------------------------------------------------
+    // Kalah Beruntun
+    //--------------------------------------------------
+
+    const lose=
+    [...p]
+    .filter(x=>x.current=="L")
+    .sort((a,b)=>b.streak-a.streak)[0];
+
+    if(lose){
+
+        warning.push({
+
+            judul:"📉 Kehilangan Momentum",
+
+            isi:`
+
+            <b>${lose.nama}</b>
+
+            sedang mengalami
+
+            <b>${lose.streak}</b>
+
+            kekalahan beruntun.
+
+            Satu kemenangan saja
+            dapat mengembalikan
+            kepercayaan dirinya.
+
+            `
+
+        });
 
     }
+
+    //--------------------------------------------------
+    // Sering Kalah Tipis
+    //--------------------------------------------------
+
+    const clutch=
+    [...p]
+    .sort((a,b)=>b.kalahTipis-a.kalahTipis)[0];
+
+    if(clutch.kalahTipis>1){
+
+        warning.push({
+
+            judul:"😓 Kurang Beruntung",
+
+            isi:`
+
+            <b>${clutch.nama}</b>
+
+            beberapa kali kalah
+            dengan selisih satu frame.
+
+            Sedikit peningkatan pada
+            bola-bola penentu dapat
+            mengubah hasil pertandingan.
+
+            `
+
+        });
+
+    }
+
+    //--------------------------------------------------
+    // Tier Atas Sering Tumbang
+    //--------------------------------------------------
+
+    const tier=
+    [...p]
+    .filter(x=>x.tier<=2)
+    .sort((a,b)=>b.kalahTierBawah-a.kalahTierBawah)[0];
+
+    if(tier.kalahTierBawah>0){
+
+        warning.push({
+
+            judul:"⚡ Waspada",
+
+            isi:`
+
+            <b>${tier.nama}</b>
+
+            sudah beberapa kali
+            dikalahkan pemain tier
+            di bawahnya.
+
+            Persaingan musim ini
+            semakin tidak mudah
+            diprediksi.
+
+            `
+
+        });
+
+    }
+
+    //--------------------------------------------------
+    // Win Rate Rendah
+    //--------------------------------------------------
+
+    const rendah=
+    [...p]
+    .filter(x=>x.main>=8)
+    .sort((a,b)=>a.winRate-b.winRate)[0];
+
+    warning.push({
+
+        judul:"🚨 Perlu Bangkit",
+
+        isi:`
+
+        Win rate
+
+        <b>${rendah.nama}</b>
+
+        baru mencapai
+
+        <b>${Math.round(rendah.winRate*100)}%</b>.
+
+        Konsistensi menjadi pekerjaan
+        rumah terbesarnya.
+
+        `
+
+    });
+
+    //--------------------------------------------------
+    // Banyak Kalah Besar
+    //--------------------------------------------------
+
+    const besar=
+    [...p]
+    .sort((a,b)=>b.kalahBesar-a.kalahBesar)[0];
+
+    if(besar.kalahBesar>0){
+
+        warning.push({
+
+            judul:"🛡 Saatnya Memperbaiki Defense",
+
+            isi:`
+
+            <b>${besar.nama}</b>
+
+            cukup sering mengalami
+            kekalahan dengan margin besar.
+
+            Mengurangi satu atau dua frame
+            yang hilang di setiap pertandingan
+            akan sangat membantu klasemen.
+
+            `
+
+        });
+
+    }
+
+    //--------------------------------------------------
+
+    const pilih=
+
+    warning[
+        Math.floor(
+            Math.random()*warning.length
+        )
+    ];
 
     document.getElementById("warning").innerHTML=`
 
     <div class="card">
 
-        <h2>⚠ Warning Zone</h2>
+        <h2>${pilih.judul}</h2>
 
         <p>
 
-        <b>${pemain[1]}</b>
-
-        memiliki selisih frame
-
-        <b>${pemain[7]}</b>.
-
-        Mengurangi kekalahan dengan margin besar
-        akan memberikan dampak signifikan terhadap
-        posisi klasemen akhir.
+        ${pilih.isi}
 
         </p>
 
@@ -355,7 +1127,6 @@ function buatWarning(data){
     `;
 
 }
-
 
 
 //==================================================
