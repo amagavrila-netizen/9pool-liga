@@ -1296,19 +1296,28 @@ border-left:8px solid crimson;
 .league-announcement{
     max-width:1000px;
     margin:20px auto;
-    padding:18px 22px;
-    background:#fff8e6;
-    border-left:6px solid #f39c12;
+    padding:20px 24px;
+    background:#ffffff;
+    border-left:8px solid #c62828;
     border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    color:#222;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
 }
 
 .league-announcement h2{
-    margin-top:0;
-    color:#d35400;
+    margin:0 0 15px;
+    color:#c62828;
+    font-size:26px;
+    font-weight:700;
 }
 
 .league-announcement p{
-    margin:10px 0;
-    line-height:1.6;
+    margin:12px 0;
+    color:#333;
+    font-size:17px;
+    line-height:1.7;
+}
+
+.league-announcement strong{
+    color:#c62828;
 }
