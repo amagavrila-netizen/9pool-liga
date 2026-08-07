@@ -1,4 +1,3 @@
-```javascript
 //======================================================
 // LIGA JURNAL
 // EDISI TERBARU
@@ -668,4 +667,3 @@ function renderJournal() {
 document.addEventListener("DOMContentLoaded", function() {
     renderJournal();
 });
-```
