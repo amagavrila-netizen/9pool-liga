@@ -1,788 +1,403 @@
-//======================================================
-// LIGA JURNAL
-// EDISI TERBARU
-// 9-POOL BILLIARDS & CAFE
-//======================================================
-
-const jurnal = [
+# 📰 LIGA JURNAL
 
-{
-title:"📰 LIGA JURNAL",
-content:`
+## EDISI TERBARU
 
-<div class="edition">
+### **KETIKA PAPAN TENGAH MULAI MEMBAKAR**
 
-<h2>EDISI TERBARU</h2>
+Ada satu kesalahan yang mudah dilakukan ketika melihat klasemen saat ini:
 
-<p>
-Berita • Analisis • Statistik • Fun Fact • Cerita Liga
-</p>
+**menganggap posisi hari ini sebagai gambaran kekuatan akhir musim.**
 
-<p>
-<b>Musim memasuki fase yang semakin panas.</b>
-</p>
-
-</div>
-
-`
-},
-
-//======================================================
-// ZONA 5-8
-//======================================================
-
-{
-title:"🔥 ZONA 5–8: PINTU KE PAPAN ATAS MASIH TERBUKA",
-content:`
+Padahal setelah **245 pertandingan**, justru papan tengah yang mulai memberikan tanda-tanda paling menarik.
 
-<p>
-Di belakang kelompok pemimpin klasemen, persaingan justru semakin menarik.
-</p>
-
-<p>
-<b>Iwan, Ko CG, Ko Charles, dan Pandi</b> saat ini berada di zona 5–8.
-Keempatnya memiliki modal yang cukup kuat untuk mengganggu papan atas.
-</p>
-
-<p>
-Iwan sudah mengumpulkan <b>182 poin</b>, sementara Ko CG berada di
-<b>171 poin</b>.
-Ko Charles mengoleksi <b>161 poin</b> dan Pandi <b>159 poin</b>.
-</p>
+Dan semakin diperhatikan, semakin sulit menebak siapa yang akan berada di posisi yang sama ketika liga berakhir.
 
-<p>
-Secara matematis, jarak antara posisi 5 dan 8 hanya
-<b>23 poin</b>.
-Dalam format liga ini, selisih tersebut dapat berubah sangat cepat
-hanya dalam beberapa pertandingan.
-</p>
+---
 
-<p>
-Dan pertandingan terbaru kembali menambah cerita.
-<b>Ko CG berhasil mengalahkan William 9–7.</b>
-</p>
+## 🔥 ZONA 5–9: JARAKNYA SUDAH TERLALU TIPIS
 
-<p>
-Kemenangan tersebut bukan sekadar tambahan sembilan poin.
-Ia juga menjaga Ko CG tetap berada di dalam kelompok yang sedang
-mengejar papan atas.
-</p>
-
-<div class="fun-fact">
+Bang Larosa berada di posisi 5 dengan **185 poin**.
 
-<b>🎯 FUN FACT</b>
+Tepat di belakangnya:
 
-<p>
-Ko CG kini sudah memainkan <b>21 pertandingan</b>.
-Artinya ia masih memiliki ruang pertandingan untuk mengubah posisi
-akhirnya secara signifikan.
-</p>
+**Ko CG — 180**
 
-</div>
-
-`
-},
+Kemudian:
 
-//======================================================
-// ZONA 9-12
-//======================================================
+**Ko Charles — 170**
+**Pandi — 168**
+**Habib — 168**
 
-{
-title:"⚡ ZONA 9–12: EMPAT NAMA, SATU PERBURUAN",
-content:`
-
-<p>
-Di posisi 9 sampai 12 terdapat <b>Habib, Ko Khenny, William, dan Om Anto</b>.
-</p>
+Perhatikan angkanya.
 
-<p>
-Jarak mereka tidak terlalu jauh.
-Habib memiliki <b>150 poin</b>, Ko Khenny <b>134</b>,
-William <b>131</b>, sedangkan Om Anto <b>129</b>.
-</p>
-
-<p>
-Selisih antara posisi 9 dan 12 hanya:
+Dari posisi 6 sampai posisi 9 hanya terdapat **12 poin**.
 
-</p>
+Bahkan Pandi dan Habib memiliki jumlah poin yang sama.
 
-<h3>
-150 − 129 = 21 poin
-</h3>
+Ini bukan lagi sekadar perebutan posisi.
 
-<p>
-Dengan kata lain, satu rangkaian kemenangan dapat mengubah
-wajah kelompok ini secara drastis.
-</p>
+Ini sudah menjadi **kelompok pengejar**.
 
-<p>
-Yang membuatnya semakin menarik adalah performa mereka tidak seragam.
-Ada yang memiliki jumlah pertandingan lebih sedikit,
-ada yang sudah memainkan lebih banyak pertandingan,
-dan ada yang memiliki selisih frame negatif tetapi tetap mengumpulkan
-kemenangan penting.
-</p>
+Satu kemenangan besar dapat mengubah susunan kelompok ini.
 
-<p>
-Karena itu klasemen tidak hanya berbicara tentang siapa yang kuat.
-Ia juga berbicara tentang <b>siapa yang paling cepat mengumpulkan poin
-pada fase akhir musim.</b>
-</p>
+Dan pemain yang hari ini berada di posisi 9 belum tentu masih berada di sana ketika musim memasuki garis akhir.
 
-<div class="fun-fact">
+---
 
-<b>🎯 FUN FACT</b>
+## ⚡ KO CG TERUS MENEKAN
 
-<p>
-William sudah memainkan <b>19 pertandingan</b>, tetapi masih memiliki
-kesempatan mengejar pemain di atasnya karena jarak poin dengan
-Ko Khenny hanya <b>3 poin</b>.
-</p>
+Ko CG sekarang memiliki:
 
-</div>
+**22 pertandingan**
+**16 kemenangan**
+**6 kekalahan**
+**180 poin**
+**+46 selisih frame**
 
-`
-},
-
-//======================================================
-// ZONA 13-16
-//======================================================
+Dalam lima pertandingan terakhir:
 
-{
-title:"🚨 ZONA 13–16: KELOMPOK YANG BISA MELEDAK",
-content:`
+**4 kemenangan – 1 kekalahan**
 
-<p>
-<b>Aris, Alfin, Eza, dan Alex</b> berada di antara posisi 13 sampai 16.
-</p>
+Dengan total frame:
 
-<p>
-Menariknya, kelompok ini memperlihatkan dua karakter berbeda.
-</p>
+**42–29**
 
-<p>
-Aris dan Alfin memiliki jumlah pertandingan yang cukup banyak,
-sementara Alex baru memainkan <b>16 pertandingan</b>.
-</p>
+Artinya, Ko CG bukan sekadar mempertahankan posisinya.
 
-<p>
-Alex sekarang memiliki <b>120 poin</b> dari 16 pertandingan.
-Itu berarti rata-rata poinnya:
+Ia sedang memberikan tekanan.
 
-</p>
+Dan hanya **5 poin** yang memisahkannya dari posisi 5.
 
-<h3>
-120 ÷ 16 = 7,50 poin per pertandingan
-</h3>
+---
 
-<p>
-Angka tersebut menunjukkan bahwa Alex memiliki kemampuan
-mengumpulkan poin yang cukup agresif ketika pertandingan berjalan
-sesuai harapannya.
-</p>
+## 🎯 DUA POIN YANG MEMISAHKAN DUA PEMAIN
 
-<p>
-Sementara itu Eza memiliki <b>121 poin</b> dari 18 pertandingan
-dan Aris <b>129 poin</b> dari 18 pertandingan.
-</p>
+Pandi dan Habib sama-sama memiliki:
 
-<p>
-Artinya kelompok ini belum aman dari kejaran pemain di bawahnya,
-tetapi juga belum kehilangan peluang untuk naik.
-</p>
+### **168 poin.**
 
-<p>
-Satu hal sudah jelas:
+Tetapi ceritanya berbeda.
 
-<b>
-zona ini adalah zona yang sangat mudah berubah.
-</b>
-</p>
+Pandi:
 
-<div class="fun-fact">
+**13 kemenangan dari 21 pertandingan**
+**+24 selisih frame**
 
-<b>🎯 FUN FACT</b>
+Habib:
 
-<p>
-Alex hanya terpaut <b>1 poin</b> dari Eza,
-tetapi memiliki <b>2 pertandingan lebih sedikit</b>.
-</p>
+**11 kemenangan dari 22 pertandingan**
+**+4 selisih frame**
 
-<p>
-Secara jumlah pertandingan, Alex masih mempunyai ruang
-untuk mengubah posisi akhirnya.
-</p>
+Dalam lima pertandingan terakhir:
 
-</div>
+Pandi mencatat **3 kemenangan**.
 
-`
-},
+Habib hanya **2 kemenangan**.
 
-//======================================================
-// ZONA 17-20
-//======================================================
+Jadi meskipun angka klasemen saat ini sama...
 
-{
-title:"📈 ZONA 17–20: MEREKA BELUM SELESAI",
-content:`
+**momentumnya tidak sama.**
 
-<p>
-<b>Yosia, Vincent, Lahi, dan Bang Aceng</b> berada di zona 17–20.
-</p>
+---
 
-<p>
-Namun jangan tertipu oleh posisi klasemen.
-</p>
-
-<p>
-Lahi baru memainkan <b>12 pertandingan</b> dan sudah mengumpulkan
-<b>98 poin</b>.
-</p>
+# 🧨 ZONA 10–17: PERANG PALING RAMAI
 
-<p>
-Bang Aceng bahkan baru memainkan <b>11 pertandingan</b>
-tetapi sudah mengoleksi <b>95 poin</b>.
-</p>
-
-<p>
-Jika menggunakan rata-rata poin per pertandingan:
+William berada di posisi 10 dengan **139 poin**.
 
-</p>
+Kemudian Om Anto **138**.
 
-<h3>
-Lahi: 98 ÷ 12 = 8,17
-</h3>
+Ko Khenny **134**.
 
-<h3>
-Bang Aceng: 95 ÷ 11 = 8,64
-</h3>
+Aris **129**.
 
-<p>
-Angka tersebut membuat situasi zona 17–20 menjadi salah satu
-bagian paling menarik dalam klasemen.
-</p>
+Alex **124**.
 
-<p>
-Mereka mungkin belum berada di papan atas,
-tetapi jumlah pertandingan yang masih tersedia membuat
-posisi mereka sangat mungkin berubah.
-</p>
-
-<p>
-<b>
-Klasemen hari ini belum tentu mencerminkan kekuatan klasemen akhir.
-</b>
-</p>
+Alfin **123**.
 
-<div class="fun-fact">
-
-<b>🎯 FUN FACT</b>
-
-<p>
-Bang Aceng memiliki rata-rata poin per pertandingan
-lebih tinggi daripada Lahi berdasarkan data klasemen saat ini.
-</p>
+Eza **121**.
 
-</div>
-
-`
-},
-
-//======================================================
-// ZONA 21-25
-//======================================================
-
-{
-title:"💥 ZONA 21–25: PERTANDINGAN SEDIKIT, MISTERI BESAR",
-content:`
-
-<p>
-Masuk ke zona 21–25,
-kita menemukan <b>Agus, Muler, Gideon, Bang Daniel, dan Salsa</b>.
-</p>
+Yosia **112**.
 
-<p>
-Kelompok ini terlihat tertinggal dalam jumlah poin.
-Namun jumlah pertandingan mereka juga relatif lebih sedikit.
-</p>
-
-<p>
-Contohnya:
+Dari William sampai Eza hanya terdapat:
 
-</p>
+### **18 poin.**
 
-<p>
-Agus: <b>13 pertandingan</b><br>
-Muler: <b>14 pertandingan</b><br>
-Gideon: <b>13 pertandingan</b><br>
-Bang Daniel: <b>11 pertandingan</b><br>
-Salsa: <b>9 pertandingan</b>
-</p>
+Itu berarti delapan pemain berada dalam satu rentang yang sangat sempit.
 
-<p>
-Artinya tabel klasemen tidak boleh dibaca hanya dari kolom poin.
-</p>
+Dan inilah bagian liga yang paling sulit diprediksi.
 
-<p>
-Jika pemain dengan jumlah pertandingan lebih sedikit mulai
-memenangkan pertandingan secara beruntun,
-jarak poin dapat terpangkas dengan cepat.
-</p>
+---
 
-<p>
-Inilah alasan mengapa papan tengah dan bawah masih menyimpan
-potensi kejutan.
-</p>
+## 📈 ADA YANG MULAI NAIK
 
-<div class="fun-fact">
+Om Anto baru saja memenangkan pertandingan terbaru:
 
-<b>🎯 FUN FACT</b>
+### **Om Anto 9–5 Salsa**
 
-<p>
-Salsa baru memainkan <b>9 pertandingan</b>.
-Dengan jumlah pertandingan yang masih relatif sedikit,
-posisinya belum memberikan gambaran final tentang tempatnya
-di akhir musim.
-</p>
+Kemenangan tersebut membuat Om Anto tetap berada di posisi 11 dengan **138 poin**.
 
-</div>
+Dalam lima pertandingan terakhir:
 
-`
-},
+**3 menang – 2 kalah**
 
-//======================================================
-// ZONA 26-30
-//======================================================
+Dengan total frame:
 
-{
-title:"🎱 ZONA 26–30: JANGAN ANGKAT TANGAN DULU",
-content:`
+**42–34.**
 
-<p>
-Di posisi 26 sampai 30 terdapat
-<b>Dilzy, Solis, Laban, Pak Haji, dan Pak Ustad Akbar</b>.
-</p>
+Menariknya, Om Anto hanya tertinggal **1 poin dari William**.
 
-<p>
-Dilzy saat ini memiliki <b>57 poin</b>,
-sementara Solis juga mengoleksi <b>57 poin</b>.
-</p>
+Jadi pertandingan berikutnya bisa langsung mengubah posisi mereka.
 
-<p>
-Ini menarik karena dua pemain tersebut memiliki jumlah pertandingan
-yang berbeda.
-</p>
+---
 
-<p>
-Dilzy sudah memainkan <b>8 pertandingan</b>,
-sedangkan Solis sudah memainkan <b>10 pertandingan</b>.
-</p>
+## 🐎 ALEX BELUM SELESAI
 
-<p>
-Laban bahkan baru memainkan <b>5 pertandingan</b>.
-</p>
+Alex berada di posisi 14 dengan:
 
-<p>
-Karena itu posisi akhir mereka masih sangat sulit ditebak.
-</p>
+**124 poin**
+**9 kemenangan**
+**8 kekalahan**
 
-<p>
-Dalam liga panjang, satu periode kemenangan dapat membuat pemain
-dari papan bawah tiba-tiba masuk ke papan tengah.
-</p>
+Jaraknya dengan Alfin hanya:
 
-<p>
-Dan ketika pemain papan tengah mulai saling mengambil poin,
-pergerakan tersebut bisa menjadi semakin cepat.
-</p>
+### **1 poin.**
 
-<div class="fun-fact">
+Dan dengan Eza:
 
-<b>🎯 FUN FACT</b>
+### **3 poin.**
 
-<p>
-Laban baru memainkan <b>5 pertandingan</b>.
-Dengan data sebanyak itu, posisi sekarang belum cukup untuk
-menentukan seberapa tinggi posisi akhirnya nanti.
-</p>
+Dalam lima pertandingan terakhir Alex mencatat:
 
-</div>
+**3 kemenangan – 2 kekalahan.**
 
-`
-},
+Namun ada satu angka yang membuat ceritanya belum selesai:
 
-//======================================================
-// MISTERI MATEMATIKA
-//======================================================
+**Alex memiliki 17 pertandingan.**
 
-{
-title:"🧮 MISTERI AKHIR MUSIM: ANGKA TIDAK PERNAH BOHONG",
-content:`
+Masih ada ruang untuk membuat pergerakan.
 
-<p>
-Mari lihat situasinya secara matematis.
-</p>
+---
 
-<p>
-Pemimpin klasemen saat ini memiliki:
+# 👀 ZONA 18–20: JANGAN REMEHKAN ANGKA
 
-</p>
+Lahi berada di posisi 18.
 
-<h3>
-Chad — 210 poin
-</h3>
+Tetapi jangan hanya melihat angka 107.
 
-<p>
-Namun di belakangnya terdapat beberapa kelompok dengan
-jarak yang relatif masih dapat dikejar.
-</p>
+Lahi baru memainkan:
 
-<p>
-Di zona 5–8 saja:
+### **13 pertandingan.**
 
-</p>
+Rekornya:
 
-<h3>
-182 → 171 → 161 → 159
-</h3>
+**9 menang – 4 kalah**
 
-<p>
-Jarak antara posisi 5 dan 8 hanya <b>23 poin</b>.
-</p>
+Dengan selisih:
 
-<p>
-Sementara dari posisi 9 sampai 16:
+### **+25 frame.**
 
-</p>
+Dalam lima pertandingan terakhir:
 
-<h3>
-150 → 134 → 131 → 129 → 129 → 123 → 121 → 120
-</h3>
+**3 menang – 2 kalah**
 
-<p>
-Ada kelompok besar yang hanya berjarak puluhan poin.
-</p>
+dengan frame:
 
-<p>
-Sekarang tambahkan satu fakta penting:
-setiap kemenangan bernilai <b>9 poin</b>.
-</p>
+**41–30.**
 
-<p>
-Maka:
+Lahi mungkin berada di posisi 18.
 
-</p>
+Tetapi statistiknya tidak terlihat seperti pemain yang sudah menyerah terhadap klasemen.
 
-<h3>
-3 kemenangan = 27 poin
-</h3>
+---
 
-<p>
+## 🔥 DAN ADA SATU ANGKA YANG SANGAT MENGGANGGU
+
+### **Bang Aceng.**
+
+Posisi:
+
+**20**
+
+Poin:
+
+**95**
+
+Pertandingan:
+
+**11**
+
+Menang:
+
+**9**
+
+Kalah:
+
+**2**
+
+Win rate:
+
+### **81,8%**
+
+Selisih frame:
+
+### **+32**
+
+Dalam lima pertandingan terakhir:
+
+**3 menang – 2 kalah**
+
+Bang Aceng adalah salah satu anomali paling menarik di klasemen.
+
+Posisinya rendah.
+
+Tetapi efisiensinya tinggi.
+
+Pertanyaannya bukan apakah statistiknya bagus.
+
+Pertanyaannya:
+
+### **berapa jauh dia bisa bergerak jika mulai aktif mengejar pertandingan?**
+
+---
+
+# 📊 MATEMATIKA MULAI MENJADI MISTERI
+
+Sekarang kita lihat jaraknya.
+
+**Alex — 124**
+**Alfin — 123**
+**Eza — 121**
+
+Tiga pemain.
+
+Selisih:
+
+### **3 poin.**
+
+Kemudian:
+
+**Yosia — 112**
+
+Hanya **9 poin** dari Eza.
+
 Dan:
 
-</p>
-
-<h3>
-5 kemenangan = 45 poin
-</h3>
-
-<p>
-Artinya sebuah rangkaian lima kemenangan dapat mengubah
-wajah klasemen secara drastis.
-</p>
-
-<p>
-Inilah misterinya.
-</p>
-
-<p>
-<b>
-Kita belum tahu siapa yang akan berada di posisi atas
-ketika musim benar-benar berakhir.
-</b>
-</p>
-
-<p>
-Yang kita tahu hanyalah satu:
-semakin sedikit pertandingan yang tersisa,
-semakin mahal nilai setiap pertandingan.
-</p>
-
-<div class="fun-fact">
-
-<b>🎯 FUN FACT</b>
-
-<p>
-Secara matematis, <b>lima kemenangan sempurna</b>
-menghasilkan 45 poin.
-Itu lebih besar daripada jarak antara beberapa kelompok
-pemain di klasemen saat ini.
-</p>
-
-</div>
-
-`
-},
-
-//======================================================
-// MATCH TERBARU
-//======================================================
-
-{
-title:"⚔️ HASIL TERBARU: KO CG KEMBALI MENJAGA MOMENTUM",
-content:`
-
-<p>
-Pertandingan terbaru kembali memberikan tambahan cerita:
-</p>
-
-<h3>
-Ko CG 9 – 7 William
-</h3>
-
-<p>
-Ko CG berhasil mengamankan kemenangan dan menambah
-<b>9 poin</b> ke dalam klasemennya.
-</p>
-
-<p>
-Kemenangan tersebut juga membuat Ko CG tetap berada di
-zona persaingan posisi 5–8.
-</p>
-
-<p>
-Sementara William kehilangan pertandingan penting,
-tetapi masih memiliki peluang untuk membalas melalui pertandingan
-berikutnya.
-</p>
-
-<p>
-Inilah karakter liga saat ini:
-tidak ada pertandingan yang benar-benar kecil.
-</p>
-
-<div class="fun-fact">
-
-<b>🎯 FUN FACT</b>
-
-<p>
-Pertandingan Ko CG vs William berakhir dengan selisih hanya
-<b>2 frame</b>.
-Artinya 16 frame dimainkan dan hanya 2 frame yang memisahkan
-pemenang dari kekalahan.
-</p>
-
-</div>
-
-`
-},
-
-//======================================================
-// SEMUA MASIH PANAS
-//======================================================
-
-{
-title:"🔥 SEMUA PEMAIN SEDANG PANAS",
-content:`
-
-<p>
-Yang membuat fase akhir musim semakin menarik bukan hanya
-jarak poin.
-</p>
-
-<p>
-Kemampuan para pemain juga semakin sulit diprediksi.
-</p>
-
-<p>
-Pemain papan atas bisa kalah.
-Pemain papan tengah bisa mencuri kemenangan.
-Pemain papan bawah bisa mengganggu perjalanan pemain yang
-berada jauh di atasnya.
-</p>
-
-<p>
-Akibatnya, klasemen mulai terlihat seperti sebuah papan catur.
-</p>
-
-<p>
-Satu pertandingan menggeser satu pemain.
-Satu kemenangan membuka peluang pemain lain.
-Satu kekalahan membuat jarak semakin lebar.
-</p>
-
-<p>
-Dan ketika setiap kemenangan bernilai sembilan poin,
-<b>momentum menjadi sangat berharga.</b>
-</p>
-
-<p>
-Tidak ada waktu untuk merasa aman.
-</p>
-
-<p>
-Tidak ada waktu untuk menunggu lawan lain kehilangan poin.
-</p>
-
-<p>
-<b>
-Jika ingin naik, harus bermain.
-</b>
-</p>
-
-`
-},
-
-//======================================================
-// PENGUMUMAN
-//======================================================
-
-{
-title:"📢 PENGUMUMAN LIGA",
-content:`
-
-<div class="announcement">
-
-<h3>
-🏁 LIGA BERAKHIR 26 AGUSTUS 2026
-</h3>
-
-<p>
-Panitia mengingatkan seluruh peserta bahwa
-<b>Liga 9-Pool Billiards & Cafe akan berakhir pada
-26 Agustus 2026.</b>
-</p>
-
-<p>
-Seluruh peserta diharapkan segera menyelesaikan
-partisipasi pertandingan liga yang masih menjadi kewajibannya.
-</p>
-
-<p>
-Peserta juga diharapkan menyelesaikan seluruh
-<b>kewajiban administrasi terkait</b>
-melalui staf <b>9 Pool Billiard and Cafe</b>.
-</p>
-
-<p>
-Jangan menunggu sampai pertandingan terakhir.
-</p>
+**Lahi — 107**
 
-<p>
-<b>
-Selesaikan pertandingan.
-Kejar poin.
-Amankan posisi.
-Tuntaskan kewajiban.
-</b>
-</p>
+Hanya **5 poin** dari Yosia.
 
-<p>
-Karena setelah tanggal 26 Agustus,
-angka di klasemen tidak lagi bergerak.
-</p>
+Jadi dari posisi 14 sampai 18:
 
-</div>
+### **17 poin.**
 
-`
-},
+Lima pemain.
 
-//======================================================
-// PENUTUP
-//======================================================
+Dan semuanya masih memiliki peluang untuk saling bertukar tempat.
 
-{
-title:"🔮 PERTANYAAN TERAKHIR: SIAPA YANG AKAN NAIK?",
-content:`
+---
 
-<p>
-Saat ini kita masih melihat angka.
-</p>
+# 🧠 YANG PALING BERBAHAYA BUKAN PEMAIN TERATAS
 
-<p>
-Namun beberapa minggu lagi,
-angka tersebut akan berubah menjadi sejarah.
-</p>
+Pemain yang paling berbahaya di fase seperti ini bukan selalu pemain yang sedang berada di posisi tinggi.
 
-<p>
-Apakah pemain papan tengah berhasil naik?
-</p>
+Justru pemain yang:
 
-<p>
-Apakah pemain yang saat ini berada di bawah mampu melakukan
-lonjakan besar?
-</p>
+**masih aktif,**
 
-<p>
-Atau justru pemain yang sekarang terlihat aman
-akan kehilangan posisinya?
-</p>
+**sedang menang,**
 
-<p>
-Tidak ada yang tahu.
-</p>
+dan **memiliki pertandingan lebih sedikit**...
 
-<p>
-Yang pasti,
-<b>26 Agustus 2026 semakin dekat.</b>
-</p>
+bisa menjadi pengganggu terbesar.
 
-<p>
-Dan setiap pertandingan yang belum dimainkan
-adalah kesempatan terakhir untuk mengubah cerita.
-</p>
+Karena mereka memiliki sesuatu yang tidak dimiliki semua pemain di atasnya:
 
-<h3>
-🎱 MEJA MASIH TERBUKA.
-<br>
-🔥 POIN MASIH BISA BERUBAH.
-<br>
-🏆 MUSIM BELUM SELESAI.
-</h3>
+### **ruang untuk mengejar.**
 
-`
+---
 
-}
+# ⚔️ ZONA 21–30: PERBURUAN MOMENTUM
 
-];
+Di bawah posisi 20, persaingan memang lebih renggang.
 
-//======================================================
-// RENDER
-//======================================================
+Tetapi beberapa pemain mulai menunjukkan tanda-tanda kehidupan.
 
-function renderJournal(){
+Agus masih memiliki **13 pertandingan**.
 
-    const container = document.getElementById("journal");
+Muler **14**.
 
-    if(!container) return;
+Gideon **13**.
 
-    let html = "";
+Dilzy baru **8 pertandingan**.
 
-    jurnal.forEach(item => {
+Solis **11**.
 
-        html += `
+Laban **9**.
 
-        <section class="card journal-card">
+Artinya, bagian bawah klasemen belum sepenuhnya terkunci.
 
-            <h2>${item.title}</h2>
+Satu hal yang pasti:
 
-            ${item.content}
+### pertandingan yang dimainkan sekarang jauh lebih berharga daripada pertandingan yang ditunda.
 
-        </section>
+Karena semakin dekat tanggal penutupan liga, semakin sedikit waktu untuk mengejar.
 
-        `;
+---
 
-    });
+# 🎱 FUN FACT
 
-    container.innerHTML = html;
+**Pandi dan Habib sama-sama memiliki 168 poin.**
 
-}
+Tetapi Pandi memperoleh angka tersebut dari **21 pertandingan**, sedangkan Habib membutuhkan **22 pertandingan**.
 
-//======================================================
-// START
-//======================================================
+Sementara di bawah mereka, Lahi sudah mengumpulkan **107 poin hanya dari 13 pertandingan**.
 
-document.addEventListener(
-    "DOMContentLoaded",
-    renderJournal
-);
+Dan Bang Aceng:
+
+### **95 poin dari hanya 11 pertandingan.**
+
+Jadi ada satu angka yang mulai menjadi penting:
+
+## **Poin per pertandingan.**
+
+Bukan berarti angka ini menggantikan klasemen resmi.
+
+Tetapi angka ini memberi kita gambaran tentang **seberapa cepat seorang pemain mengumpulkan poin ketika turun bermain.**
+
+---
+
+# 🔮 MISTERI MENUJU 26 AGUSTUS
+
+Semakin dekat liga menuju akhir,
+
+semakin kecil ruang untuk melakukan kesalahan.
+
+Pemain yang sekarang berada di posisi 5 bisa turun.
+
+Pemain posisi 10 bisa masuk 7 besar.
+
+Pemain posisi 18 bisa tiba-tiba muncul di papan tengah.
+
+Dan pemain posisi 20 dengan statistik luar biasa...
+
+bisa menjadi cerita terbesar jika mulai mengejar pertandingan.
+
+Tidak ada yang benar-benar aman.
+
+Tidak ada posisi yang benar-benar terkunci.
+
+Dan mungkin inilah bagian paling menarik dari musim ini:
+
+### **kita sudah memiliki klasemen...**
+
+### **tetapi belum memiliki akhir cerita.**
+
+**26 Agustus semakin dekat.**
+
+Sekarang pertanyaannya bukan:
+
+> **Siapa yang sedang berada di atas?**
+
+Tetapi:
+
+> ## **SIAPA YANG BERANI TURUN BERMAIN DAN MENGUBAHNYA?** 🎱🔥
