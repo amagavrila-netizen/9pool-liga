@@ -1293,3 +1293,22 @@ color:#0b5ed7;
 .warning{
 border-left:8px solid crimson;
 }
+.league-announcement{
+    max-width:1000px;
+    margin:20px auto;
+    padding:18px 22px;
+    background:#fff8e6;
+    border-left:6px solid #f39c12;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.league-announcement h2{
+    margin-top:0;
+    color:#d35400;
+}
+
+.league-announcement p{
+    margin:10px 0;
+    line-height:1.6;
+}
