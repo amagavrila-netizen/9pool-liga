@@ -574,7 +574,6 @@ Dan 175 pertandingan terakhir belum memberikan jawabannya.
 
 function renderJournal(){
 
-```
 const container = document.getElementById("journal");
 
 if(!container) return;
@@ -598,7 +597,6 @@ jurnal.forEach(item => {
 });
 
 container.innerHTML = html;
-```
 
 }
 
