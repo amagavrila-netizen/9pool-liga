@@ -22,96 +22,393 @@ Berita • Analisis • Statistik • Anomali • Cerita Liga
 `
 },
 
+//======================================================
+// 1. 275 PERTANDINGAN
+//======================================================
+
 {
-title:"🔥 260 PERTANDINGAN. 175 PERTANDINGAN TERSISA. DAN BELUM ADA YANG AMAN.",
+title:"🔥 275 PERTANDINGAN: PUNCAK MASIH PANAS, TENGAH MULAI MENGAMUK",
 content:`
 
 <p>
-Liga ini sudah melewati <b>260 pertandingan.</b>
+Liga memasuki fase yang semakin sulit ditebak.
 </p>
 
 <p>
-Tetapi semakin banyak pertandingan dimainkan, semakin sulit menjawab satu pertanyaan sederhana:
+Sebanyak <b>275 pertandingan</b> telah dimainkan. Dari 435 pertandingan yang mungkin terjadi, masih tersisa <b>160 duel</b>.
 </p>
 
 <p>
-<b>Siapa yang benar-benar akan menguasai akhir musim?</b>
+Dan justru di sinilah masalahnya.
 </p>
 
 <p>
-Di atas, <b>Chad</b> masih memimpin dengan <b>219 poin</b>.
-<b>Bang Jul</b> hanya tertinggal 4 poin di angka <b>215</b>, sementara
-<b>Aken</b> berada di <b>201</b>.
-<b>Iwan</b> menguntit dengan <b>195</b>, dan
-<b>Bang Larosa</b> berada di <b>194</b>.
+<b>Klasemen belum memberi jawaban.</b>
 </p>
 
 <p>
-Lima pemain teratas hanya berjarak <b>25 poin.</b>
-</p>
-
-<p>
-Itu bukan jarak yang nyaman.
-</p>
-
-<p>
-Itu adalah jarak yang bisa berubah hanya dalam beberapa pertandingan.
+Klasemen hanya memberi petunjuk.
 </p>
 
 `
 },
 
+//======================================================
+// 2. PUNCAK
+//======================================================
+
 {
-title:"⚠️ 175 PERTANDINGAN MASIH MENUNGGU",
+title:"🔥 BANG JUL MEMIMPIN, TETAPI CHAD DAN AKEN BELUM MENYERAH",
 content:`
 
 <p>
-Secara matematis, dengan 30 pemain dalam sistem satu kali pertemuan,
-terdapat <b>435 pertandingan</b> dalam satu musim.
+Bang Jul sekarang berada di puncak dengan:
 </p>
 
 <p>
-Sudah dimainkan:
-</p>
-
-<h3>260 pertandingan</h3>
-
-<p>
-Artinya masih ada:
-</p>
-
-<h2>175 PERTANDINGAN</h2>
-
-<p>
-yang belum dimainkan.
+<b>224 poin dari 26 pertandingan.</b>
 </p>
 
 <p>
-Dalam 175 pertandingan tersebut, minimal akan tercipta
-<b>1.575 poin frame</b> tambahan, karena setiap pertandingan menghasilkan
-sedikitnya 9 frame yang dimenangkan.
+Chad membuntuti dengan:
 </p>
 
 <p>
-Tetapi jumlah aktualnya bisa jauh lebih besar karena pemain yang kalah
-tetap membawa frame kemenangan mereka ke klasemen.
+<b>219 poin dari 25 pertandingan.</b>
 </p>
 
 <p>
-Dengan kata lain:
+Aken berada di posisi keempat dengan:
 </p>
 
-<h3>Klasemen hari ini belum merupakan akhir cerita.</h3>
+<p>
+<b>201 poin dari 23 pertandingan.</b>
+</p>
 
 <p>
-Bahkan belum mendekati akhir cerita.
+Artinya, tiga pemain ini tidak memiliki jumlah pertandingan yang sama.
+</p>
+
+<p>
+Bang Jul hanya menyisakan <b>3 pertandingan</b>.
+</p>
+
+<p>
+Chad masih memiliki <b>4 pertandingan</b>.
+</p>
+
+<p>
+Aken masih memiliki <b>6 pertandingan</b>.
+</p>
+
+<p>
+Dan ini membuat persaingan menjadi jauh lebih menarik.
+</p>
+
+<p>
+Jika kita hanya melihat klasemen, Bang Jul terlihat unggul.
+</p>
+
+<p>
+Tetapi jika kita melihat <b>kecepatan perolehan frame</b>, cerita berubah.
+</p>
+
+<p>
+Bang Jul rata-rata menghasilkan <b>8,62 frame per pertandingan</b>.
+</p>
+
+<p>
+Chad:
+</p>
+
+<p>
+<b>8,76 frame.</b>
+</p>
+
+<p>
+Aken:
+</p>
+
+<p>
+<b>8,74 frame.</b>
+</p>
+
+<p>
+Secara matematis sederhana, apabila mereka mempertahankan kecepatan masing-masing sampai pertandingan terakhir, proyeksinya kira-kira:
+</p>
+
+<ul>
+<li>Chad → <b>254 poin</b></li>
+<li>Aken → <b>253 poin</b></li>
+<li>Bang Jul → <b>250 poin</b></li>
+</ul>
+
+<p>
+Ini bukan prediksi hasil akhir.
+</p>
+
+<p>
+Tetapi ini cukup untuk menghasilkan satu pertanyaan besar:
+</p>
+
+<p>
+<b>Apakah pemimpin klasemen saat ini benar-benar akan menjadi pemimpin ketika pertandingan terakhir selesai?</b>
 </p>
 
 `
 },
 
+//======================================================
+// 3. BANG LAROSA
+//======================================================
+
 {
-title:"🔥 LIGA INI SUDAH MEMASUKI FASE PANAS",
+title:"⚠️ DAN ADA SATU NAMA YANG MEMBUAT PERHITUNGAN SEMAKIN RUMIT",
+content:`
+
+<p>
+<b>Bang Larosa.</b>
+</p>
+
+<p>
+Posisi ketiga.
+</p>
+
+<p>
+<b>203 poin.</b>
+</p>
+
+<p>
+Tetapi sudah memainkan <b>27 pertandingan</b>.
+</p>
+
+<p>
+Artinya hanya tersisa <b>2 pertandingan</b>.
+</p>
+
+<p>
+Secara matematis, ruang geraknya jauh lebih kecil dibanding pemain di bawahnya.
+</p>
+
+<p>
+Bang Larosa bukan lagi sekadar mengejar.
+</p>
+
+<p>
+Ia sedang berusaha mempertahankan wilayah.
+</p>
+
+<p>
+Karena di belakangnya:
+</p>
+
+<ul>
+<li><b>Ko CG — 198</b></li>
+<li><b>Iwan — 195</b></li>
+<li><b>Habib — 192</b></li>
+<li><b>Ko Charles — 188</b></li>
+<li><b>Pandi — 186</b></li>
+</ul>
+
+<p>
+Hanya <b>17 poin</b> yang memisahkan posisi 5 sampai 9.
+</p>
+
+<p>
+Dan beberapa dari mereka masih mempunyai <b>5–6 pertandingan</b> tersisa.
+</p>
+
+`
+},
+
+//======================================================
+// 4. ZONA TENGAH
+//======================================================
+
+{
+title:"📈 ZONA TENGAH SUDAH BUKAN PAPAN TENGAH",
+content:`
+
+<p>
+Inilah bagian klasemen yang menurut kami paling berbahaya.
+</p>
+
+<p>
+Posisi <b>10 sampai 20</b> sekarang berisi:
+</p>
+
+<p>
+<b>
+Aris, William, Ko Khenny, Om Anto, Alfin, Lahi, Eza, Yosia, Alex, Vincent, dan Agus.
+</b>
+</p>
+
+<p>
+Dari posisi 10 sampai 20 terdapat jarak <b>42 poin</b>.
+</p>
+
+<p>
+Tetapi jumlah pertandingan mereka tidak sama.
+</p>
+
+<p>
+Dan di sinilah muncul pemain-pemain dengan potensi lonjakan terbesar.
+</p>
+
+<h3>🔥 Lahi</h3>
+
+<p>
+Baru memainkan <b>17 pertandingan</b>.
+</p>
+
+<p>
+Sudah mengumpulkan:
+</p>
+
+<p>
+<b>141 poin.</b>
+</p>
+
+<p>
+Kecepatan frame:
+</p>
+
+<p>
+<b>8,29 per pertandingan.</b>
+</p>
+
+<p>
+Jika ritme itu bertahan sampai 29 pertandingan, proyeksi sederhananya mencapai sekitar:
+</p>
+
+<p>
+<b>240 poin.</b>
+</p>
+
+<p>
+Itu bukan angka pemain papan tengah.
+</p>
+
+<p>
+Itu angka yang secara matematis bisa mengganggu papan atas.
+</p>
+
+<h3>🔥 BANG ACENG</h3>
+
+<p>
+Lebih ekstrem lagi.
+</p>
+
+<p>
+Baru memainkan <b>12 pertandingan</b>.
+</p>
+
+<p>
+Tetapi sudah memiliki:
+</p>
+
+<p>
+<b>102 poin.</b>
+</p>
+
+<p>
+Dengan rata-rata:
+</p>
+
+<p>
+<b>8,50 frame per pertandingan.</b>
+</p>
+
+<p>
+Jika mempertahankan pace tersebut, proyeksi sederhananya mencapai sekitar:
+</p>
+
+<p>
+<b>246 poin.</b>
+</p>
+
+<p>
+Sekali lagi:
+</p>
+
+<p>
+<b>ini bukan prediksi.</b>
+</p>
+
+<p>
+Tetapi angka ini menunjukkan betapa berbahayanya pemain yang masih memiliki banyak pertandingan.
+</p>
+
+<p>
+Bang Aceng masih memiliki sekitar <b>17 pertandingan</b>.
+</p>
+
+<p>
+Dengan kata lain, pemain yang sekarang berada di posisi 21 belum tentu berada di sana ketika liga selesai.
+</p>
+
+`
+},
+
+//======================================================
+// 5. ANOMALI PAPAN BAWAH
+//======================================================
+
+{
+title:"💣 ANOMALI BESAR: PAPAN BAWAH SUDAH BERKALI-KALI MEMUKUL PAPAN ATAS",
+content:`
+
+<p>
+Data pertandingan memberikan fakta yang jauh lebih panas.
+</p>
+
+<p>
+Dengan menggunakan <b>peringkat klasemen saat ini sebagai acuan</b>, terdapat sekitar:
+</p>
+
+<p>
+<b>75 kemenangan pemain yang saat ini berperingkat lebih rendah atas pemain yang saat ini berperingkat lebih tinggi.</b>
+</p>
+
+<p>
+Bahkan pemain zona <b>21–30</b> tercatat <b>8 kali</b> mengalahkan pemain yang sekarang berada di zona 1–10.
+</p>
+
+<p>
+Dan <b>5 kali</b> pemain zona 21–30 berhasil menjatuhkan pemain yang sekarang berada di <b>lima besar</b>.
+</p>
+
+<p>
+Beberapa hasil yang paling mencolok:
+</p>
+
+<ul>
+<li><b>Bang Daniel 9–8 Bang Larosa</b></li>
+<li><b>Dilzy 9–7 Bang Larosa</b></li>
+<li><b>Dilzy 9–3 Aken</b></li>
+<li><b>Bang Aceng 9–8 Chad</b></li>
+<li><b>Bang Aceng 9–3 Bang Larosa</b></li>
+<li><b>Solis 9–6 Habib</b></li>
+<li><b>Alex 9–8 Iwan</b></li>
+</ul>
+
+<p>
+Ini bukan sekadar kejutan satu kali.
+</p>
+
+<p>
+<b>Ini adalah pola.</b>
+</p>
+
+`
+},
+
+//======================================================
+// 6. 51 KALI 9-8
+//======================================================
+
+{
+title:"🎱 51 KALI HILL-HILL",
 content:`
 
 <p>
@@ -119,485 +416,545 @@ Ada satu angka yang sangat sulit diabaikan.
 </p>
 
 <p>
-Dari 260 pertandingan, sebanyak:
+Dari 275 pertandingan:
 </p>
 
-<h2>49 pertandingan berakhir 9–8.</h2>
+<p>
+<b>51 pertandingan berakhir 9–8.</b>
+</p>
 
 <p>
 Itu berarti sekitar:
 </p>
 
-<h2>18,8% pertandingan</h2>
-
 <p>
-berakhir hanya dengan satu frame sebagai pembeda.
+<b>18,5% seluruh pertandingan.</b>
 </p>
 
 <p>
-Hampir <b>1 dari setiap 5 pertandingan</b> berubah menjadi perang sampai
-frame terakhir.
+Hampir <b>1 dari setiap 5 pertandingan</b> berakhir dengan selisih hanya satu frame.
 </p>
 
 <p>
-Ini bukan lagi sekadar persoalan siapa yang memiliki pukulan terbaik.
+Dan Match 275 baru saja menambah satu lagi.
+</p>
+
+<h3>🔥 YOSIA 9–8 BANG DANIEL</h3>
+
+<p>
+Pertandingan terakhir dalam database terbaru justru kembali memperlihatkan wajah liga ini:
 </p>
 
 <p>
-Ketika skor sudah <b>8–8</b>, yang tersisa bukan teori.
+<b>tidak ada yang benar-benar aman.</b>
 </p>
 
 <p>
-Yang tersisa adalah:
-</p>
-
-<h3>
-napas, keputusan, keberanian, dan kemampuan menahan tekanan.
-</h3>
-
-`
-},
-
-{
-title:"💣 PAPAN BAWAH SUDAH MULAI MENGGIGIT",
-content:`
-
-<p>
-Ada anggapan bahwa pemain papan atas tinggal mengalahkan pemain papan bawah
-untuk mengamankan perjalanan mereka.
+Satu frame.
 </p>
 
 <p>
-Data 260 pertandingan justru mengatakan:
-</p>
-
-<h2>Jangan terlalu percaya diri.</h2>
-
-<p>
-Sedikitnya <b>7 kali</b> pemain yang saat ini berada di zona rank 21–30
-berhasil mengalahkan pemain yang saat ini berada di rank 1–10.
+Satu keputusan.
 </p>
 
 <p>
-Beberapa di antaranya bukan kemenangan biasa.
+Satu kesalahan.
 </p>
 
 <p>
-Dilzy mengalahkan Ko Charles <b>9–7</b>.
-</p>
-
-<p>
-Dilzy kemudian mengalahkan Bang Larosa <b>9–7</b>.
-</p>
-
-<p>
-Bang Daniel menumbangkan Iwan <b>9–8</b>.
-</p>
-
-<p>
-Bang Daniel kembali mengalahkan Bang Larosa <b>9–8</b>.
-</p>
-
-<p>
-Agus mengalahkan Ko Khenny <b>9–7</b>.
-</p>
-
-<p>
-Solis mengalahkan Habib <b>9–6</b>.
-</p>
-
-<p>
-Dan yang paling mengejutkan:
-</p>
-
-<h2>Dilzy 9–3 Aken.</h2>
-
-<p>
-Pesannya jelas:
-</p>
-
-<h3>Klasemen tidak menjamin keselamatan.</h3>
-
-`
-},
-
-{
-title:"🧨 ZONA TENGAH MULAI MENJADI MEDAN PERANG",
-content:`
-
-<p>
-Lihat papan tengah.
-</p>
-
-<p>
-Rank 8 sampai 17 saat ini dihuni Habib, Pandi, Ko Khenny, Om Anto,
-Aris, William, Alex, Eza, Alfin, dan Yosia.
-</p>
-
-<p>
-Mereka berada di rentang:
-</p>
-
-<h2>177 sampai 118 poin.</h2>
-
-<p>
-Namun di antara mereka terdapat pemain dengan statistik yang sangat berbeda.
-</p>
-
-<p>
-Ada yang punya selisih frame positif.
-</p>
-
-<p>
-Ada yang masih negatif.
-</p>
-
-<p>
-Ada yang sudah memainkan 20 pertandingan.
-</p>
-
-<p>
-Ada yang baru 18 atau 19.
-</p>
-
-<p>
-Ada pula pemain seperti <b>Lahi</b> yang baru memainkan 14 pertandingan
-tetapi sudah mengumpulkan <b>116 poin</b> dengan selisih frame <b>+28</b>.
-</p>
-
-<p>
-Sementara <b>Bang Aceng</b> baru memainkan 11 pertandingan dan sudah
-mengumpulkan <b>95 poin</b> dengan selisih <b>+32</b>.
-</p>
-
-<p>
-Artinya, papan tengah bukan sekadar tempat menunggu.
-</p>
-
-<h3>Ini zona pemain yang sedang mengejar.</h3>
-
-<p>
-Dan mereka memiliki jumlah pertandingan tersisa yang berbeda.
+Dan seluruh pertandingan berubah.
 </p>
 
 `
 },
 
+//======================================================
+// 7. MATCH 260-275
+//======================================================
+
 {
-title:"📈 YANG MENARIK BUKAN SIAPA YANG MEMIMPIN",
+title:"🔥 MATCH 260–275: LIGA TIDAK MEMBERI WAKTU UNTUK BERNAFAS",
 content:`
 
 <p>
-Yang menarik justru:
-</p>
-
-<h2>siapa yang sedang datang dari belakang.</h2>
-
-<p>
-Poin Lahi, Bang Aceng, Alex, Eza, Alfin, Yosia, sampai kelompok rank 20–30
-masih bisa berubah sangat cepat karena sebagian dari mereka memainkan
-pertandingan lebih sedikit dibanding pemain yang berada di atasnya.
+16 pertandingan terakhir memperlihatkan distribusi kemenangan yang sangat menarik.
 </p>
 
 <p>
-Satu kemenangan <b>9–0</b> menghasilkan sembilan poin.
+Tidak ada satu pemain yang mendominasi rangkaian tersebut.
+</p>
+
+<ul>
+<li>Vincent menang atas Yosia</li>
+<li>Lahi menang atas Vincent</li>
+<li>Bang Jul menang telak atas Dilzy</li>
+<li>Agus mengalahkan Lahi</li>
+<li>Aris mengalahkan Dilzy</li>
+<li>Agus mengalahkan Habib</li>
+<li>Lahi membalas dengan mengalahkan Yosia</li>
+<li>Pandi mengalahkan Dilzy</li>
+<li>Gideon mengalahkan Eza</li>
+<li>Habib mengalahkan Alfin</li>
+<li>William mengalahkan Alfin</li>
+<li>Ko CG mengalahkan Alfin</li>
+<li>Alfin membalas dengan mengalahkan Agus</li>
+<li>Bang Larosa menang 9–8 atas Pak Haji</li>
+<li>Pandi mengalahkan Bang Aceng</li>
+<li>Yosia menang 9–8 atas Bang Daniel</li>
+</ul>
+
+<p>
+Tidak ada satu nama yang mengambil alih periode ini.
 </p>
 
 <p>
-Tetapi kemenangan <b>9–8</b> menghasilkan sembilan poin juga.
-</p>
-
-<p>
-Perbedaannya?
-</p>
-
-<h2>Tekanan.</h2>
-
-<p>
-Dan semakin banyak pertandingan yang berakhir 9–8, semakin banyak pertandingan
-yang menunjukkan bahwa lawan tidak mau menyerah begitu saja.
+Dan justru itu yang membuat liga semakin menarik.
 </p>
 
 `
 },
 
+//======================================================
+// 8. SIAPA YANG SEBENARNYA KUAT
+//======================================================
+
 {
-title:"🎱 ANOMALI LIGA",
+title:"🧠 MISTERI BESAR: SIAPA YANG SEBENARNYA PALING KUAT?",
 content:`
 
 <p>
-Ada sesuatu yang menarik dari seluruh 260 pertandingan.
+Kalau kita melihat <b>menang-kalah</b>, jawabannya mudah.
 </p>
 
 <p>
-Liga ini menghasilkan kemenangan besar.
+Tetapi kalau kita melihat <b>frame</b>, ceritanya menjadi berbeda.
 </p>
 
 <p>
-Tetapi pada saat yang sama menghasilkan perang 9–8 dalam jumlah luar biasa.
+Aken mempunyai:
 </p>
 
 <p>
-Artinya dua wajah liga muncul bersamaan:
-</p>
-
-<h2>Dominasi.</h2>
-
-<h2>dan</h2>
-
-<h2>ketidakpastian.</h2>
-
-<p>
-Bang Larosa pernah menang <b>9–0</b> atas Agus.
+<b>22 kemenangan dari 23 pertandingan.</b>
 </p>
 
 <p>
-Tetapi pemain yang sama juga pernah kalah <b>9–8</b> dari Bang Daniel.
+Win rate:
 </p>
 
 <p>
-Chad mampu mengumpulkan 21 kemenangan dari 25 pertandingan.
+<b>95,7%</b>
 </p>
 
 <p>
-Tetapi ia juga pernah kalah 9–8 dari Iwan dan Bang Aceng.
+Chad:
 </p>
 
 <p>
-Aken memiliki rekor luar biasa <b>22 kemenangan dari 23 pertandingan</b>,
-tetapi tetap pernah dihantam Dilzy <b>9–3</b>.
+<b>21 dari 25</b>
 </p>
 
 <p>
-Jadi ada satu kesimpulan yang mulai muncul:
+= <b>84%</b>
 </p>
 
-<h3>Pemain terbaik bisa kalah.</h3>
+<p>
+Bang Jul:
+</p>
 
-<h3>Pemain papan bawah bisa meledak.</h3>
+<p>
+<b>24 dari 26</b>
+</p>
 
-<h3>Dan satu pertandingan buruk bisa mengubah seluruh cerita.</h3>
+<p>
+= <b>92,3%</b>
+</p>
+
+<p>
+Ko CG:
+</p>
+
+<p>
+<b>18 dari 24</b>
+</p>
+
+<p>
+= <b>75%</b>
+</p>
+
+<p>
+Lahi:
+</p>
+
+<p>
+<b>12 dari 17</b>
+</p>
+
+<p>
+= <b>70,6%</b>
+</p>
+
+<p>
+Bang Aceng:
+</p>
+
+<p>
+<b>9 dari 12</b>
+</p>
+
+<p>
+= <b>75%</b>
+</p>
+
+<p>
+Masalahnya:
+</p>
+
+<p>
+<b>mereka belum memainkan jumlah pertandingan yang sama.</b>
+</p>
+
+<p>
+Karena itu, klasemen sekarang adalah foto.
+</p>
+
+<p>
+<b>Bukan film.</b>
+</p>
 
 `
 },
 
+//======================================================
+// 9. ZONA 5-9
+//======================================================
+
 {
-title:"🧠 3.804 FRAME SUDAH BERBICARA",
+title:"⚔️ ZONA 5–9: PERANG PALING KETAT",
 content:`
 
 <p>
-Dalam 260 pertandingan pertama, total frame yang sudah dimainkan mencapai:
-</p>
-
-<h2>3.804 frame.</h2>
-
-<p>
-Angka itu berarti sudah ada <b>3.804 kesempatan</b> bagi pemain untuk
-mencetak poin, membalikkan momentum, dan menghancurkan prediksi.
+Lihat jaraknya:
 </p>
 
 <p>
-Namun masih ada 175 pertandingan.
+<b>Ko CG — 198</b><br>
+<b>Iwan — 195</b><br>
+<b>Habib — 192</b><br>
+<b>Ko Charles — 188</b><br>
+<b>Pandi — 186</b>
 </p>
 
 <p>
-Jika semuanya dimainkan sampai minimal 9 frame kemenangan, masih ada sedikitnya
-<b>1.575 frame kemenangan</b> yang akan diperebutkan.
+Dari posisi 5 ke posisi 9 hanya:
 </p>
 
 <p>
-Dan jumlah sebenarnya akan lebih tinggi karena setiap pertandingan dapat
-menghasilkan frame kemenangan dari kedua pemain.
+<b>12 poin.</b>
 </p>
 
 <p>
-Jadi secara matematis:
+Dengan beberapa pemain masih memiliki enam pertandingan tersisa.
 </p>
 
-<h3>3.804 frame sudah menjadi sejarah.</h3>
+<p>
+Satu kemenangan 9–8 hanya menghasilkan 9 frame.
+</p>
 
-<h3>1.575+ frame kemenangan baru masih menunggu.</h3>
+<p>
+Tetapi satu kemenangan telak juga bisa mengubah selisih frame secara drastis.
+</p>
+
+<p>
+Karena itu, satu pertandingan bukan hanya menentukan:
+</p>
+
+<p>
+<b>menang atau kalah.</b>
+</p>
+
+<p>
+Ia juga menentukan:
+</p>
+
+<p>
+<b>berapa banyak frame yang dibawa pulang.</b>
+</p>
 
 `
 },
 
+//======================================================
+// 10. ANOMALI TERBESAR
+//======================================================
+
 {
-title:"🔥 SEMUA ORANG SEKARANG PUNYA ALASAN UNTUK TURUN MAIN",
+title:"🚨 ANOMALI TERBESAR BUKAN DI PUNCAK",
 content:`
 
 <p>
-Pemain atas tidak boleh santai.
+Justru bagian paling aneh ada di bawah.
 </p>
 
 <p>
-Pemain tengah tidak boleh menunggu.
+<b>Bang Aceng 102 poin dari 12 pertandingan.</b>
 </p>
 
 <p>
-Pemain bawah tidak boleh merasa musim sudah selesai.
+<b>Lahi 141 poin dari 17 pertandingan.</b>
 </p>
 
 <p>
-Karena statistik menunjukkan sesuatu yang brutal:
-</p>
-
-<h2>selisih kecil bisa berubah menjadi selisih besar.</h2>
-
-<p>
-Satu kemenangan 9–8 tetap bernilai 9 poin.
+<b>Pak Ustad Akbar baru 3 pertandingan.</b>
 </p>
 
 <p>
-Satu kekalahan 8–9 tetap membawa 8 poin.
+<b>Pak Haji baru 4 pertandingan.</b>
 </p>
 
 <p>
-Tetapi secara psikologis, keduanya terasa sangat berbeda.
+Sementara beberapa pemain lain sudah memainkan lebih dari 20 pertandingan.
 </p>
 
 <p>
-Yang satu pulang membawa kemenangan.
+Artinya klasemen bawah saat ini <b>sangat tidak homogen.</b>
 </p>
 
 <p>
-Yang satu pulang sambil memikirkan:
+Ada pemain yang memang sedang kesulitan.
 </p>
 
-<h3>
-“Kalau satu bola tadi masuk…”
-</h3>
+<p>
+Tetapi ada juga pemain yang hanya <b>belum memainkan pertandingan sebanyak pemain lain.</b>
+</p>
+
+<p>
+Karena itu, posisi rendah belum tentu berarti kekuatan rendah.
+</p>
+
+<p>
+Dan ini bisa menjadi salah satu bom terbesar menjelang akhir musim.
+</p>
 
 `
 },
 
+//======================================================
+// 11. PROYEKSI
+//======================================================
+
 {
-title:"🔮 MISTERI 175 PERTANDINGAN",
+title:"🔮 PROYEKSI YANG MEMBUAT SEMUA ORANG HARUS WASPADA",
 content:`
 
 <p>
-Inilah bagian paling menarik.
+Jika kita menggunakan pendekatan sederhana:
 </p>
 
 <p>
-Dengan 175 pertandingan tersisa, belum ada alasan untuk menganggap
-klasemen sekarang sebagai gambaran akhir musim.
+<b>
+Poin sekarang + rata-rata frame per pertandingan × pertandingan tersisa
+</b>
 </p>
 
 <p>
-Chad memang memimpin.
+maka beberapa pemain yang sekarang belum berada di papan atas justru mempunyai proyeksi tinggi.
 </p>
 
 <p>
-Bang Jul mengejar.
+Bang Aceng sekitar:
 </p>
 
 <p>
-Aken masih sangat berbahaya.
+<b>246</b>
 </p>
 
 <p>
-Iwan dan Bang Larosa berada sangat dekat.
+Lahi sekitar:
 </p>
 
 <p>
-Ko CG dan Ko Charles juga hanya beberapa poin di belakang.
+<b>241</b>
 </p>
 
 <p>
-Tetapi di bawah mereka terdapat kelompok pemain yang masih bisa
-mengumpulkan banyak pertandingan dan mengubah peta klasemen.
+Pandi sekitar:
 </p>
 
 <p>
-Dan di antara mereka terdapat pemain-pemain yang sudah membuktikan:
+<b>235</b>
 </p>
 
-<h2>mereka mampu mengalahkan siapa saja.</h2>
+<p>
+Iwan sekitar:
+</p>
+
+<p>
+<b>236</b>
+</p>
+
+<p>
+Ko CG sekitar:
+</p>
+
+<p>
+<b>239</b>
+</p>
+
+<p>
+Sementara pemain yang sudah memainkan banyak pertandingan memiliki ruang untuk bergerak jauh lebih kecil.
+</p>
+
+<p>
+Ini menciptakan sebuah paradoks:
+</p>
+
+<p>
+<b>Pemain yang terlihat aman belum tentu aman.</b>
+</p>
+
+<p>
+<b>Pemain yang terlihat jauh di bawah belum tentu sudah kalah.</b>
+</p>
 
 `
 },
 
+//======================================================
+// 12. MISTERI AKHIR MUSIM
+//======================================================
+
 {
-title:"⚔️ PESAN UNTUK SEMUA PEMAIN",
+title:"📰 DAN SEKARANG, PERTANYAAN TERBESAR LIGA",
 content:`
 
 <p>
-Musim ini tidak akan ditentukan oleh siapa yang paling hebat di atas kertas.
+275 pertandingan sudah selesai.
 </p>
 
 <p>
-Musim ini akan ditentukan oleh siapa yang:
-</p>
-
-<h3>tetap datang,</h3>
-
-<h3>tetap bermain,</h3>
-
-<h3>tetap menang ketika kesempatan datang,</h3>
-
-<p>
-dan yang paling penting—
-</p>
-
-<h3>
-tidak membuang pertandingan yang seharusnya bisa dimenangkan.
-</h3>
-
-<p>
-Karena 49 kali skor <b>9–8</b> sudah memberi peringatan.
+160 pertandingan masih menunggu.
 </p>
 
 <p>
-Dan 175 pertandingan terakhir belum memberikan jawabannya.
+51 kali pertandingan berakhir 9–8.
 </p>
 
-<h2>
-🔥 KLASemen boleh berbicara hari ini.
-</h2>
+<p>
+75 kemenangan tercatat sebagai kemenangan pemain yang saat ini berada di bawah lawannya dalam klasemen.
+</p>
 
-<h2>
-🎱 TETAPI MEJA BILIAR YANG AKAN MENENTUKAN SIAPA YANG BERBICARA TERAKHIR.
-</h2>
+<p>
+Pemain zona bawah sudah <b>5 kali</b> menjatuhkan pemain lima besar.
+</p>
 
-<h2>Musim belum selesai.</h2>
+<p>
+Di puncak, selisih Bang Jul dan Chad hanya:
+</p>
 
-<h2>Justru sekarang baru terasa panasnya.</h2>
+<p>
+<b>5 poin.</b>
+</p>
+
+<p>
+Sementara di bawahnya ada pemain-pemain dengan pertandingan tersisa jauh lebih banyak.
+</p>
+
+<p>
+Dan di tengah semuanya...
+</p>
+
+<p>
+<b>semua masih bisa berubah.</b>
+</p>
+
+`
+},
+
+//======================================================
+// 13. PENUTUP
+//======================================================
+
+{
+title:"🔥 LIGA INI SUDAH TIDAK LAGI MENCARI PEMAIN TERBAIK",
+content:`
+
+<p>
+<b>Liga ini sudah tidak lagi mencari siapa pemain terbaik.</b>
+</p>
+
+<p>
+Liga ini sedang mencari siapa pemain yang mampu bertahan ketika semua orang mulai panas.
+</p>
+
+<p>
+Karena setelah 275 pertandingan, satu hal sudah terbukti:
+</p>
+
+<p>
+<b>peringkat bukan jaminan.</b>
+</p>
+
+<p>
+<b>nama besar bukan jaminan.</b>
+</p>
+
+<p>
+<b>keunggulan poin bukan jaminan.</b>
+</p>
+
+<p>
+Dan ketika masih tersisa <b>160 pertandingan</b>...
+</p>
+
+<p>
+<b>satu-satunya hal yang benar-benar aman adalah pertandingan yang sudah dimenangkan.</b>
+</p>
 
 `
 }
 
 ];
 
+
 //======================================================
-// RENDER
+// RENDER JURNAL
 //======================================================
 
 function renderJournal(){
 
-const container = document.getElementById("journal");
+    const container = document.getElementById("journal");
 
-if(!container) return;
+    if(!container) return;
 
-let html = "";
+    let html = "";
 
-jurnal.forEach(item => {
+    jurnal.forEach(item => {
 
-    html += `
+        html += `
 
-    <section class="card journal-card">
+        <section class="card journal-card">
 
-        <h2>${item.title}</h2>
+            <h2>${item.title}</h2>
 
-        ${item.content}
+            ${item.content}
 
-    </section>
+        </section>
 
-    `;
+        `;
 
-});
+    });
 
-container.innerHTML = html;
-
+    container.innerHTML = html;
 }
 
-document.addEventListener("DOMContentLoaded", renderJournal);
+
+//======================================================
+// JALANKAN SETELAH HTML SELESAI DIMUAT
+//======================================================
+
+document.addEventListener("DOMContentLoaded", function(){
+
+    renderJournal();
+
+});
