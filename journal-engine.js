@@ -1,764 +1,981 @@
 //======================================================
-// LIGA JURNAL
-// EDISI TERBARU — 12 AGUSTUS 2026
+// LIGA JURNAL ENGINE
+// EDISI 12 AGUSTUS 2026
+// 296 PERTANDINGAN
+//======================================================
+
+
+//======================================================
+// JURNAL
 //======================================================
 
 const jurnal = [
 
 {
-title:"📰 LIGA JURNAL",
-content:`
+    title:"📰 LIGA JURNAL",
+    content:`
 
-<div class="edition">
+    <div class="edition">
 
-<h2>EDISI TERBARU</h2>
+        <h2>EDISI TERBARU</h2>
 
-<p>
-Berita • Analisis • Statistik • Anomali • Cerita Liga
-</p>
+        <p>
+        <b>12 AGUSTUS 2026</b>
+        </p>
 
-</div>
+        <p>
+        Berita • Analisis • Statistik • Anomali • Cerita Liga
+        </p>
 
-`
+    </div>
+
+    `
 },
 
+
 {
-title:"🔥 296 PERTANDINGAN. 139 PERTANDINGAN TERSISA. DAN BELUM ADA YANG AMAN.",
-content:`
+    title:"🔥 KETIKA ANGKA MULAI BERBICARA, MEJA MULAI MENYALA",
+    content:`
 
-<p>
-Liga ini sudah melewati <b>296 pertandingan.</b>
-</p>
+    <p>
+    <b>296 pertandingan</b> sudah dimainkan.
+    </p>
 
-<p>
-296 cerita sudah ditorehkan.
-</p>
+    <p>
+    296 cerita sudah ditorehkan.
+    </p>
 
-<p>
-Tetapi masih ada <b>139 pertandingan</b> yang menunggu dimainkan.
-</p>
+    <p>
+    Tetapi <b>139 pertandingan</b> masih menunggu dimainkan.
+    </p>
 
-<p>
-Dan justru di sanalah cerita terbesar sedang disimpan oleh meja pertandingan.
-</p>
+    <p>
+    Dan justru di sanalah,
+    cerita terbesar sedang disimpan oleh meja pertandingan.
+    </p>
 
-<p>
-Pertanyaannya sekarang bukan lagi sekadar siapa yang sedang memimpin.
-</p>
-
-<p>
-Pertanyaannya adalah:
-</p>
-
-<p>
-<b>Siapa yang mampu bertahan ketika seluruh pemain mulai menekan?</b>
-</p>
-
-`
+    `
 },
 
+
 {
-title:"🎱 435 PERTANDINGAN DALAM SATU MUSIM",
-content:`
+    title:"🎱 435 PERTANDINGAN DALAM SATU MUSIM",
+    content:`
 
-<p>
-Secara matematis, dengan <b>30 pemain</b> dalam sistem satu kali pertemuan,
-terdapat <b>435 pertandingan</b> dalam satu musim.
-</p>
+    <p>
+    Secara matematis,
+    30 pemain berarti <b>435 kemungkinan pertemuan.</b>
+    </p>
 
-<p>
-296 sudah selesai.
-</p>
+    <p>
+    296 sudah selesai.
+    </p>
 
-<p>
-139 masih menjadi misteri.
-</p>
+    <p>
+    139 masih menjadi misteri.
+    </p>
 
-<p>
-Artinya sekitar <b>68% perjalanan liga telah dilewati.</b>
-</p>
+    <p>
+    Artinya,
+    sekitar <b>68% perjalanan telah dilewati.</b>
+    </p>
 
-<p>
-Namun masih ada sekitar <b>32%</b> perjalanan yang dapat mengubah seluruh isi klasemen.
-</p>
+    <p>
+    Namun 32% yang tersisa,
+    bisa mengubah seluruh isi klasemen yang kini kita kenali.
+    </p>
 
-<p>
-Karena dalam liga seperti ini,
-satu kemenangan bukan sekadar kemenangan.
-</p>
+    <p>
+    Karena dalam liga seperti ini,
+    </p>
 
-<p>
-Ia adalah sembilan frame.
-</p>
+    <p>
+    <b>satu kemenangan bukan sekadar kemenangan.</b>
+    </p>
 
-<p>
-Sembilan frame adalah sembilan langkah.
-</p>
+    <p>
+    Ia adalah sembilan frame.
+    </p>
 
-<p>
-Dan sembilan langkah,
-kadang cukup untuk mengubah nama di papan klasemen.
-</p>
+    <p>
+    Sembilan frame adalah sembilan langkah.
+    </p>
 
-`
+    <p>
+    Dan sembilan langkah,
+    kadang cukup untuk mengubah nama di puncak klasemen.
+    </p>
+
+    `
 },
 
+
 {
-title:"⚔️ PUNCAK HANYA BERJARAK 30 FRAME",
-content:`
+    title:"⚔️ PUNCAK HANYA BERJARAK 30 FRAME",
+    content:`
 
-<p>
-Chad masih memimpin dengan <b>228 frame.</b>
-</p>
+    <p>
+    Chad masih memimpin dengan <b>228</b>.
+    </p>
 
-<p>
-Bang Jul mengejar dengan <b>224.</b>
-</p>
+    <p>
+    Bang Jul mengejar dengan <b>224</b>.
+    </p>
 
-<p>
-Aken berada di <b>210.</b>
-</p>
+    <p>
+    Aken berdiri di <b>210</b>.
+    </p>
 
-<p>
-Habib <b>206.</b>
-</p>
+    <p>
+    Habib <b>206</b>.
+    </p>
 
-<p>
-Iwan <b>204.</b>
-</p>
+    <p>
+    Iwan <b>204</b>.
+    </p>
 
-<p>
-Bang Larosa <b>203.</b>
-</p>
+    <p>
+    Bang Larosa <b>203</b>.
+    </p>
 
-<p>
-Ko Charles dan Pandi sama-sama berada di <b>202.</b>
-</p>
+    <p>
+    Ko Charles dan Pandi sama-sama <b>202</b>.
+    </p>
 
-<p>
-Ko CG berada di <b>198.</b>
-</p>
+    <p>
+    Ko CG <b>198</b>.
+    </p>
 
-<p>
-Sembilan nama.
-</p>
+    <p>
+    Sembilan nama.
+    </p>
 
-<p>
-Sembilan cerita.
-</p>
+    <p>
+    Sembilan cerita.
+    </p>
 
-<p>
-Tetapi jarak dari nomor satu ke nomor sembilan...
-</p>
+    <p>
+    Tetapi jarak dari nomor satu ke nomor sembilan...
+    </p>
 
-<p>
-<b>hanya 30 frame.</b>
-</p>
+    <h2>
+    <b>hanya 30 frame.</b>
+    </h2>
 
-<p>
-Tiga puluh.
-</p>
+    <p>
+    Tiga puluh.
+    </p>
 
-<p>
-Bukan tiga ratus.
-</p>
+    <p>
+    Bukan tiga ratus.
+    </p>
 
-<p>
-Bukan tiga ribu.
-</p>
+    <p>
+    Bukan tiga ribu.
+    </p>
 
-<p>
-Hanya tiga puluh.
-</p>
+    <p>
+    Hanya tiga puluh.
+    </p>
 
-<p>
-Dan dalam liga di mana satu pertandingan dapat menghasilkan sembilan frame,
-jarak itu bukan benteng.
-</p>
+    <p>
+    Dan di liga yang satu pertandingan dapat menghasilkan sembilan frame,
+    jarak itu bukan benteng.
+    </p>
 
-<p>
-<b>Jarak itu hanya pagar.</b>
-</p>
+    <p>
+    <b>Jarak itu hanya pagar.</b>
+    </p>
 
-`
+    `
 },
 
+
 {
-title:"🔥 54 KALI HILL-HILL",
-content:`
+    title:"🔥 54 KALI HILL-HILL",
+    content:`
 
-<p>
-Ada satu angka yang pantas membuat semua pemain berhenti sejenak.
-</p>
+    <p>
+    Ada satu angka yang pantas membuat semua pemain berhenti sejenak.
+    </p>
 
-<p>
-<b>54 pertandingan berakhir dengan skor 9–8.</b>
-</p>
+    <h2>
+    <b>54 pertandingan berakhir 9–8.</b>
+    </h2>
 
-<p>
-Lima puluh empat kali pertandingan menolak menyerah.
-</p>
+    <p>
+    Lima puluh empat kali pertandingan menolak menyerah.
+    </p>
 
-<p>
-Lima puluh empat kali satu frame terakhir menjadi penentu.
-</p>
+    <p>
+    Lima puluh empat kali satu frame terakhir menjadi penentu.
+    </p>
 
-<p>
-Dan di sinilah statistik mulai berubah menjadi cerita.
-</p>
+    <p>
+    Dan di sinilah statistik mulai berubah menjadi cerita.
+    </p>
 
-<p>
-Karena 9–8 bukan sekadar angka.
-</p>
+    <p>
+    Karena 9–8 bukan sekadar angka.
+    </p>
 
-<p>
-<b>9–8 adalah pesan bahwa tidak ada kemenangan yang boleh dianggap mudah.</b>
-</p>
+    <p>
+    9–8 adalah pesan:
+    </p>
 
-<p>
-Satu frame bisa menjadi pembeda.
-</p>
+    <h3>
+    <b>Tidak ada kemenangan yang boleh dianggap mudah.</b>
+    </h3>
 
-<p>
-Satu keputusan bisa menjadi pembeda.
-</p>
+    <p>
+    Satu frame bisa menjadi pembeda.
+    </p>
 
-<p>
-Satu bola bisa menjadi pembeda.
-</p>
+    <p>
+    Satu keputusan bisa menjadi pembeda.
+    </p>
 
-<p>
-Dan satu malam yang buruk...
-</p>
+    <p>
+    Satu bola bisa menjadi pembeda.
+    </p>
 
-<p>
-<b>bisa menjadi pembeda klasemen.</b>
-</p>
+    <p>
+    Dan satu malam yang buruk...
+    </p>
 
-`
+    <p>
+    <b>bisa menjadi pembeda klasemen.</b>
+    </p>
+
+    `
 },
 
+
 {
-title:"🧠 ANOMALI TERBESAR: MENANG BELUM TENTU BERARTI TINGGI",
-content:`
+    title:"🧠 ANOMALI TERBESAR: MENANG BELUM TENTU BERARTI TINGGI",
+    content:`
 
-<p>
-Lihat Habib.
-</p>
+    <p>
+    Lihat <b>Habib</b>.
+    </p>
 
-<p>
-Ia sudah mencatat <b>14 kemenangan</b> dan <b>13 kekalahan</b>.
-</p>
+    <p>
+    14 kemenangan.
+    </p>
 
-<p>
-Namun masih berada di posisi keempat.
-</p>
+    <p>
+    13 kekalahan.
+    </p>
 
-<p>
-Mengapa?
-</p>
+    <p>
+    Namun berada di posisi keempat.
+    </p>
 
-<p>
-Karena liga ini tidak hanya berbicara tentang menang.
-</p>
+    <p>
+    Mengapa?
+    </p>
 
-<p>
-Liga ini berbicara tentang <b>frame.</b>
-</p>
+    <p>
+    Karena liga ini tidak hanya berbicara tentang menang.
+    </p>
 
-<p>
-Itulah yang membuat klasemen ini berbeda.
-</p>
+    <p>
+    Liga ini berbicara tentang <b>frame.</b>
+    </p>
 
-<p>
-Bang Larosa memiliki <b>13 kemenangan</b> dan <b>14 kekalahan</b>,
-namun sudah mengumpulkan <b>203 frame.</b>
-</p>
+    <p>
+    Dan itulah mengapa klasemen ini terasa berbeda.
+    </p>
 
-<p>
-Ia berada di posisi keenam.
-</p>
+    <p>
+    Bang Larosa memiliki 13 kemenangan.
+    </p>
 
-<p>
-Artinya,
-</p>
+    <p>
+    14 kekalahan.
+    </p>
 
-<p>
-<b>kemenangan menceritakan siapa yang menang.</b>
-</p>
+    <p>
+    Tetapi sudah mengumpulkan <b>203 frame.</b>
+    </p>
 
-<p>
-Tetapi frame menceritakan...
-</p>
+    <p>
+    Ia berada di posisi keenam.
+    </p>
 
-<p>
-<b>seberapa jauh ia bertahan.</b>
-</p>
+    <p>
+    Artinya,
+    </p>
 
-`
+    <p>
+    <b>kemenangan menceritakan siapa yang menang.</b>
+    </p>
+
+    <p>
+    Tetapi frame menceritakan...
+    </p>
+
+    <h3>
+    <b>seberapa jauh ia bertahan.</b>
+    </h3>
+
+    `
 },
 
+
 {
-title:"🚨 BANG LAROSA: DARI PENGEJAR MENJADI YANG DIKEJAR",
-content:`
+    title:"🚨 BANG LAROSA: DARI PENGEJAR MENJADI YANG DIKEJAR",
+    content:`
 
-<p>
-Bang Larosa kini berada di <b>203 frame.</b>
-</p>
+    <p>
+    Bang Larosa kini berada di <b>203</b>.
+    </p>
 
-<p>
-Namun pertandingan tersisanya hanya <b>dua.</b>
-</p>
+    <p>
+    Puncak klasemen berada di <b>228</b>.
+    </p>
 
-<p>
-Dua.
-</p>
+    <p>
+    Tetapi pertandingan tersisa Bang Larosa hanya dua.
+    </p>
 
-<p>
-Maksimum tambahan yang mungkin diperoleh adalah:
-</p>
+    <p>
+    <b>Dua.</b>
+    </p>
 
-<p>
-<b>2 × 9 = 18 frame.</b>
-</p>
+    <p>
+    Dan maksimum tambahan yang mungkin diperoleh adalah:
+    </p>
 
-<p>
-Maka batas matematisnya:
-</p>
+    <h2>
+    <b>18 frame.</b>
+    </h2>
 
-<p>
-<b>203 + 18 = 221.</b>
-</p>
+    <p>
+    Maka batas matematisnya:
+    </p>
 
-<p>
-Chad sudah berada di <b>228.</b>
-</p>
+    <h2>
+    <b>203 + 18 = 221.</b>
+    </h2>
 
-<p>
-Bang Jul sudah berada di <b>224.</b>
-</p>
+    <p>
+    Chad sudah 228.
+    </p>
 
-<p>
-Artinya Bang Larosa tidak lagi dapat mengejar Chad maupun Bang Jul hanya melalui hasilnya sendiri.
-</p>
+    <p>
+    Bang Jul sudah 224.
+    </p>
 
-<p>
-Misterinya berubah.
-</p>
+    <p>
+    Artinya,
+    bahkan jika Bang Larosa menyapu dua pertandingan terakhirnya,
+    ia <b>tidak lagi bisa mengejar Chad maupun Bang Jul hanya dari hasilnya sendiri.</b>
+    </p>
 
-<p>
-Bukan lagi:
-</p>
+    <p>
+    Misterinya berubah.
+    </p>
 
-<p>
-<b>"Bisakah Bang Larosa menjadi juara?"</b>
-</p>
+    <p>
+    Bukan lagi:
+    </p>
 
-<p>
-Tetapi:
-</p>
+    <h3>
+    <b>"Bisakah Bang Larosa menjadi juara?"</b>
+    </h3>
 
-<p>
-<b>"Seberapa jauh Bang Larosa bisa bertahan ketika pemain di belakangnya masih bergerak?"</b>
-</p>
+    <p>
+    Tetapi:
+    </p>
 
-`
+    <h3>
+    <b>"Seberapa jauh Bang Larosa bisa bertahan ketika seluruh pemain di belakangnya masih bergerak?"</b>
+    </h3>
+
+    `
 },
 
+
 {
-title:"⚡ MOMENTUM BANG LAROSA BELUM PADAM",
-content:`
+    title:"⚡ MOMENTUM BANG LAROSA BELUM PADAM",
+    content:`
 
-<p>
-Namun jangan salah membaca angka.
-</p>
+    <p>
+    Namun jangan salah membaca angka.
+    </p>
 
-<p>
-Dalam sepuluh pertandingan terakhir,
-Bang Larosa memenangkan <b>7 pertandingan.</b>
-</p>
+    <p>
+    Dalam sepuluh pertandingan terakhir,
+    Bang Larosa memenangkan <b>7 pertandingan.</b>
+    </p>
 
-<p>
-Menghasilkan <b>82 frame</b>.
-</p>
+    <p>
+    Menghasilkan <b>82 frame.</b>
+    </p>
 
-<p>
-Kehilangan <b>67 frame</b>.
-</p>
+    <p>
+    Kehilangan <b>67 frame.</b>
+    </p>
 
-<p>
-Rata-rata menghasilkan:
-</p>
+    <p>
+    Rata-rata menghasilkan:
+    </p>
 
-<p>
-<b>82 ÷ 10 = 8,2 frame per pertandingan.</b>
-</p>
+    <h2>
+    <b>8,2 frame per pertandingan.</b>
+    </h2>
 
-<p>
-Margin rata-rata:
-</p>
+    <p>
+    Margin rata-rata:
+    </p>
 
-<p>
-<b>(82 − 67) ÷ 10 = +1,5 frame per pertandingan.</b>
-</p>
+    <h2>
+    <b>+1,5 frame per pertandingan.</b>
+    </h2>
 
-<p>
-Jadi meskipun klasemennya sedang terancam,
-momentumnya belum mati.
-</p>
+    <p>
+    Jadi meskipun klasemennya sedang terancam,
+    momentumnya belum mati.
+    </p>
 
-<p>
-Api masih ada.
-</p>
+    <p>
+    Api masih ada.
+    </p>
 
-<p>
-Pertanyaannya bukan apakah apinya menyala.
-</p>
+    <p>
+    Pertanyaannya bukan apakah apinya menyala.
+    </p>
 
-<p>
-Pertanyaannya:
-</p>
+    <h3>
+    <b>cukupkah api itu untuk bertahan sampai bara terakhir?</b>
+    </h3>
 
-<p>
-<b>cukupkah api itu untuk bertahan sampai bara terakhir?</b>
-</p>
-
-`
+    `
 },
 
+
 {
-title:"🐎 KUDA-KUDA YANG BELUM SELESAI",
-content:`
+    title:"🐎 KUDA-KUDA YANG BELUM SELESAI",
+    content:`
 
-<p>
-Lihat Bang Aceng.
-</p>
+    <p>
+    Lihat <b>Bang Aceng</b>.
+    </p>
 
-<p>
-Posisi <b>20</b>.
-</p>
+    <p>
+    Posisi 20.
+    </p>
 
-<p>
-Tetapi sudah memenangkan <b>10 dari 14 pertandingan.</b>
-</p>
+    <p>
+    Tetapi sudah menang <b>10 dari 14 pertandingan.</b>
+    </p>
 
-<p>
-Selisih frame:
-<b>+34.</b>
-</p>
+    <p>
+    Selisih frame:
+    <b>+34.</b>
+    </p>
 
-<p>
-Lahi berada di posisi <b>14</b>.
-</p>
+    <p>
+    Lahi berada di posisi 14.
+    </p>
 
-<p>
-Sudah memenangkan <b>13 dari 18 pertandingan.</b>
-</p>
+    <p>
+    <b>13 kemenangan dari 18 pertandingan.</b>
+    </p>
 
-<p>
-Selisih frame:
-<b>+34.</b>
-</p>
+    <p>
+    Selisih:
+    <b>+34.</b>
+    </p>
 
-<p>
-Dan Ko CG?
-</p>
+    <p>
+    Dan Ko CG?
+    </p>
 
-<p>
-Posisi <b>9</b>.
-</p>
+    <p>
+    Posisi 9.
+    </p>
 
-<p>
-Sudah memenangkan <b>18 pertandingan dari 24.</b>
-</p>
+    <p>
+    <b>18 kemenangan dari 24 pertandingan.</b>
+    </p>
 
-<p>
-Selisih frame:
-<b>+53.</b>
-</p>
+    <p>
+    Selisih:
+    <b>+53.</b>
+    </p>
 
-<p>
-Mereka bukan sekadar penghuni klasemen.
-</p>
+    <p>
+    Mereka bukan sekadar penghuni klasemen.
+    </p>
 
-<p>
-<b>Mereka adalah arus bawah.</b>
-</p>
+    <p>
+    Mereka adalah <b>arus bawah.</b>
+    </p>
 
-<p>
-Dan arus bawah,
-jika terus bergerak,
-</p>
+    <p>
+    Dan arus bawah,
+    jika terus bergerak,
+    </p>
 
-<p>
-akhirnya bisa mengangkat siapa saja ke atas.
-</p>
+    <p>
+    akhirnya bisa mengangkat siapa saja ke atas.
+    </p>
 
-`
+    `
 },
 
+
 {
-title:"🎯 STATISTIK TIDAK SELALU MEMBERI JAWABAN",
-content:`
+    title:"🎯 STATISTIK TIDAK SELALU MEMBERI JAWABAN",
+    content:`
 
-<p>
-Statistik bisa berkata:
-</p>
+    <p>
+    Statistik bisa berkata:
+    </p>
 
-<p>
-Aken sangat kuat.
-</p>
+    <p>
+    <b>Aken sangat kuat.</b>
+    </p>
 
-<p>
-Bang Jul sangat konsisten.
-</p>
+    <p>
+    <b>Bang Jul sangat konsisten.</b>
+    </p>
 
-<p>
-Chad sangat stabil.
-</p>
+    <p>
+    <b>Chad sangat stabil.</b>
+    </p>
 
-<p>
-Ko CG sangat berbahaya.
-</p>
+    <p>
+    <b>Ko CG sangat berbahaya.</b>
+    </p>
 
-<p>
-Pandi masih mengejar.
-</p>
+    <p>
+    <b>Pandi masih mengejar.</b>
+    </p>
 
-<p>
-Iwan masih bertahan.
-</p>
+    <p>
+    <b>Iwan masih bertahan.</b>
+    </p>
 
-<p>
-Bang Larosa masih melawan.
-</p>
+    <p>
+    <b>Bang Larosa masih melawan.</b>
+    </p>
 
-<p>
-Tetapi statistik hanya membaca masa lalu.
-</p>
+    <p>
+    Tetapi statistik hanya membaca masa lalu.
+    </p>
 
-<p>
-Meja membaca saat ini.
-</p>
+    <p>
+    <b>Meja membaca saat ini.</b>
+    </p>
 
-<p>
-Pertandingan menentukan masa depan.
-</p>
+    <p>
+    <b>Dan pertandingan menentukan masa depan.</b>
+    </p>
 
-<p>
-Dan di situlah statistik berhenti menjadi kepastian.
-</p>
-
-`
+    `
 },
 
+
 {
-title:"🔥 139 PERTANDINGAN TERAKHIR",
-content:`
+    title:"🔥 139 PERTANDINGAN TERAKHIR",
+    content:`
 
-<p>
-<b>139 pertandingan</b> belum dimainkan.
-</p>
+    <p>
+    <b>139 pertandingan</b> belum dimainkan.
+    </p>
 
-<p>
-139 kesempatan untuk menang.
-</p>
+    <p>
+    139 kesempatan untuk menang.
+    </p>
 
-<p>
-139 kesempatan untuk tergelincir.
-</p>
+    <p>
+    139 kesempatan untuk tergelincir.
+    </p>
 
-<p>
-139 kesempatan untuk membuat satu nama naik.
-</p>
+    <p>
+    139 kesempatan untuk membuat satu nama naik.
+    </p>
 
-<p>
-Dan satu nama turun.
-</p>
+    <p>
+    Dan satu nama turun.
+    </p>
 
-<p>
-Karena semakin dekat garis akhir,
-semakin kecil ruang untuk kesalahan.
-</p>
+    <p>
+    Karena semakin dekat garis akhir,
+    semakin kecil ruang untuk kesalahan.
+    </p>
 
-<p>
-Semakin rapat klasemen,
-semakin mahal satu frame.
-</p>
+    <p>
+    Semakin rapat klasemen,
+    semakin mahal satu frame.
+    </p>
 
-<p>
-Semakin panas meja,
-semakin dingin kepala harus bekerja.
-</p>
+    <p>
+    Semakin panas meja,
+    semakin dingin kepala harus bekerja.
+    </p>
 
-`
+    `
 },
 
+
 {
-title:"🧮 FORMULA AKHIR MUSIM",
-content:`
+    title:"🧮 FORMULA AKHIR MUSIM",
+    content:`
 
-<p>
-Kalau kita ingin bermain dengan angka,
-mari kita bermain dengan angka.
-</p>
+    <p>
+    Kalau kita ingin bermain dengan angka,
+    </p>
 
-<p>
-<b>Poin akhir = poin sekarang + frame dari pertandingan tersisa.</b>
-</p>
+    <p>
+    mari kita bermain dengan angka.
+    </p>
 
-<p>
-Tetapi ada satu variabel yang tidak masuk rumus:
-</p>
+    <h2>
+    <b>Poin akhir = poin sekarang + frame dari pertandingan tersisa.</b>
+    </h2>
 
-<p>
-<b>mental.</b>
-</p>
+    <p>
+    Tetapi ada satu variabel yang tidak masuk rumus:
+    </p>
 
-<p>
-Ada satu variabel yang tidak tercatat:
-</p>
+    <h3>
+    <b>mental.</b>
+    </h3>
 
-<p>
-<b>keberanian.</b>
-</p>
+    <p>
+    Ada satu variabel yang tidak tercatat:
+    </p>
 
-<p>
-Ada satu variabel yang tidak bisa diprediksi:
-</p>
+    <h3>
+    <b>keberanian.</b>
+    </h3>
 
-<p>
-<b>hari buruk.</b>
-</p>
+    <p>
+    Ada satu variabel yang tidak bisa diprediksi:
+    </p>
 
-<p>
-Dan ada satu variabel yang selalu punya kata terakhir:
-</p>
+    <h3>
+    <b>hari buruk.</b>
+    </h3>
 
-<p>
-<b>MEJA.</b>
-</p>
+    <p>
+    Dan ada satu variabel yang selalu punya kata terakhir:
+    </p>
 
-`
+    <h2>
+    <b>MEJA.</b>
+    </h2>
+
+    `
 },
 
+
 {
-title:"🔮 MISTERI AKHIR MUSIM",
-content:`
+    title:"🔮 MISTERI AKHIR MUSIM",
+    content:`
 
-<p>
-Mungkin Chad tetap di atas.
-</p>
+    <p>
+    Mungkin Chad tetap di atas.
+    </p>
 
-<p>
-Mungkin Bang Jul merebut mahkota.
-</p>
+    <p>
+    Mungkin Bang Jul merebut mahkota.
+    </p>
 
-<p>
-Mungkin Aken datang dari belakang.
-</p>
+    <p>
+    Mungkin Aken datang dari belakang.
+    </p>
 
-<p>
-Mungkin Iwan dan Habib menyusup.
-</p>
+    <p>
+    Mungkin Iwan dan Habib menyusup.
+    </p>
 
-<p>
-Mungkin Ko CG membuat kejutan.
-</p>
+    <p>
+    Mungkin Ko CG membuat kejutan.
+    </p>
 
-<p>
-Mungkin Pandi menyalip.
-</p>
+    <p>
+    Mungkin Pandi menyalip.
+    </p>
 
-<p>
-Mungkin Bang Larosa bertahan.
-</p>
+    <p>
+    Mungkin Bang Larosa bertahan.
+    </p>
 
-<p>
-Atau mungkin...
-</p>
+    <p>
+    Atau mungkin...
+    </p>
 
-<p>
-satu pemain yang hari ini bahkan belum dibicarakan,
-besok justru menjadi berita utama.
-</p>
+    <p>
+    satu pemain yang hari ini bahkan belum dibicarakan,
+    </p>
 
-<p>
-Karena liga ini belum selesai.
-</p>
+    <p>
+    besok justru menjadi berita utama.
+    </p>
 
-<p>
-Klasemen belum final.
-</p>
+    <p>
+    Karena liga ini belum selesai.
+    </p>
 
-<p>
-Angka belum menjadi takdir.
-</p>
+    <p>
+    Klasemen belum final.
+    </p>
 
-<p>
-Dan selama masih ada frame yang dimainkan...
-</p>
+    <p>
+    Angka belum menjadi takdir.
+    </p>
 
-<p>
-<b>belum ada cerita yang benar-benar selesai.</b>
-</p>
+    <p>
+    Dan selama masih ada frame yang dimainkan...
+    </p>
 
-`
+    <h2>
+    <b>belum ada cerita yang benar-benar selesai.</b>
+    </h2>
+
+    `
 },
 
+
 {
-title:"🎱 DARI MEJA REDAKSI",
-content:`
+    title:"🎱 DARI MEJA REDAKSI",
+    content:`
 
-<p>
-Kapur boleh menipis.
-</p>
+    <p>
+    Kapur boleh menipis.
+    </p>
 
-<p>
-Cue stick boleh semakin berat.
-</p>
+    <p>
+    Cue stick boleh semakin berat.
+    </p>
 
-<p>
-Tangan boleh mulai lelah.
-</p>
+    <p>
+    Tangan boleh mulai lelah.
+    </p>
 
-<p>
-Tetapi pertandingan terakhir...
-</p>
+    <p>
+    Tetapi pertandingan terakhir...
+    </p>
 
-<p>
-<b>belum dimainkan.</b>
-</p>
+    <h2>
+    <b>belum dimainkan.</b>
+    </h2>
 
-<p>
-Jadi jangan bermain untuk mempertahankan nama.
-</p>
+    <p>
+    Jadi jangan bermain untuk mempertahankan nama.
+    </p>
 
-<p>
-Jangan bermain untuk mempertahankan posisi.
-</p>
+    <p>
+    Jangan bermain untuk mempertahankan posisi.
+    </p>
 
-<p>
-<b>Mainkan frame berikutnya.</b>
-</p>
+    <h2>
+    <b>Mainkan frame berikutnya.</b>
+    </h2>
 
-<p>
-Karena mungkin,
-</p>
+    <p>
+    Karena mungkin,
+    </p>
 
-<p>
-frame berikutnya adalah frame
-</p>
+    <p>
+    frame berikutnya adalah frame
+    </p>
 
-<p>
-yang mengubah seluruh cerita.
-</p>
+    <p>
+    yang mengubah seluruh cerita.
+    </p>
 
-<p>
-<b>Salam dari Meja Redaksi.</b>
-</p>
+    <hr>
 
-`
+    <p>
+    <b>Salam dari Meja Redaksi.</b>
+    </p>
+
+    `
 }
 
 ];
+
+
+//======================================================
+// RENDER JURNAL
+//======================================================
+
+function renderJournal(){
+
+    /*
+     * TIDAK menggunakan #journal.
+     * Mengikuti struktur ligajurnal.html yang sudah ada.
+     */
+
+    const headline =
+        document.getElementById("headline");
+
+    const hotPlayer =
+        document.getElementById("hotPlayer");
+
+    const warning =
+        document.getElementById("warning");
+
+    const trend =
+        document.getElementById("trend");
+
+    const matchDay =
+        document.getElementById("matchDay");
+
+    const coach =
+        document.getElementById("coach");
+
+    const mental =
+        document.getElementById("mental");
+
+    const strategy =
+        document.getElementById("strategy");
+
+    const prediction =
+        document.getElementById("prediction");
+
+
+    /*
+     * Jika halaman belum selesai dimuat,
+     * tunggu DOMContentLoaded.
+     */
+
+    if(
+        !headline ||
+        !hotPlayer ||
+        !warning ||
+        !trend ||
+        !matchDay ||
+        !coach ||
+        !mental ||
+        !strategy ||
+        !prediction
+    ){
+
+        console.error(
+            "Container Liga Jurnal tidak ditemukan."
+        );
+
+        return;
+
+    }
+
+
+    /*
+     * Bersihkan isi lama.
+     */
+
+    headline.innerHTML="";
+    hotPlayer.innerHTML="";
+    warning.innerHTML="";
+    trend.innerHTML="";
+    matchDay.innerHTML="";
+    coach.innerHTML="";
+    mental.innerHTML="";
+    strategy.innerHTML="";
+    prediction.innerHTML="";
+
+
+    /*
+     * Bagi jurnal ke container yang
+     * SUDAH ADA di ligajurnal.html.
+     */
+
+    const kelompok = [
+
+        [0,1],
+
+        [2,3],
+
+        [4],
+
+        [5],
+
+        [6],
+
+        [7],
+
+        [8],
+
+        [9,10],
+
+        [11,12]
+
+    ];
+
+
+    const containers = [
+
+        headline,
+
+        hotPlayer,
+
+        warning,
+
+        trend,
+
+        matchDay,
+
+        coach,
+
+        mental,
+
+        strategy,
+
+        prediction
+
+    ];
+
+
+    for(
+        let i=0;
+        i<kelompok.length;
+        i++
+    ){
+
+        let html="";
+
+
+        kelompok[i].forEach(index=>{
+
+            const item=jurnal[index];
+
+            if(!item) return;
+
+
+            html += `
+
+            <section class="card journal-card">
+
+                <h2>${item.title}</h2>
+
+                ${item.content}
+
+            </section>
+
+            `;
+
+        });
+
+
+        containers[i].innerHTML=html;
+
+    }
+
+}
+
+
+//======================================================
+// START
+//======================================================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    renderJournal
+);
