@@ -803,179 +803,112 @@ const jurnal = [
 
 
 //======================================================
-// RENDER JURNAL
+// RENDER LIGA JURNAL
 //======================================================
 
 function renderJournal(){
 
-    /*
-     * TIDAK menggunakan #journal.
-     * Mengikuti struktur ligajurnal.html yang sudah ada.
-     */
+    // ---------------------------------------------
+    // Cari container jurnal yang tersedia
+    // ---------------------------------------------
 
-    const headline =
-        document.getElementById("headline");
+    let container =
+        document.getElementById("journal") ||
+        document.getElementById("isiJurnal") ||
+        document.getElementById("narasi");
 
-    const hotPlayer =
-        document.getElementById("hotPlayer");
+    // ---------------------------------------------
+    // Jika container tidak ada, buat otomatis
+    // ---------------------------------------------
 
-    const warning =
-        document.getElementById("warning");
+    if(!container){
 
-    const trend =
-        document.getElementById("trend");
+        console.warn(
+            "Container Liga Jurnal tidak ditemukan. Membuat container otomatis."
+        );
 
-    const matchDay =
-        document.getElementById("matchDay");
+        container = document.createElement("div");
 
-    const coach =
-        document.getElementById("coach");
+        container.id = "journal";
 
-    const mental =
-        document.getElementById("mental");
+        document.body.appendChild(container);
+    }
 
-    const strategy =
-        document.getElementById("strategy");
+    // ---------------------------------------------
+    // Bersihkan isi lama
+    // ---------------------------------------------
 
-    const prediction =
-        document.getElementById("prediction");
+    container.innerHTML = "";
 
+    // ---------------------------------------------
+    // Render seluruh berita
+    // ---------------------------------------------
 
-    /*
-     * Jika halaman belum selesai dimuat,
-     * tunggu DOMContentLoaded.
-     */
+    let html = "";
 
-    if(
-        !headline ||
-        !hotPlayer ||
-        !warning ||
-        !trend ||
-        !matchDay ||
-        !coach ||
-        !mental ||
-        !strategy ||
-        !prediction
-    ){
+    if(typeof jurnal === "undefined"){
+
+        container.innerHTML = `
+            <section class="card journal-card">
+                <h2>⚠️ Liga Jurnal</h2>
+
+                <p>
+                    Data jurnal belum tersedia.
+                </p>
+            </section>
+        `;
 
         console.error(
-            "Container Liga Jurnal tidak ditemukan."
+            "Variabel jurnal tidak ditemukan."
         );
 
         return;
-
     }
 
+    jurnal.forEach(function(item){
 
-    /*
-     * Bersihkan isi lama.
-     */
+        html += `
 
-    headline.innerHTML="";
-    hotPlayer.innerHTML="";
-    warning.innerHTML="";
-    trend.innerHTML="";
-    matchDay.innerHTML="";
-    coach.innerHTML="";
-    mental.innerHTML="";
-    strategy.innerHTML="";
-    prediction.innerHTML="";
+        <section class="card journal-card">
 
+            <h2>${item.title}</h2>
 
-    /*
-     * Bagi jurnal ke container yang
-     * SUDAH ADA di ligajurnal.html.
-     */
+            ${item.content}
 
-    const kelompok = [
+        </section>
 
-        [0,1],
+        `;
 
-        [2,3],
+    });
 
-        [4],
+    // ---------------------------------------------
+    // Masukkan ke halaman
+    // ---------------------------------------------
 
-        [5],
+    container.innerHTML = html;
 
-        [6],
-
-        [7],
-
-        [8],
-
-        [9,10],
-
-        [11,12]
-
-    ];
-
-
-    const containers = [
-
-        headline,
-
-        hotPlayer,
-
-        warning,
-
-        trend,
-
-        matchDay,
-
-        coach,
-
-        mental,
-
-        strategy,
-
-        prediction
-
-    ];
-
-
-    for(
-        let i=0;
-        i<kelompok.length;
-        i++
-    ){
-
-        let html="";
-
-
-        kelompok[i].forEach(index=>{
-
-            const item=jurnal[index];
-
-            if(!item) return;
-
-
-            html += `
-
-            <section class="card journal-card">
-
-                <h2>${item.title}</h2>
-
-                ${item.content}
-
-            </section>
-
-            `;
-
-        });
-
-
-        containers[i].innerHTML=html;
-
-    }
-
+    console.log(
+        "Liga Jurnal berhasil dirender:",
+        jurnal.length,
+        "berita"
+    );
 }
 
 
 //======================================================
-// START
+// JALANKAN SETELAH HTML SELESAI DIMUAT
 //======================================================
 
-document.addEventListener(
-    "DOMContentLoaded",
-    renderJournal
-);
+if(document.readyState === "loading"){
+
+    document.addEventListener(
+        "DOMContentLoaded",
+        renderJournal
+    );
+
+}
+else{
+
+    renderJournal();
+
+}
