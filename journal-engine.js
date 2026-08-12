@@ -1,6 +1,6 @@
 //======================================================
 // LIGA JURNAL
-// EDISI TERBARU
+// EDISI TERBARU — 12 AGUSTUS 2026
 //======================================================
 
 const jurnal = [
@@ -11,10 +11,10 @@ content:`
 
 <div class="edition">
 
-<h2>EDISI SELASA, 11 AGUSTUS 2026</h2>
+<h2>EDISI TERBARU</h2>
 
 <p>
-Berita • Analisis • Statistik • Momentum • Strategi • Cerita Liga
+Berita • Analisis • Statistik • Anomali • Cerita Liga
 </p>
 
 </div>
@@ -23,1072 +23,742 @@ Berita • Analisis • Statistik • Momentum • Strategi • Cerita Liga
 },
 
 {
-title:"🔥 287 PERTANDINGAN — DAN PETA PERSAINGAN LIGA SEMAKIN KABUR",
+title:"🔥 296 PERTANDINGAN. 139 PERTANDINGAN TERSISA. DAN BELUM ADA YANG AMAN.",
 content:`
 
 <p>
-Liga telah memainkan <b>287 pertandingan</b>.
+Liga ini sudah melewati <b>296 pertandingan.</b>
 </p>
 
 <p>
-Dari total <b>435 pertandingan</b> yang mungkin terjadi dalam format 30 pemain satu kali pertemuan, masih tersisa <b>148 pertandingan</b>.
+296 cerita sudah ditorehkan.
 </p>
 
 <p>
-Artinya, hampir dua pertiga perjalanan telah dilewati.
+Tetapi masih ada <b>139 pertandingan</b> yang menunggu dimainkan.
 </p>
 
 <p>
-Tetapi semakin jauh liga berjalan, justru semakin sulit menunjuk siapa yang benar-benar aman.
+Dan justru di sanalah cerita terbesar sedang disimpan oleh meja pertandingan.
 </p>
 
 <p>
-<b>Bang Jul</b> memimpin dengan <b>224 poin</b>.
-<b>Chad</b> hanya tertinggal <b>5 poin</b> dengan 219 poin.
+Pertanyaannya sekarang bukan lagi sekadar siapa yang sedang memimpin.
 </p>
 
 <p>
-Di belakang mereka, persaingan semakin padat.
+Pertanyaannya adalah:
 </p>
 
 <p>
-Matematika mulai mengatakan satu hal:
-</p>
-
-<h3>
-JARAK KECIL HARI INI BISA MENJADI PERUBAHAN BESAR BESOK.
-</h3>
-
-`
-},
-
-{
-title:"🧮 STATISTIK YANG BERCERITA",
-content:`
-
-<p>
-Mulai sekarang, klasemen tidak cukup dibaca hanya dari kolom poin.
-</p>
-
-<p>
-Kita mulai melihat <b>kecepatan seorang pemain menghasilkan frame.</b>
-</p>
-
-<h3>⚡ KPF — KECEPATAN PEROLEHAN FRAME</h3>
-
-<p>
-Rumus:
-</p>
-
-<p>
-<b>KPF = Frame+ ÷ Jumlah Pertandingan</b>
-</p>
-
-<p>
-Semakin tinggi KPF, semakin cepat seorang pemain mengumpulkan frame.
-</p>
-
-<p>
-Beberapa angka menarik:
-</p>
-
-<ul>
-
-<li><b>Chad — 8,76</b></li>
-<li><b>Aken — 8,74</b></li>
-<li><b>Bang Jul — 8,62</b></li>
-<li><b>Bang Aceng — 8,46</b></li>
-<li><b>Lahi — 8,33</b></li>
-<li><b>Ko CG — 8,25</b></li>
-
-</ul>
-
-<p>
-Dan di sinilah statistik mulai membuat cerita menjadi menarik.
-</p>
-
-<p>
-<b>Bang Aceng</b> berada di posisi 21, tetapi mempunyai KPF <b>8,46</b>.
-</p>
-
-<p>
-<b>Lahi</b> berada di posisi 13, tetapi mempunyai KPF <b>8,33</b>.
-</p>
-
-<p>
-Artinya, posisi klasemen mereka saat ini belum sepenuhnya menggambarkan kecepatan permainan mereka.
-</p>
-
-<p>
-<b>Statistik tidak mengatakan siapa yang akan juara.</b>
-</p>
-
-<p>
-Tetapi statistik bisa memberi tahu:
-</p>
-
-<h3>
-SIAPA YANG SEDANG BERGERAK.
-</h3>
-
-`
-},
-
-{
-title:"🔥 MFR — SIAPA YANG SEDANG MEMANAS?",
-content:`
-
-<p>
-KPF melihat keseluruhan musim.
-</p>
-
-<p>
-Tetapi ada angka lain yang melihat perubahan performa:
-</p>
-
-<h3>🚀 MFR — MOMENTUM FRAME RATE</h3>
-
-<p>
-Rumus:
-</p>
-
-<p>
-<b>MFR = KPF 10 Pertandingan Terakhir − KPF Musim</b>
-</p>
-
-<p>
-Jika hasilnya positif, pemain sedang menghasilkan frame lebih cepat daripada rata-rata musimnya.
-</p>
-
-<p>
-Jika negatif, kecepatannya sedang menurun.
-</p>
-
-<p>
-Beberapa momentum yang menarik:
-</p>
-
-<ul>
-
-<li>
-<b>Gideon — +0,96</b><br>
-Momentum meningkat sangat tajam.
-</li>
-
-<li>
-<b>Bang Larosa — +0,68</b><br>
-Kecepatan terakhir meningkat dibanding rata-rata musim.
-</li>
-
-<li>
-<b>Alex — +0,62</b><br>
-Papan bawah tetapi mulai menghasilkan frame dengan kecepatan lebih tinggi.
-</li>
-
-<li>
-<b>Ko Khenny — +0,60</b><br>
-Performa terbaru bergerak lebih cepat daripada rata-rata musim.
-</li>
-
-</ul>
-
-<p>
-Inilah bagian yang berbahaya.
-</p>
-
-<p>
-Pemain yang sedang panas tidak selalu terlihat dari posisi klasemen.
-</p>
-
-<p>
-Kadang momentum muncul terlebih dahulu.
-</p>
-
-<p>
-<b>Klasemen baru menyusul kemudian.</b>
+<b>Siapa yang mampu bertahan ketika seluruh pemain mulai menekan?</b>
 </p>
 
 `
 },
 
 {
-title:"⚔️ PERANG ZONA 3–9",
+title:"🎱 435 PERTANDINGAN DALAM SATU MUSIM",
 content:`
 
 <p>
-Inilah salah satu wilayah paling berbahaya dalam liga.
+Secara matematis, dengan <b>30 pemain</b> dalam sistem satu kali pertemuan,
+terdapat <b>435 pertandingan</b> dalam satu musim.
 </p>
 
 <p>
-Habib <b>206</b>.
+296 sudah selesai.
 </p>
 
 <p>
-Iwan <b>204</b>.
+139 masih menjadi misteri.
 </p>
 
 <p>
-Bang Larosa <b>203</b>.
+Artinya sekitar <b>68% perjalanan liga telah dilewati.</b>
 </p>
 
 <p>
-Pandi <b>202</b>.
+Namun masih ada sekitar <b>32%</b> perjalanan yang dapat mengubah seluruh isi klasemen.
 </p>
 
 <p>
-Aken <b>201</b>.
+Karena dalam liga seperti ini,
+satu kemenangan bukan sekadar kemenangan.
 </p>
 
 <p>
-Ko CG <b>198</b>.
+Ia adalah sembilan frame.
 </p>
 
 <p>
-Ko Charles <b>193</b>.
+Sembilan frame adalah sembilan langkah.
 </p>
 
 <p>
-Tujuh pemain.
-</p>
-
-<h3>
-HANYA 13 POIN.
-</h3>
-
-<p>
-Tetapi jumlah pertandingan mereka berbeda.
-</p>
-
-<p>
-Aken masih mempunyai ruang pertandingan yang lebih besar dibanding beberapa pemain di atasnya.
-</p>
-
-<p>
-Ko CG juga belum memainkan jumlah pertandingan sebanyak sebagian pesaingnya.
-</p>
-
-<p>
-Inilah yang membuat klasemen terlihat rapat sekaligus menipu.
-</p>
-
-<p>
-Pemain yang terlihat berada di bawah belum tentu lebih lemah.
-</p>
-
-<p>
-Bisa jadi ia hanya mempunyai pertandingan yang lebih sedikit.
-</p>
-
-<h3>
-DAN KETIKA PERTANDINGAN ITU MULAI DIMAINKAN...
-</h3>
-
-<p>
-<b>PAPAN TENGAH BISA BERUBAH MENJADI PAPAN ATAS.</b>
+Dan sembilan langkah,
+kadang cukup untuk mengubah nama di papan klasemen.
 </p>
 
 `
 },
 
 {
-title:"💣 BANG ACENG — NAMA YANG MENGGANGGU MATEMATIKA KLASemen",
+title:"⚔️ PUNCAK HANYA BERJARAK 30 FRAME",
 content:`
 
 <p>
-Bang Aceng berada di posisi <b>21</b>.
+Chad masih memimpin dengan <b>228 frame.</b>
 </p>
 
 <p>
-Tetapi angka-angkanya membuat kita harus berhenti sejenak.
+Bang Jul mengejar dengan <b>224.</b>
 </p>
 
 <p>
-<b>110 poin dari 13 pertandingan.</b>
+Aken berada di <b>210.</b>
 </p>
 
 <p>
-Menang:
-<b>9</b>
+Habib <b>206.</b>
 </p>
 
 <p>
-Kalah:
-<b>4</b>
+Iwan <b>204.</b>
 </p>
 
 <p>
-Win Rate:
-<b>69,2%</b>
+Bang Larosa <b>203.</b>
 </p>
 
 <p>
-KPF:
-<b>8,46</b>
+Ko Charles dan Pandi sama-sama berada di <b>202.</b>
 </p>
 
 <p>
-Jika pace 8,46 tersebut sekadar dipertahankan sampai 29 pertandingan, proyeksi sederhananya mencapai sekitar:
-</p>
-
-<h3>245 POIN.</h3>
-
-<p>
-Tentu saja itu bukan ramalan.
+Ko CG berada di <b>198.</b>
 </p>
 
 <p>
-Lawan yang tersisa belum tentu mudah.
-Momentum dapat berubah.
-Kondisi pemain dapat berubah.
+Sembilan nama.
 </p>
 
 <p>
-Tetapi angka tersebut cukup untuk memberikan satu peringatan:
-</p>
-
-<h3>
-JANGAN MENILAI PEMAIN HANYA DARI POSISI KLASemen.
-</h3>
-
-`
-},
-
-{
-title:"📈 LAHI — POSISI 13, KECEPATAN PAPAN ATAS",
-content:`
-
-<p>
-Lahi berada di posisi <b>13</b>.
+Sembilan cerita.
 </p>
 
 <p>
-Tetapi baru memainkan <b>18 pertandingan</b>.
+Tetapi jarak dari nomor satu ke nomor sembilan...
 </p>
 
 <p>
-Sudah menghasilkan:
-<b>150 frame</b>.
+<b>hanya 30 frame.</b>
 </p>
 
 <p>
-KPF:
-<b>8,33</b>.
+Tiga puluh.
 </p>
 
 <p>
-Jika pace tersebut dipertahankan hingga 29 pertandingan, proyeksi sederhananya berada di sekitar:
-</p>
-
-<h3>242 POIN.</h3>
-
-<p>
-Sekali lagi, bukan prediksi akhir.
+Bukan tiga ratus.
 </p>
 
 <p>
-Ini hanyalah proyeksi berdasarkan kecepatan saat ini.
+Bukan tiga ribu.
 </p>
 
 <p>
-Tetapi justru di sinilah misterinya:
+Hanya tiga puluh.
 </p>
 
 <p>
-<b>
-Pemain dengan pertandingan lebih sedikit mempunyai ruang untuk bergerak jauh lebih besar.
-</b>
+Dan dalam liga di mana satu pertandingan dapat menghasilkan sembilan frame,
+jarak itu bukan benteng.
+</p>
+
+<p>
+<b>Jarak itu hanya pagar.</b>
 </p>
 
 `
 },
 
 {
-title:"🎱 53 KALI 9–8 — SATU FRAME YANG MENGUBAH CERITA",
+title:"🔥 54 KALI HILL-HILL",
 content:`
 
 <p>
-Ada satu angka yang menjadi ciri khas liga ini.
-</p>
-
-<h3>53 PERTANDINGAN BERAKHIR 9–8.</h3>
-
-<p>
-Dari 287 pertandingan, sekitar:
-</p>
-
-<h3>18,5%</h3>
-
-<p>
-berakhir hanya dengan selisih satu frame.
+Ada satu angka yang pantas membuat semua pemain berhenti sejenak.
 </p>
 
 <p>
-Hampir satu dari setiap lima pertandingan menghasilkan drama sampai frame terakhir.
+<b>54 pertandingan berakhir dengan skor 9–8.</b>
 </p>
 
 <p>
-Dalam periode terbaru:
-</p>
-
-<ul>
-
-<li><b>Yosia 9–8 Bang Daniel</b></li>
-
-<li><b>Yosia 9–8 Alfin</b></li>
-
-<li><b>Habib 9–8 Bang Aceng</b></li>
-
-</ul>
-
-<p>
-Tiga pertandingan.
+Lima puluh empat kali pertandingan menolak menyerah.
 </p>
 
 <p>
-Tiga kemenangan dengan margin minimum.
+Lima puluh empat kali satu frame terakhir menjadi penentu.
 </p>
 
 <p>
-Di liga seperti ini, satu frame bukan sekadar angka.
-</p>
-
-<h3>
-SATU FRAME ADALAH PERBEDAAN ANTARA PULANG SEBAGAI PEMENANG ATAU MEMBAWA PULANG KEKALAHAN.
-</h3>
-
-`
-},
-
-{
-title:"💥 MATCH 260–287 — PAPAN BAWAH TERUS MENYERANG",
-content:`
-
-<p>
-Dalam pertandingan-pertandingan terbaru, pola yang menjadi ciri khas musim ini kembali muncul.
-</p>
-
-<ul>
-
-<li>Gideon mengalahkan Habib.</li>
-
-<li>Muler mengalahkan Ko Charles.</li>
-
-<li>Muler mengalahkan Pandi.</li>
-
-<li>Dilzy mengalahkan Vincent.</li>
-
-<li>Yosia mengalahkan Alfin.</li>
-
-<li>Lahi mengalahkan Aris.</li>
-
-</ul>
-
-<p>
-Pemain yang secara posisi berada lebih rendah terus mencuri kemenangan dari pemain yang secara klasemen berada lebih tinggi.
+Dan di sinilah statistik mulai berubah menjadi cerita.
 </p>
 
 <p>
-Jika seluruh database dibandingkan dengan klasemen saat ini, terdapat <b>81 kemenangan</b> di mana pemain yang sekarang berada lebih rendah berhasil mengalahkan pemain yang sekarang berada lebih tinggi.
+Karena 9–8 bukan sekadar angka.
 </p>
 
-<h3>
-KLASEMEN BUKAN KASTA.
-</h3>
+<p>
+<b>9–8 adalah pesan bahwa tidak ada kemenangan yang boleh dianggap mudah.</b>
+</p>
 
 <p>
-Karena meja tidak mengenal peringkat.
+Satu frame bisa menjadi pembeda.
+</p>
+
+<p>
+Satu keputusan bisa menjadi pembeda.
+</p>
+
+<p>
+Satu bola bisa menjadi pembeda.
+</p>
+
+<p>
+Dan satu malam yang buruk...
+</p>
+
+<p>
+<b>bisa menjadi pembeda klasemen.</b>
 </p>
 
 `
 },
 
 {
-title:"🔮 PROYEKSI PACE — KALAU KECEPATAN SAAT INI BERTAHAN...",
+title:"🧠 ANOMALI TERBESAR: MENANG BELUM TENTU BERARTI TINGGI",
 content:`
 
 <p>
-Kita gunakan rumus sederhana:
-</p>
-
-<h3>
-Poin sekarang + KPF × pertandingan tersisa
-</h3>
-
-<p>
-Hasil proyeksi pace saat ini:
-</p>
-
-<ul>
-
-<li><b>Chad → sekitar 254 poin</b></li>
-
-<li><b>Aken → sekitar 253 poin</b></li>
-
-<li><b>Bang Jul → sekitar 250 poin</b></li>
-
-<li><b>Bang Aceng → sekitar 245 poin</b></li>
-
-<li><b>Lahi → sekitar 242 poin</b></li>
-
-<li><b>Ko CG → sekitar 239 poin</b></li>
-
-<li><b>Iwan → sekitar 237 poin</b></li>
-
-<li><b>Pandi → sekitar 234 poin</b></li>
-
-</ul>
-
-<p>
-Ini bukan klasemen akhir.
+Lihat Habib.
 </p>
 
 <p>
-Ini adalah <b>simulasi kecepatan</b>.
+Ia sudah mencatat <b>14 kemenangan</b> dan <b>13 kekalahan</b>.
 </p>
 
 <p>
-Dan justru di situlah misterinya.
+Namun masih berada di posisi keempat.
 </p>
 
 <p>
-Secara klasemen, Bang Aceng bukan kandidat papan atas.
+Mengapa?
 </p>
 
 <p>
-Tetapi berdasarkan pace, namanya muncul di antara pemain yang sedang mengejar kelompok teratas.
-</p>
-
-<h3>
-MATEMATIKA MEMBERIKAN PETUNJUK.
-MEJA YANG MEMBERIKAN JAWABAN.
-</h3>
-
-`
-},
-
-{
-title:"🛡️ BERTAHAN SAMPAI AKHIR — JANGAN KALAH SEBELUM MEJA MEMBUKTIKAN",
-content:`
-
-<p>
-Masih ada <b>148 pertandingan</b>.
+Karena liga ini tidak hanya berbicara tentang menang.
 </p>
 
 <p>
-Artinya, pertarungan belum memasuki fase untuk sekadar mempertahankan posisi.
+Liga ini berbicara tentang <b>frame.</b>
 </p>
 
 <p>
-Justru sekarang adalah fase ketika setiap pemain harus mulai berpikir:
-</p>
-
-<h3>
-BAGAIMANA SAYA TETAP HIDUP SAMPAI PERTANDINGAN TERAKHIR?
-</h3>
-
-<p>
-Performa tinggi satu atau dua malam belum cukup.
+Itulah yang membuat klasemen ini berbeda.
 </p>
 
 <p>
-Yang dibutuhkan adalah kemampuan tetap kompetitif ketika badan lelah, pikiran mulai penuh, lawan semakin percaya diri, dan setiap frame terasa semakin mahal.
-</p>
-
-<h3>🧠 SARAN REDAKSI</h3>
-
-<p>
-<b>1. Mainkan satu pertandingan pada satu waktu.</b>
+Bang Larosa memiliki <b>13 kemenangan</b> dan <b>14 kekalahan</b>,
+namun sudah mengumpulkan <b>203 frame.</b>
 </p>
 
 <p>
-Jangan berpikir harus mengejar 20 poin.
+Ia berada di posisi keenam.
 </p>
 
 <p>
-Pikirkan:
-</p>
-
-<h3>
-“SAYA HARUS MEMENANGKAN PERTANDINGAN YANG ADA DI DEPAN SAYA.”
-</h3>
-
-<p>
-Satu pertandingan.
-Satu frame.
-Satu kesempatan.
+Artinya,
 </p>
 
 <p>
-<b>2. Jaga ritme, bukan hanya hasil.</b>
+<b>kemenangan menceritakan siapa yang menang.</b>
 </p>
 
 <p>
-Ketika sedang panas, jangan mengubah stroke hanya karena ingin mempertahankan kemenangan.
+Tetapi frame menceritakan...
 </p>
 
 <p>
-Datang ke meja.
-Lihat.
-Putuskan.
-Eksekusi.
-Reset.
-</p>
-
-<p>
-<b>3. Jangan membawa satu miss ke frame berikutnya.</b>
-</p>
-
-<p>
-Satu kesalahan hanya bernilai satu kesalahan.
-Jangan mengubahnya menjadi tiga.
-</p>
-
-<p>
-Selama meja belum selesai:
-</p>
-
-<h3>
-PERTANDINGAN BELUM SELESAI.
-</h3>
-
-`
-},
-
-{
-title:"🚀 CARA MENDONGKRAK PERFORMA — TARGETKAN KPF",
-content:`
-
-<p>
-Mulai sekarang setiap pemain dapat memiliki target pribadi:
-</p>
-
-<h3>
-“BERAPA KPF SAYA MALAM INI?”
-</h3>
-
-<p>
-Misalnya KPF musim seorang pemain adalah:
-<b>7,20</b>.
-</p>
-
-<p>
-Jangan hanya menargetkan kemenangan besar.
-</p>
-
-<p>
-Targetkan:
-</p>
-
-<h3>
-MINIMAL 8 FRAME DALAM PERTANDINGAN BERIKUTNYA.
-</h3>
-
-<p>
-Dengan demikian fokus berpindah dari kecemasan terhadap hasil menjadi kualitas permainan.
-</p>
-
-<p>
-Jika KPF musim:
-<b>7,20</b>
-</p>
-
-<p>
-dan target baru:
-<b>7,80</b>,
-</p>
-
-<p>
-maka pemain sedang mengejar:
-</p>
-
-<h3>
-+0,60 FRAME PER PERTANDINGAN.
-</h3>
-
-<p>
-Jika peningkatan itu dapat dipertahankan dalam banyak pertandingan, klasemen akan mulai merasakan dampaknya.
+<b>seberapa jauh ia bertahan.</b>
 </p>
 
 `
 },
 
 {
-title:"⚔️ TIGA ZONA — TIGA CARA BERMAIN",
+title:"🚨 BANG LAROSA: DARI PENGEJAR MENJADI YANG DIKEJAR",
 content:`
 
-<h3>🔥 PAPAN ATAS</h3>
-
 <p>
-Jangan bermain hanya untuk mempertahankan nama.
+Bang Larosa kini berada di <b>203 frame.</b>
 </p>
 
 <p>
-Semakin tinggi posisi Anda, semakin banyak pemain yang ingin menjatuhkan Anda.
+Namun pertandingan tersisanya hanya <b>dua.</b>
 </p>
 
 <p>
-Jangan bermain untuk membuktikan siapa yang lebih hebat.
-</p>
-
-<h3>
-MAINkan MEJA. BUKAN KLASemen.
-</h3>
-
-<p>
-Bola tidak tahu siapa yang berada di posisi pertama.
-</p>
-
-<hr>
-
-<h3>🐺 PAPAN TENGAH</h3>
-
-<p>
-Sekarang waktunya menyerang.
+Dua.
 </p>
 
 <p>
-Jangan terlalu takut melihat jarak dengan papan atas.
+Maksimum tambahan yang mungkin diperoleh adalah:
 </p>
 
 <p>
-Lihat jumlah pertandingan yang masih tersedia.
+<b>2 × 9 = 18 frame.</b>
 </p>
 
 <p>
-Satu kemenangan atas pemain di atas Anda menghasilkan dua tekanan sekaligus:
+Maka batas matematisnya:
 </p>
 
 <p>
-<b>Anda mendapatkan poin.</b>
+<b>203 + 18 = 221.</b>
 </p>
 
 <p>
-<b>Lawan kehilangan kesempatan memperlebar jarak.</b>
-</p>
-
-<h3>
-ITULAH CARA PAPAN TENGAH MENJADI PAPAN ATAS.
-</h3>
-
-<hr>
-
-<h3>💣 PAPAN BAWAH</h3>
-
-<p>
-Jangan menunggu klasemen membaik untuk mulai percaya diri.
+Chad sudah berada di <b>228.</b>
 </p>
 
 <p>
-Bang Aceng adalah contoh paling jelas.
+Bang Jul sudah berada di <b>224.</b>
 </p>
 
 <p>
-Posisi rendah tidak otomatis berarti kecepatan rendah.
+Artinya Bang Larosa tidak lagi dapat mengejar Chad maupun Bang Jul hanya melalui hasilnya sendiri.
 </p>
 
 <p>
-Targetnya bukan langsung masuk 10 besar.
+Misterinya berubah.
 </p>
 
 <p>
-Targetnya:
+Bukan lagi:
 </p>
 
-<h3>
-NAIK SEDIKIT.
-KEMUDIAN SEDIKIT LAGI.
-</h3>
+<p>
+<b>"Bisakah Bang Larosa menjadi juara?"</b>
+</p>
 
 <p>
-Kemudian lihat klasemen.
+Tetapi:
+</p>
+
+<p>
+<b>"Seberapa jauh Bang Larosa bisa bertahan ketika pemain di belakangnya masih bergerak?"</b>
 </p>
 
 `
 },
 
 {
-title:"🎂 SELAMAT ULANG TAHUN, KO CG",
+title:"⚡ MOMENTUM BANG LAROSA BELUM PADAM",
 content:`
 
-<h3>
-🎂🎱 SELAMAT ULANG TAHUN, KO CG!
-</h3>
-
 <p>
-Ulang tahun kali ini datang bukan ketika liga sedang sepi.
+Namun jangan salah membaca angka.
 </p>
 
 <p>
-Justru datang ketika persaingan sedang panas-panasnya.
+Dalam sepuluh pertandingan terakhir,
+Bang Larosa memenangkan <b>7 pertandingan.</b>
 </p>
 
 <p>
-Ko CG berada di posisi <b>8</b> dengan:
-</p>
-
-<ul>
-
-<li><b>198 poin</b></li>
-<li><b>24 pertandingan</b></li>
-<li><b>18 kemenangan</b></li>
-<li><b>6 kekalahan</b></li>
-<li><b>KPF 8,25</b></li>
-</ul>
-
-<p>
-FER Ko CG:
-<b>57,73%</b>.
+Menghasilkan <b>82 frame</b>.
 </p>
 
 <p>
-Rumus FER:
-</p>
-
-<h3>
-FER = Frame+ ÷ (Frame+ + Frame-) × 100%
-</h3>
-
-<p>
-Yang lebih menarik:
+Kehilangan <b>67 frame</b>.
 </p>
 
 <p>
-Dalam 10 pertandingan terakhir, Ko CG menghasilkan sekitar <b>8,30 frame per pertandingan</b>.
+Rata-rata menghasilkan:
 </p>
 
 <p>
-Sedikit lebih tinggi daripada rata-rata musimnya.
+<b>82 ÷ 10 = 8,2 frame per pertandingan.</b>
 </p>
 
 <p>
-Artinya statistik belum menunjukkan tanda bahwa Ko CG sedang mengendur.
+Margin rata-rata:
 </p>
 
 <p>
-Justru masih ada:
+<b>(82 − 67) ÷ 10 = +1,5 frame per pertandingan.</b>
 </p>
 
-<h3>
-TENAGA.
-KECEPATAN.
-DAN PELUANG.
-</h3>
-
 <p>
-Semoga tahun ini bukan hanya bertambah usia.
+Jadi meskipun klasemennya sedang terancam,
+momentumnya belum mati.
 </p>
 
-<h3>
-TETAPI JUGA BERTAMBAH FRAME KEMENANGAN.
-</h3>
+<p>
+Api masih ada.
+</p>
 
 <p>
-🎂🔥 Selamat ulang tahun, Ko CG!
+Pertanyaannya bukan apakah apinya menyala.
+</p>
+
+<p>
+Pertanyaannya:
+</p>
+
+<p>
+<b>cukupkah api itu untuk bertahan sampai bara terakhir?</b>
 </p>
 
 `
 },
 
 {
-title:"🧠 MATEMATIKA BISA MEMBACA. MEJA YANG MENENTUKAN.",
+title:"🐎 KUDA-KUDA YANG BELUM SELESAI",
 content:`
 
 <p>
-Sekarang kita bisa membaca liga dengan lebih banyak angka:
-</p>
-
-<ul>
-
-<li><b>Win Rate</b></li>
-
-<li><b>KPF — Kecepatan Perolehan Frame</b></li>
-
-<li><b>FER — Frame Efficiency Rate</b></li>
-
-<li><b>MFR — Momentum Frame Rate</b></li>
-
-<li><b>Sisa pertandingan</b></li>
-
-<li><b>Kecepatan pemain</b></li>
-
-<li><b>Perubahan momentum</b></li>
-
-</ul>
-
-<p>
-Tetapi semua angka tersebut memiliki satu kelemahan:
-</p>
-
-<h3>
-MEREKA TIDAK BISA MEMEGANG CUE.
-</h3>
-
-<p>
-Mereka hanya bisa menghitung kemungkinan.
+Lihat Bang Aceng.
 </p>
 
 <p>
-Mereka tidak bisa merasakan tekanan ketika skor sudah 8–8.
+Posisi <b>20</b>.
 </p>
 
 <p>
-Tidak bisa merasakan tangan yang mulai berat.
+Tetapi sudah memenangkan <b>10 dari 14 pertandingan.</b>
 </p>
 
 <p>
-Tidak bisa melihat bola terakhir.
+Selisih frame:
+<b>+34.</b>
 </p>
 
 <p>
-Dan tidak bisa mengambil keputusan di meja.
+Lahi berada di posisi <b>14</b>.
 </p>
 
-<h3>
-MATEMATIKA BISA MEMBACA PELUANG.
-</h3>
+<p>
+Sudah memenangkan <b>13 dari 18 pertandingan.</b>
+</p>
 
-<h3>
-MEJA YANG MEMBUKTIKAN ALUR CERITA AKHIR.
-</h3>
+<p>
+Selisih frame:
+<b>+34.</b>
+</p>
+
+<p>
+Dan Ko CG?
+</p>
+
+<p>
+Posisi <b>9</b>.
+</p>
+
+<p>
+Sudah memenangkan <b>18 pertandingan dari 24.</b>
+</p>
+
+<p>
+Selisih frame:
+<b>+53.</b>
+</p>
+
+<p>
+Mereka bukan sekadar penghuni klasemen.
+</p>
+
+<p>
+<b>Mereka adalah arus bawah.</b>
+</p>
+
+<p>
+Dan arus bawah,
+jika terus bergerak,
+</p>
+
+<p>
+akhirnya bisa mengangkat siapa saja ke atas.
+</p>
 
 `
 },
 
 {
-title:"🔥 PESAN REDAKSI UNTUK 30 PEMAIN",
+title:"🎯 STATISTIK TIDAK SELALU MEMBERI JAWABAN",
 content:`
 
 <p>
-Jangan kejar angka sampai lupa bermain.
+Statistik bisa berkata:
 </p>
 
 <p>
-Jangan kejar peringkat sampai kehilangan stroke.
+Aken sangat kuat.
 </p>
 
 <p>
-Jangan takut kalah sampai takut menyerang.
+Bang Jul sangat konsisten.
 </p>
 
 <p>
-Dan jangan terlalu percaya diri hanya karena sedang menang.
+Chad sangat stabil.
 </p>
 
 <p>
-Karena:
+Ko CG sangat berbahaya.
 </p>
 
 <p>
-<b>Chad bisa kalah.</b>
+Pandi masih mengejar.
 </p>
 
 <p>
-<b>Bang Jul bisa kehilangan poin.</b>
+Iwan masih bertahan.
 </p>
 
 <p>
-<b>Aken bisa terkejar.</b>
+Bang Larosa masih melawan.
 </p>
 
 <p>
-<b>Pemain papan tengah bisa naik.</b>
+Tetapi statistik hanya membaca masa lalu.
 </p>
 
 <p>
-<b>Pemain papan bawah bisa meledak.</b>
+Meja membaca saat ini.
 </p>
 
 <p>
-Dan satu pertandingan <b>9–8</b> saja sudah cukup untuk mengubah cerita.
-</p>
-
-<h3>
-🎱 148 PERTANDINGAN TERAKHIR.
-</h3>
-
-<p>
-Sekarang kita tidak hanya menunggu siapa yang menjadi juara.
+Pertandingan menentukan masa depan.
 </p>
 
 <p>
-Kita menunggu:
+Dan di situlah statistik berhenti menjadi kepastian.
+</p>
+
+`
+},
+
+{
+title:"🔥 139 PERTANDINGAN TERAKHIR",
+content:`
+
+<p>
+<b>139 pertandingan</b> belum dimainkan.
 </p>
 
 <p>
-<b>Siapa yang bertahan paling lama.</b>
+139 kesempatan untuk menang.
 </p>
 
 <p>
-<b>Siapa yang mampu menjaga panasnya.</b>
+139 kesempatan untuk tergelincir.
 </p>
 
 <p>
-<b>Siapa yang mampu memperbaiki performanya.</b>
+139 kesempatan untuk membuat satu nama naik.
 </p>
 
 <p>
-Dan...
+Dan satu nama turun.
 </p>
 
-<h2>
-SIAPA YANG MASIH SANGGUP BERMAIN DENGAN KEPALA DINGIN KETIKA SEMUA ORANG MULAI MENGHITUNG POIN.
-</h2>
-
 <p>
-Karena pada akhirnya:
+Karena semakin dekat garis akhir,
+semakin kecil ruang untuk kesalahan.
 </p>
 
-<h2>
-LIGA TIDAK DIMENANGKAN OLEH PEMAIN YANG PALING SERING DIPREDIKSI.
-</h2>
-
-<h2>
-LIGA DIMENANGKAN OLEH PEMAIN YANG...
-</h2>
-
-<h1>
-MASIH BERDIRI KETIKA FRAME TERAKHIR SELESAI.
-</h1>
+<p>
+Semakin rapat klasemen,
+semakin mahal satu frame.
+</p>
 
 <p>
-🎱🔥
+Semakin panas meja,
+semakin dingin kepala harus bekerja.
+</p>
+
+`
+},
+
+{
+title:"🧮 FORMULA AKHIR MUSIM",
+content:`
+
+<p>
+Kalau kita ingin bermain dengan angka,
+mari kita bermain dengan angka.
+</p>
+
+<p>
+<b>Poin akhir = poin sekarang + frame dari pertandingan tersisa.</b>
+</p>
+
+<p>
+Tetapi ada satu variabel yang tidak masuk rumus:
+</p>
+
+<p>
+<b>mental.</b>
+</p>
+
+<p>
+Ada satu variabel yang tidak tercatat:
+</p>
+
+<p>
+<b>keberanian.</b>
+</p>
+
+<p>
+Ada satu variabel yang tidak bisa diprediksi:
+</p>
+
+<p>
+<b>hari buruk.</b>
+</p>
+
+<p>
+Dan ada satu variabel yang selalu punya kata terakhir:
+</p>
+
+<p>
+<b>MEJA.</b>
+</p>
+
+`
+},
+
+{
+title:"🔮 MISTERI AKHIR MUSIM",
+content:`
+
+<p>
+Mungkin Chad tetap di atas.
+</p>
+
+<p>
+Mungkin Bang Jul merebut mahkota.
+</p>
+
+<p>
+Mungkin Aken datang dari belakang.
+</p>
+
+<p>
+Mungkin Iwan dan Habib menyusup.
+</p>
+
+<p>
+Mungkin Ko CG membuat kejutan.
+</p>
+
+<p>
+Mungkin Pandi menyalip.
+</p>
+
+<p>
+Mungkin Bang Larosa bertahan.
+</p>
+
+<p>
+Atau mungkin...
+</p>
+
+<p>
+satu pemain yang hari ini bahkan belum dibicarakan,
+besok justru menjadi berita utama.
+</p>
+
+<p>
+Karena liga ini belum selesai.
+</p>
+
+<p>
+Klasemen belum final.
+</p>
+
+<p>
+Angka belum menjadi takdir.
+</p>
+
+<p>
+Dan selama masih ada frame yang dimainkan...
+</p>
+
+<p>
+<b>belum ada cerita yang benar-benar selesai.</b>
+</p>
+
+`
+},
+
+{
+title:"🎱 DARI MEJA REDAKSI",
+content:`
+
+<p>
+Kapur boleh menipis.
+</p>
+
+<p>
+Cue stick boleh semakin berat.
+</p>
+
+<p>
+Tangan boleh mulai lelah.
+</p>
+
+<p>
+Tetapi pertandingan terakhir...
+</p>
+
+<p>
+<b>belum dimainkan.</b>
+</p>
+
+<p>
+Jadi jangan bermain untuk mempertahankan nama.
+</p>
+
+<p>
+Jangan bermain untuk mempertahankan posisi.
+</p>
+
+<p>
+<b>Mainkan frame berikutnya.</b>
+</p>
+
+<p>
+Karena mungkin,
+</p>
+
+<p>
+frame berikutnya adalah frame
+</p>
+
+<p>
+yang mengubah seluruh cerita.
+</p>
+
+<p>
+<b>Salam dari Meja Redaksi.</b>
 </p>
 
 `
 }
 
 ];
-
-//======================================================
-// RENDER
-//======================================================
-
-function renderJournal(){
-
-const container=document.getElementById("journal");
-
-if(!container) return;
-
-let html="";
-
-jurnal.forEach(item=>{
-
-html+=`
-
-<section class="card journal-card">
-
-<h2>${item.title}</h2>
-
-${item.content}
-
-</section>
-
-`;
-
-});
-
-container.innerHTML=html;
-
-}
-
-document.addEventListener("DOMContentLoaded",renderJournal);
